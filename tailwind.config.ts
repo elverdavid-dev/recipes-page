@@ -14,6 +14,9 @@ const config: Config = {
 				light: "#FFF9EA",
 				gold: "#FFAC4B",
 			},
+			fontFamily: {
+				readexPro: ["var(--readexPro)"],
+			},
 		},
 	},
 	plugins: [nextui()],
