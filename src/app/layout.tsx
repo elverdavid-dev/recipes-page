@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Readex_Pro } from "next/font/google";
+import "react-multi-carousel/lib/styles.css";
 import Providers from "./providers";
 import "./styles/globals.css";
-
 //Metadata
 export const metadata: Metadata = {
 	title: "Landing page",
