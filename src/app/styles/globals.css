@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+@apply bg-[#f6f6f6]
+}
+
+.Subtitle{
+@apply py-10 text-3xl font-kanit text-slate-950 px-5
+}

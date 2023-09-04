@@ -48,10 +48,8 @@ const SectionCategory = () => {
 	};
 
 	return (
-		<section className="mt-16 lg:mx-10 mx-4 my-10">
-			<h2 className="py-5 text-3xl font-readexPro text-gold font-bold">
-				Categorias
-			</h2>
+		<section className="mt-32 lg:mx-10 mx-4 my-10">
+			<h2 className="Subtitle">Categorias</h2>
 			<Carusel
 				responsive={Response}
 				infinite
@@ -73,13 +71,11 @@ const SectionCategory = () => {
 							<img
 								src={image}
 								alt={name}
-								width="250"
+								width="200"
 								height="200"
 								className="rounded-md"
 							/>
-							<span className="text-lg font-readexPro text-slate-700">
-								{name}
-							</span>
+							<span className="font-rubik block mt-4 ">{name}</span>
 						</div>
 					))
 				)}

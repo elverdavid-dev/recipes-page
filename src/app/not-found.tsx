@@ -21,10 +21,10 @@ const NotFound = () => {
 			</div>
 			<div className="text-center text-slate-950">
 				<b className="font-extrabold text-7xl">Oops!</b>
-				<p className="text-2xl font-readexPro mt-5">Esta pagina no existe!</p>
+				<p className="text-2xl font-kanit mt-5">Esta pagina no existe!</p>
 				<Button
 					size="lg"
-					className="mt-5 bg-gold  text-slate-950 rounded-full capitalize font-readexPro"
+					className="mt-5 bg-gold  text-slate-950 rounded-full capitalize font-rubik"
 					onClick={redirectToHome}
 				>
 					Regresar al inicio
