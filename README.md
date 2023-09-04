@@ -3,7 +3,7 @@
 ---
 
 ## Descripción
-Este proyecto es una página de recetas que esta desarrolandose en equipo para compartir una amplia variedad de recetas de cocina de todo el mundo.
+Este proyecto es una página de recetas que esta desarrollandose en equipo para compartir una amplia variedad de recetas de cocina de todo el mundo.
 
 ## Intalacion
 
@@ -34,6 +34,7 @@ pnpm i
 - Zustand
 - React icons
 - React-multi-carrucel
+- Rome tools   **Alternativa a prettier y eslint , intalar la extencion llamada Rome** [Pagina de las Rome tools](https://rome.tools/)
 
 ## Docs de la api
 

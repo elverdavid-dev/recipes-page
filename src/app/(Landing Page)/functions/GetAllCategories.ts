@@ -1,3 +1,4 @@
+//No puede usar process.env.BASE_URL , aparece como undefined y causa un error
 const baseUrl = "https://recipes-api-r43i.onrender.com/v1/api/categories";
 
 export async function GetAllCategories() {
