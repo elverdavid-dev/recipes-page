@@ -4,7 +4,10 @@ const baseUrl = "https://recipes-api-r43i.onrender.com/v1/api/recipes/latest";
 
 export async function GetLatestRecipes() {
 	try {
-		const response = await fetch(baseUrl);
+		const response = await fetch(baseUrl, {
+			cache: "force-cache",
+			next: { revalidate: 60 },
+		});
 		if (!response.ok) {
 			throw new Error("Error al obtener las recetas");
 		}
