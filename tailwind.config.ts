@@ -15,7 +15,8 @@ const config: Config = {
 				gold: "#FFAC4B",
 			},
 			fontFamily: {
-				readexPro: ["var(--readexPro)"],
+				kanit: ["var(--kanit)"],
+				rubik: ["var(--rubik)"],
 			},
 		},
 	},

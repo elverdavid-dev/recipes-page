@@ -5,20 +5,21 @@ const SectionRecipesLatest = async () => {
 	console.log(data);
 	return (
 		<section className="mt-32 lg:mx-10 mx-4">
-			<h2 className="py-5 text-3xl font-readexPro text-gold font-bold">
-				Ultimas recetas agregadas
-			</h2>
-			<div className="grid grid-cols-4 justify-items-center gap-y-5">
+			<h2 className="Subtitle">Ultimas recetas</h2>
+			<div className="grid lg:grid-cols-4 justify-items-center gap-y-5">
 				{data?.map(({ _id, name, image }) => (
-					<div key={_id}>
+					<div
+						key={_id}
+						className="cursor-pointer bg-slate-50 w-[250px] shadow-md rounded-md pb-2"
+					>
 						<img
 							src={image}
 							alt={name}
 							width="250"
 							height="200"
-							className="rounded-md"
+							className="rounded-md w-auto mx-auto"
 						/>
-						<span>{name} </span>
+						<span className="font-rubik mt-4 block px-2">{name}</span>
 					</div>
 				))}
 			</div>

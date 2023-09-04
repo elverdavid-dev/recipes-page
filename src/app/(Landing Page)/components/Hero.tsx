@@ -10,19 +10,19 @@ const Hero = () => {
 	return (
 		<section className="lg:px-20 px-4 grid lg:grid-cols-2 bg-light lg:h-[580px] relative">
 			<div className="lg:w-[600px]">
-				<h1 className="lg:text-5xl text-4xl font-readexPro font-extrabold lg:mt-32 mt-16 text-slate-950">
+				<h1 className="lg:text-5xl text-4xl font-kanit font-extrabold lg:mt-32 mt-16 text-slate-950">
 					Explora recetas de <br className="lg:block hidden" /> todo el
 					<strong className="text-gold"> Mundo</strong>
 				</h1>
 
-				<span className="text-lg font-readexPro text-slate-700 block mt-4">
+				<span className="text-lg font-rubik text-slate-700 block mt-4">
 					Sumérgete en una experiencia gastronómica única que{" "}
 					<br className="lg:block hidden" /> te lleva en un viaje por los
 					sabores del mundo.
 				</span>
 
 				<Button
-					className="font-readexPro bg-gold mt-4 rounded-full capitalize text-slate-950"
+					className="font-rubik bg-gold mt-4 rounded-full capitalize text-slate-950"
 					size="lg"
 					onClick={() => router.push("/recetas")}
 				>

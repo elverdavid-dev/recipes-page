@@ -1,3 +1,5 @@
+import { Categories } from "../interfaces/Categories.interface";
+
 //No puede usar process.env.BASE_URL , aparece como undefined y causa un error
 const baseUrl = "https://recipes-api-r43i.onrender.com/v1/api/categories";
 
@@ -7,7 +9,7 @@ export async function GetAllCategories() {
 		if (!response.ok) {
 			throw Error("Error al obtener las categorias");
 		}
-		const data = await response.json();
+		const data: Categories[] = await response.json();
 		return data;
 	} catch (error) {
 		console.log(error);

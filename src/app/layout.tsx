@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Readex_Pro } from "next/font/google";
+import { Kanit, Readex_Pro, Rubik } from "next/font/google";
 import "react-multi-carousel/lib/styles.css";
 import Providers from "./providers";
 import "./styles/globals.css";
+
+export interface ChildrenProps {
+	children: React.ReactNode;
+}
 //Metadata
 export const metadata: Metadata = {
 	title: "Landing page",
@@ -11,21 +15,28 @@ export const metadata: Metadata = {
 };
 
 //Font
-const readexPro = Readex_Pro({
+
+const kanit = Kanit({
 	subsets: ["latin"],
 	preload: true,
-	display: "swap",
-	weight: "400",
-	variable: "--readexPro",
+	display: "auto",
+	weight: "500",
+	style: "normal",
+	variable: "--kanit",
 });
 
-export interface ChildrenProps {
-	children: React.ReactNode;
-}
+const rubik = Rubik({
+	subsets: ["latin"],
+	preload: true,
+	display: "auto",
+	weight: "400",
+	style: "normal",
+	variable: "--rubik",
+});
 
 export default function RootLayout({ children }: ChildrenProps) {
 	return (
-		<html lang="en" className={`${readexPro.variable}`}>
+		<html lang="en" className={` ${kanit.variable} ${rubik.variable}`}>
 			<body>
 				<Providers>{children}</Providers>
 			</body>
