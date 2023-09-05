@@ -7,5 +7,5 @@ body{
 }
 
 .Subtitle{
-@apply py-10 text-3xl font-kanit text-slate-950 px-5
+@apply py-10 text-3xl font-kanit text-slate-950 px-5 capitalize
 }

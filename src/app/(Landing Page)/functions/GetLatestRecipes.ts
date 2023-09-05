@@ -1,6 +1,6 @@
 import { Recipes } from "../interfaces/Recipes.interface";
 
-const BaseUrl = <string>process.env.BASE_URL;
+const BaseUrl = <string>process.env.NEXT_PUBLIC_BASE_URL;
 console.log(BaseUrl);
 export async function GetLatestRecipes() {
 	try {

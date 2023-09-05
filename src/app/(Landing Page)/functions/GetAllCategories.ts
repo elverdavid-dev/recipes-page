@@ -1,11 +1,10 @@
 import { Categories } from "../interfaces/Categories.interface";
 
-//No puede usar process.env.BASE_URL , aparece como undefined y causa un error
-const baseUrl = "https://recipes-api-r43i.onrender.com/v1/api/categories";
-
+const baseUrl = <string>process.env.NEXT_PUBLIC_BASE_URL;
+console.log(baseUrl);
 export async function GetAllCategories() {
 	try {
-		const response = await fetch(baseUrl);
+		const response = await fetch(`${baseUrl}/categories`);
 		if (!response.ok) {
 			throw Error("Error al obtener las categorias");
 		}

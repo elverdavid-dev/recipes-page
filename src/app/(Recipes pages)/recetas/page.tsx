@@ -1,5 +1,12 @@
+import ContentRecipes from "../components/ContentRecipes";
+import Search from "../components/Search";
 const RecipesPage = () => {
-	return <div>Hello word</div>;
+	return (
+		<>
+			<Search />
+			<ContentRecipes />
+		</>
+	);
 };
 
 export default RecipesPage;
