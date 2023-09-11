@@ -34,7 +34,7 @@ pnpm i
 - Zustand
 - React icons
 - React-multi-carrucel
-- Rome tools   **Alternativa a prettier y eslint , intalar la extencion llamada Rome** [Pagina de las Rome tools](https://rome.tools/)
+
 
 ## Docs de la api
 
