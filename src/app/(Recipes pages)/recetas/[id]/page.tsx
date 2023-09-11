@@ -7,10 +7,10 @@ interface ParamProps {
 }
 const PageById = async ({ params }: ParamProps) => {
   const recipe = await GetRecipeById(params.id);
-  if (!recipe) {
+  /* if (!recipe) {
     notFound();
-  }
-  const formattedCreatedAt = new Date(recipe.createdAt).toLocaleString();
+  } */
+  // const formattedCreatedAt = new Date(recipe.createdAt).toLocaleString();
   console.log(recipe);
   return (
     <section>
@@ -32,9 +32,6 @@ const PageById = async ({ params }: ParamProps) => {
             ))}
           </ol>
           <span>Categoria : {recipe.category.name} </span>
-          <span className="block">
-            fecha que se subio la receta :{formattedCreatedAt}{" "}
-          </span>
         </div>
       )}
     </section>

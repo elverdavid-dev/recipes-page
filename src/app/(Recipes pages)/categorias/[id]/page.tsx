@@ -1,9 +1,28 @@
-interface Props {
-	params: { id: string };
+import ShowOneRecipe from "@/app/ShowOneRecipe";
+import { GetAllRecipesOfOneCategory } from "../../functions/GetAllRecipesOfOneCategory";
+import Image from "next/image";
+interface ParamProps {
+  params: { id: string };
 }
-const page = ({ params }: Props) => {
-	console.log(params);
-	return <div>page</div>;
+const page = async ({ params }: ParamProps) => {
+  const recipes = await GetAllRecipesOfOneCategory(params.id);
+
+  return (
+    <section className="grid grid-cols-3">
+      {Array.isArray(recipes) ? (
+        recipes.map(({ _id, name, image }) => (
+          <section key={_id}>
+            <ShowOneRecipe id={_id}>
+              <img src={image} alt={name} />
+              <span>{name}</span>
+            </ShowOneRecipe>
+          </section>
+        ))
+      ) : (
+        <span>{recipes?.message}</span>
+      )}
+    </section>
+  );
 };
 
 export default page;
