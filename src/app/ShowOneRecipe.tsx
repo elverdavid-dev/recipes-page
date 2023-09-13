@@ -9,7 +9,7 @@ interface RecipeProps extends ChildrenProps {
 
 const ShowOneRecipe = ({ children, id }: RecipeProps) => {
   const router = useRouter();
-  console.log(id);
+
   return (
     <section
       onClick={() => router.push(`/recetas/${id}`)}
