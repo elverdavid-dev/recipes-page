@@ -1,5 +1,6 @@
 import { GetAllCategories } from "../functions/GetAllCategories";
 import Carusel from "./Carusel";
+import ShowRecipeOneCategory from "./ShowRecipeOneCategory";
 
 const Carousel = async () => {
   const data = await GetAllCategories();
@@ -9,7 +10,7 @@ const Carousel = async () => {
       <h2 className="Subtitle">Categorias</h2>
       <Carusel>
         {data?.map(({ _id, image, name }) => (
-          <div key={_id}>
+          <ShowRecipeOneCategory id={_id} key={_id}>
             <img
               src={image}
               alt={name}
@@ -17,8 +18,10 @@ const Carousel = async () => {
               height="200"
               className="rounded-md"
             />
-            <span>{name} </span>
-          </div>
+            <span className="text-lg text-slate-950 font-rubik block py-1">
+              {name}{" "}
+            </span>
+          </ShowRecipeOneCategory>
         ))}
       </Carusel>
     </section>

@@ -9,8 +9,8 @@ const HomePage = () => {
     <main>
       <Navbar />
       <Hero />
-      <SectionRecipesLatest />
       <SectionCarusel />
+      <SectionRecipesLatest />
     </main>
   );
 };
