@@ -1,9 +1,7 @@
-import ShowOneRecipe from "@/ShowOneRecipe";
+import ShowOneRecipe from "@/globalComponents/ShowOneRecipe";
 import { GetAllRecipesOfOneCategory } from "../../functions/GetAllRecipesOfOneCategory";
+import { ParamProps } from "@interfaces/ParamProps.interface";
 
-interface ParamProps {
-  params: { id: string };
-}
 const page = async ({ params }: ParamProps) => {
   const recipes = await GetAllRecipesOfOneCategory(params.id);
 

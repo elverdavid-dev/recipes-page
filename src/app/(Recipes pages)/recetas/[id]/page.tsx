@@ -1,10 +1,5 @@
-import React from "react";
 import { GetRecipeById } from "../../functions/GetRecipeById";
-import { notFound } from "next/navigation";
-
-interface ParamProps {
-  params: { id: string };
-}
+import { ParamProps } from "@interfaces/ParamProps.interface";
 const PageById = async ({ params }: ParamProps) => {
   const recipe = await GetRecipeById(params.id);
   /* if (!recipe) {
