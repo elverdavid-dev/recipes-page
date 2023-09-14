@@ -8,7 +8,7 @@ const SectionRecipesLatest = async () => {
   return (
     <section className="mt-32 lg:mx-10 mx-4">
       <h2 className="Subtitle">Ultimas recetas</h2>
-      <div className="grid lg:grid-cols-4 justify-items-center gap-y-12 grid-cols-auto-fit">
+      <div className="grid lg:grid-cols-4 justify-items-center gap-y-12 grid-cols-auto-fit gap-x-14">
         {data?.map(({ _id, name, image }) => (
           <div
             key={_id}

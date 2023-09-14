@@ -6,7 +6,7 @@ interface Props {
 export default function CardRecipe({ img, name }: Props) {
   return (
     <>
-      <article className='flex flex-col justify-center items-center cursor-pointer bg-[#F1F1F1] shadow-lg rounded-xl overflow-hidden max-w-[280px] h-full'>
+      <article className='flex flex-col justify-center items-center cursor-pointer bg-[#F1F1F1] shadow-lg rounded-xl overflow-hidden h-full'>
         <img
           src={img}
           alt={name}
