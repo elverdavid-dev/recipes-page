@@ -18,6 +18,9 @@ const config: Config = {
 				kanit: ["var(--kanit)"],
 				rubik: ["var(--rubik)"],
 			},
+			gridTemplateColumns: {
+        'auto-fit': 'repeat(auto-fit, minmax(200px, 1fr))'
+      },
 		},
 	},
 	plugins: [nextui()],
