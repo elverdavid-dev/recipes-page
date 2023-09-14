@@ -1,4 +1,4 @@
-import ShowOneRecipe from "@/app/ShowOneRecipe";
+import ShowOneRecipe from "@/ShowOneRecipe";
 import { GetLatestRecipes } from "../functions/GetLatestRecipes";
 
 const SectionRecipesLatest = async () => {

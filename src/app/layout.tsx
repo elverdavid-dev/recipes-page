@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Kanit, Readex_Pro, Rubik } from "next/font/google";
-import "react-multi-carousel/lib/styles.css";
+import { Kanit, Rubik } from "next/font/google";
 import Providers from "./providers";
+import { ChildrenProps } from "@interfaces/ChildrenProps.interface";
+import "react-multi-carousel/lib/styles.css";
 import "./styles/globals.css";
 
-export interface ChildrenProps {
-  children: React.ReactNode;
-}
 //Metadata
 export const metadata: Metadata = {
   title: "Landing page",

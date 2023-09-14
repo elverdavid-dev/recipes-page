@@ -1,4 +1,4 @@
-import ShowOneRecipe from "@/app/ShowOneRecipe";
+import ShowOneRecipe from "@/ShowOneRecipe";
 import { GetAllRecipes } from "../functions/GetAllRecipes";
 import PaginationComponent from "./Pagination";
 

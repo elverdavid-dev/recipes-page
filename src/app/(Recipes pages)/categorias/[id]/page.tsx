@@ -1,6 +1,6 @@
-import ShowOneRecipe from "@/app/ShowOneRecipe";
+import ShowOneRecipe from "@/ShowOneRecipe";
 import { GetAllRecipesOfOneCategory } from "../../functions/GetAllRecipesOfOneCategory";
-import Image from "next/image";
+
 interface ParamProps {
   params: { id: string };
 }
