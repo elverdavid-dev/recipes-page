@@ -3,6 +3,7 @@ import { Kanit, Readex_Pro, Rubik } from "next/font/google";
 import "react-multi-carousel/lib/styles.css";
 import Providers from "./providers";
 import "./styles/globals.css";
+import Footer from './Footer';
 
 export interface ChildrenProps {
   children: React.ReactNode;
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: ChildrenProps) {
     <html lang="en" className={` ${kanit.variable} ${rubik.variable}`}>
       <body>
         <Providers>{children}</Providers>
+        <Footer/>
       </body>
     </html>
   );
