@@ -11,8 +11,14 @@ const Carousel = async () => {
       <Carusel>
         {Categories?.map(({ _id, image, name }) => (
           <ShowRecipeOneCategory id={_id} key={_id}>
-            <Image url={image} name={name} width={200} height={200} />
-            <span className="text-lg text-slate-950 font-rubik block py-1">
+            <Image
+              url={image}
+              name={name}
+              width={200}
+              height={200}
+              customStyles="rounded-md"
+            />
+            <span className="text-lg text-slate-950 font-rubik block py-1 ">
               {name}{" "}
             </span>
           </ShowRecipeOneCategory>

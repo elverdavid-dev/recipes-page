@@ -22,7 +22,13 @@ const ContentRecipes = async () => {
           data?.data.map(({ _id, image, name }) => (
             <div key={_id}>
               <ShowOneRecipe id={_id}>
-                <Image url={image} name={name} width={300} height={300} />
+                <Image
+                  url={image}
+                  name={name}
+                  width={300}
+                  height={300}
+                  customStyles="mx-auto rounded-md"
+                />
                 <span>{name} </span>
               </ShowOneRecipe>
             </div>

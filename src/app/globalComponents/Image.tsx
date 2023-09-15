@@ -5,7 +5,13 @@ import { ImageProps } from "@interfaces/ImageProps.interface";
 import { useState } from "react";
 import { Skeleton } from "@nextui-org/react";
 
-const ImageComponent = ({ url, name, width, height }: ImageProps) => {
+const ImageComponent = ({
+  url,
+  name,
+  width,
+  height,
+  customStyles,
+}: ImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -16,7 +22,7 @@ const ImageComponent = ({ url, name, width, height }: ImageProps) => {
           alt={name}
           width={width}
           height={height}
-          className="rounded-md mx-auto"
+          className={customStyles}
           onLoadingComplete={() => setIsLoaded(!isLoaded)}
         />
       </Skeleton>

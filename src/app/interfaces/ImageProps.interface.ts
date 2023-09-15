@@ -3,4 +3,5 @@ export interface ImageProps {
   name: string;
   width: number;
   height: number;
+  customStyles?: any;
 }

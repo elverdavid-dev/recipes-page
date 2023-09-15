@@ -9,12 +9,16 @@ const page = async ({ params }: ParamProps) => {
     <section className="grid grid-cols-3">
       {Array.isArray(recipes) ? (
         recipes.map(({ _id, name, image }) => (
-          <section key={_id}>
-            <ShowOneRecipe id={_id}>
-              <Image url={image} name={name} width={400} height={300} />
-              <span>{name}</span>
-            </ShowOneRecipe>
-          </section>
+          <ShowOneRecipe id={_id} key={_id}>
+            <Image
+              url={image}
+              name={name}
+              width={400}
+              height={300}
+              customStyles="rounded-md mx-auto"
+            />
+            <span>{name}</span>
+          </ShowOneRecipe>
         ))
       ) : (
         <span>{recipes?.message}</span>

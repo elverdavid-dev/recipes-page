@@ -1,11 +1,12 @@
 import { GetRecipeById } from "../../functions/GetRecipeById";
 import { ParamProps } from "@interfaces/ParamProps.interface";
+import Image from "@/globalComponents/Image";
 const PageById = async ({ params }: ParamProps) => {
   const recipe = await GetRecipeById(params.id);
   /* if (!recipe) {
     notFound();
   } */
-  // const formattedCreatedAt = new Date(recipe.createdAt).toLocaleString();
+
   console.log(recipe);
   return (
     <section>
@@ -13,7 +14,13 @@ const PageById = async ({ params }: ParamProps) => {
         <span>Cargando...</span>
       ) : (
         <div key={recipe._id}>
-          <img src={recipe.image} alt={recipe.name} />
+          <Image
+            url={recipe.image}
+            name={recipe.name}
+            width={400}
+            height={300}
+            customStyles="rounded-md"
+          />
           <span className="text-lg">{recipe.name} </span>
           <article>{recipe.description} </article>
           <ul className="mt-10 mx-5 list-disc list-outside marker:text-gold">
