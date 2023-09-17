@@ -4,6 +4,7 @@ import Providers from "./providers";
 import { ChildrenProps } from "@interfaces/ChildrenProps.interface";
 import "react-multi-carousel/lib/styles.css";
 import "./styles/globals.css";
+import Footer from './Footer';
 
 //Metadata
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: ChildrenProps) {
     <html lang="en" className={` ${kanit.variable} ${rubik.variable}`}>
       <body>
         <Providers>{children}</Providers>
+        <Footer/>
       </body>
     </html>
   );
