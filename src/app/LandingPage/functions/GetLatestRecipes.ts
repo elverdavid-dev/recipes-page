@@ -4,7 +4,8 @@ const BaseUrl = <string>process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function GetLatestRecipes() {
   try {
-    const response = await fetch(`${BaseUrl}/recipes/latest`, {
+    const limit: number = 8;
+    const response = await fetch(`${BaseUrl}/recipes/latest?limit=${limit}`, {
       cache: "force-cache",
       next: { revalidate: 60 },
     });

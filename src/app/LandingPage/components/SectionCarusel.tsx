@@ -4,13 +4,14 @@ import ShowRecipeOneCategory from "./ShowRecipeOneCategory";
 import Image from "@/globalComponents/Image";
 const Carousel = async () => {
   const Categories = await GetAllCategories();
-  console.log(Categories);
+
   return (
     <section className="mt-32 lg:mx-10 mx-4 my-10">
       <h2 className="Subtitle">Categorias</h2>
       <Carusel>
         {Categories?.map(({ _id, image, name }) => (
           <ShowRecipeOneCategory id={_id} key={_id}>
+            {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image
               url={image}
               name={name}

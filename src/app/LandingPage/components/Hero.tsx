@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FaCircle } from "react-icons/fa";
+
 const Hero = () => {
   const router = useRouter();
 
