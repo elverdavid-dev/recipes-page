@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { MenuIcon, XIcon } from "@/assets/icons";
 import { FiMenu, FiX } from "react-icons/fi";
+
 const optionsMenu = [
   {
     title: "Inicio",
