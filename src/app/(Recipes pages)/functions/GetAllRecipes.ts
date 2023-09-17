@@ -1,4 +1,4 @@
-import { RecipeList } from "../interfaces/RecipesList.interface";
+import { RecipeList } from "@interfaces/RecipesList.interface";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 

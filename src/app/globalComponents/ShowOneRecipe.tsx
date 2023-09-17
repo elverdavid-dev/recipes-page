@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { ChildrenProps } from "./layout";
+import { ChildrenProps } from "@interfaces/ChildrenProps.interface";
 
 interface RecipeProps extends ChildrenProps {
   id: string;

@@ -1,4 +1,4 @@
-import { Recipes } from "@/app/(Landing Page)/interfaces/Recipes.interface";
+import { Recipes } from "@interfaces/Recipes.interface";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 

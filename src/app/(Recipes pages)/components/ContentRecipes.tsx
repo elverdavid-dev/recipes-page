@@ -1,7 +1,7 @@
-import ShowOneRecipe from "@/app/ShowOneRecipe";
+import ShowOneRecipe from "@/globalComponents/ShowOneRecipe";
 import { GetAllRecipes } from "../functions/GetAllRecipes";
 import PaginationComponent from "./Pagination";
-
+import Image from "@/globalComponents/Image";
 const ContentRecipes = async () => {
   const data = await GetAllRecipes();
   const initialPage = data?.page || 1;
@@ -22,7 +22,13 @@ const ContentRecipes = async () => {
           data?.data.map(({ _id, image, name }) => (
             <div key={_id}>
               <ShowOneRecipe id={_id}>
-                <img src={image} alt={name} className="rounded-md" />
+                <Image
+                  url={image}
+                  name={name}
+                  width={300}
+                  height={300}
+                  customStyles="mx-auto rounded-md"
+                />
                 <span>{name} </span>
               </ShowOneRecipe>
             </div>

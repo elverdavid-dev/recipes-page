@@ -1,6 +1,6 @@
 "use client";
 
-import { ChildrenProps } from "@/app/layout";
+import { ChildrenProps } from "@interfaces/ChildrenProps.interface";
 import { useRouter } from "next/navigation";
 
 interface Props extends ChildrenProps {
