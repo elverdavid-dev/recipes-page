@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-@apply bg-[#f6f6f6]
+body {
+  @apply bg-[#f6f6f6];
 }
 
-.Subtitle{
-@apply py-10 text-3xl font-kanit text-slate-950 px-5 capitalize
+.Subtitle {
+  @apply py-10 text-3xl font-kanit text-slate-950  capitalize;
 }
