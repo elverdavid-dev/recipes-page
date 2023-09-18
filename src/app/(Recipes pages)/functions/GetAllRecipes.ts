@@ -2,9 +2,9 @@ import { RecipeList } from "@interfaces/RecipesList.interface";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-export async function GetAllRecipes() {
+export async function GetAllRecipes(page = 1) {
   try {
-    const response = await fetch(`${baseUrl}/recipes?page=1&limit=10`, {
+    const response = await fetch(`${baseUrl}/recipes?page=${page}&limit=10`, {
       cache: "force-cache",
       next: { revalidate: 60 },
     });

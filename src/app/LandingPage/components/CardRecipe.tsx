@@ -30,19 +30,6 @@ export default function CardRecipe({ img, name }: Props) {
             <span className="font-bold text-2xl">$20.2</span>
 
             <RiHeartFill size={26} className="text-[#1d1d1d]" />
-            {/*   <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="h-6 w-6"
-            >
-              <path
-                d="M11.9646 6.12856C8.29143 0.454848 0.857147 3.5457 0.857147 9.72628C0.857147 14.3674 11.0491 21.6274 11.9646 22.5714C12.8863 21.6274 22.5714 14.3674 22.5714 9.72628C22.5714 3.59256 15.6446 0.454848 11.9646 6.12856Z"
-                fill="#1D1D1D"
-                fillOpacity="0.7"
-              />
-            </svg> */}
           </div>
         </section>
       </article>

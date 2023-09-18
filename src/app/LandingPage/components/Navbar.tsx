@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { MenuIcon, XIcon } from "@/assets/icons";
+
 import { FiMenu, FiX } from "react-icons/fi";
 
 const optionsMenu = [
@@ -53,7 +53,7 @@ const Navbar = () => {
               <Link
                 key={title + id}
                 href={href}
-                className="hover:text-gold transition-all font-semibold font-rubik"
+                className="hover:text-gold transition-all  font-rubik"
               >
                 {title}
               </Link>
