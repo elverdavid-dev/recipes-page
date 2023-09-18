@@ -1,6 +1,6 @@
 import ShowOneRecipe from "@/globalComponents/ShowOneRecipe";
 import { GetLatestRecipes } from "../functions/GetLatestRecipes";
-import CardRecipe from "./CardRecipe";
+import CardRecipe from "@/globalComponents/CardRecipe";
 
 const SectionRecipesLatest = async () => {
   const Recipes = await GetLatestRecipes();
