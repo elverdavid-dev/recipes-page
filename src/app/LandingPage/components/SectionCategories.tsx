@@ -2,7 +2,8 @@ import { GetAllCategories } from "../functions/GetAllCategories";
 import Carusel from "./Carusel";
 import ShowRecipeOneCategory from "./ShowRecipeOneCategory";
 import Image from "@/globalComponents/Image";
-const Carousel = async () => {
+
+const SectionCategories = async () => {
   const Categories = await GetAllCategories();
 
   return (
@@ -11,7 +12,6 @@ const Carousel = async () => {
       <Carusel>
         {Categories?.map(({ _id, image, name }) => (
           <ShowRecipeOneCategory id={_id} key={_id}>
-            {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image
               url={image}
               name={name}
@@ -29,4 +29,4 @@ const Carousel = async () => {
   );
 };
 
-export default Carousel;
+export default SectionCategories;
