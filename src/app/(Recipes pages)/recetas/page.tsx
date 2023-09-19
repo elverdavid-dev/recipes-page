@@ -1,10 +1,11 @@
 import ContentRecipes from "../components/ContentRecipes";
 import Search from "../components/Search";
-const RecipesPage = () => {
+import { GetAllRecipes } from '../functions/GetAllRecipes';
+const RecipesPage = async () => {
+  const data = await GetAllRecipes()  
   return (
     <>
-      <Search />
-      <ContentRecipes />
+      <ContentRecipes data={data}/>
     </>
   );
 };
