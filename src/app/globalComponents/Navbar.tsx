@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
@@ -17,12 +18,13 @@ const optionsMenu = [
   },
   {
     title: "Categorias",
-    href: "/",
+    href: "/categorias",
   },
 ];
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const pathName = usePathname();
 
   return (
     <>
@@ -33,8 +35,15 @@ const Navbar = () => {
           } fixed bottom-0 sm:pointer-events-none left-0 right-0 top-0 z-10 h-screen w-screen transition-all duration-200 ease-linear sm:hidden`}
           onClick={() => setIsOpenMenu(false)}
         />
-        <nav className="flex justify-between items-center bg-light py-5 sm:px-24 px-4">
-          <Image src="/logoFood.svg" alt="logo" width="120" height="40" />
+        <nav
+          className={`flex justify-between items-center py-5 sm:px-24 px-4 ${
+            pathName === "/" ? "bg-light" : "bg-white"
+          }`}
+        >
+          {/* Logo */}
+          <Link href={"/"}>
+            <Image src="/logoFood.svg" alt="logo" width="120" height="40" />
+          </Link>
           <div
             className={`z-30 top-0 right-0 flex h-screen w-52 flex-col items-center justify-center gap-8 bg-light  fixed ${
               isOpenMenu ? "right-0" : "translate-x-96"
@@ -53,7 +62,10 @@ const Navbar = () => {
               <Link
                 key={title + id}
                 href={href}
-                className="hover:text-gold transition-all  font-rubik"
+                className={`hover:text-gold transition-all  font-rubik  ${
+                  pathName === href ? "text-gold" : "text-slate-900"
+                }
+                 }`}
               >
                 {title}
               </Link>
