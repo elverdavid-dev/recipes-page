@@ -7,7 +7,9 @@ interface ApiResponse extends Recipes {
 }
 export async function GetAllRecipesOfOneCategory(id: string) {
   try {
-    const response = await fetch(`${baseUrl}/recipes/filter?CategoryId=${id}`);
+    const response = await fetch(
+      `${baseUrl}/recipes/filter/categories?CategoryId=${id}`
+    );
     if (!response.ok) {
       throw new Error("Error al obtener las recetas de una categoria");
     }
