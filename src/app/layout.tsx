@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en" className={` ${kanit.variable} ${rubik.variable}`}>
-      <body>
+      <body className='overflow-x-hidden'>
         <Navbar />
         <Providers>{children}</Providers>
         <Footer />
