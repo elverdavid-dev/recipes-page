@@ -7,6 +7,8 @@ export interface Recipes {
   ingredients: string[];
   steps: string[];
   category: Categories;
+  duration: number;
+  country?: string;
   image: string;
   createdAt: string;
   updatedAt: string;
