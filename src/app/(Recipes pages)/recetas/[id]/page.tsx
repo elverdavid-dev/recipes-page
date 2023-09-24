@@ -1,13 +1,13 @@
 import { GetRecipeById } from "../../functions/GetRecipeById";
 import { ParamProps } from "@interfaces/ParamProps.interface";
 import Image from "@/globalComponents/Image";
+import { notFound } from "next/navigation";
 const PageById = async ({ params }: ParamProps) => {
   const recipe = await GetRecipeById(params.id);
-  /* if (!recipe) {
+  if (!recipe) {
     notFound();
-  } */
+  }
 
-  console.log(recipe);
   return (
     <section>
       {recipe === undefined ? (

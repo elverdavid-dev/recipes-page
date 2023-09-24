@@ -6,7 +6,6 @@ export async function GetLatestRecipes() {
   try {
     const limit: number = 8;
     const response = await fetch(`${BaseUrl}/recipes/latest?limit=${limit}`, {
-      cache: "force-cache",
       next: { revalidate: 60 },
     });
     if (!response.ok) {
