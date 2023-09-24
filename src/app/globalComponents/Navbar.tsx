@@ -36,13 +36,13 @@ const Navbar = () => {
           onClick={() => setIsOpenMenu(false)}
         />
         <nav
-          className={`flex justify-between items-center py-5 sm:px-24 px-4 ${
+          className={`flex justify-between items-center py-5 sm:px-20 px-4 ${
             pathName === "/" ? "bg-light" : "bg-white"
           }`}
         >
           {/* Logo */}
           <Link href={"/"}>
-            <Image src="/logoFood.svg" alt="logo" width="120" height="40" />
+            <Image src="/logoFood.svg" alt="logo" width="150" height="60" />
           </Link>
           <div
             className={`z-30 top-0 right-0 flex h-screen w-52 flex-col items-center justify-center gap-8 bg-light  fixed ${
@@ -62,7 +62,7 @@ const Navbar = () => {
               <Link
                 key={title + id}
                 href={href}
-                className={`hover:text-gold transition-all  font-rubik  ${
+                className={`hover:text-gold transition-all  font-inter text-lg  ${
                   pathName === href ? "text-gold" : "text-slate-900"
                 }
                  }`}

@@ -16,7 +16,7 @@ const CaruselComponent = ({ children }: ChildrenProps) => {
         min: 1024,
       },
       items: 3,
-      partialVisibilityGutter: 98,
+      partialVisibilityGutter: 85,
     },
     mobile: {
       breakpoint: {

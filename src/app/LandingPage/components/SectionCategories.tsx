@@ -7,21 +7,23 @@ const SectionCategories = async () => {
   const Categories = await GetAllCategories();
 
   return (
-    <section className="mt-32 lg:mx-20 mx-4 my-10">
+    <section className="mt-32 px-4 lg:px-20 my-10">
       <h2 className="Subtitle">Explora nuestras categorias</h2>
       <Carusel>
         {Categories?.map(({ _id, image, name }) => (
           <ShowRecipeOneCategory id={_id} key={_id}>
-            <Image
-              url={image}
-              name={name}
-              width={270}
-              height={300}
-              customStyles="hover:scale-105 transition-all"
-            />
-            <span className="text-lg text-slate-700 font-rubik block py-1">
-              {name}{" "}
-            </span>
+            <section className="group">
+              <Image
+                url={image}
+                name={name}
+                width={280}
+                height={210}
+                customStyles="hover:scale-105 transition-all"
+              />
+              <span className="text-xl text-slate-950 font-inter block py-2 group-hover:text-gold transition-all ">
+                {name}{" "}
+              </span>
+            </section>
           </ShowRecipeOneCategory>
         ))}
       </Carusel>

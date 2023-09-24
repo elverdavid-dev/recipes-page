@@ -16,11 +16,11 @@ const ContentRecipes = ({ data }: { data: RecipeList | undefined }) => {
       <Search value={valueSearched} handleValue={handleValue} />
       <div className="flex items-center justify-between px-5">
         <h2 className="Subtitle">Recetas</h2>
-        <span className="text-lg font-rubik px-10">
+        <span className="text-lg font-inter px-10">
           Total de recetas {data?.totalItems}{" "}
         </span>
       </div>
-      <section className="mt-16 lg:mx-16 mx-4 grid grid-cols-4 gap-5">
+      <section className="mt-16 lg:mx-16 mx-4 grid grid-cols-2 lg:grid-cols-4 gap-5">
         {recipes.length === 0 ? (
           <span>
             No Hay recetas que concidan con la busqueda : {valueSearched}
