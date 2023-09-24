@@ -24,7 +24,7 @@ const NotFound = () => {
         <p className="text-2xl font-kanit mt-5">Esta pagina no existe!</p>
         <Button
           size="lg"
-          className="mt-5 bg-gold  text-slate-950 rounded-full capitalize font-rubik"
+          className="mt-5 bg-gold  text-slate-950 rounded-full capitalize font-inter"
           onClick={redirectToHome}
         >
           Regresar al inicio

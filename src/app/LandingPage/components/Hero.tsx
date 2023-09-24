@@ -16,14 +16,14 @@ const Hero = () => {
           <strong className="text-gold"> Mundo</strong>
         </h1>
 
-        <span className="text-lg font-rubik text-slate-700 block mt-4">
+        <span className="text-lg font-inter text-slate-700 block mt-4">
           Sumérgete en una experiencia gastronómica única que{" "}
           <br className="lg:block hidden" /> te lleva en un viaje por los
           sabores del mundo.
         </span>
 
         <Button
-          className="font-rubik bg-gold mt-4 rounded-full capitalize text-slate-950"
+          className="font-inter bg-gold mt-4 rounded-full capitalize text-slate-950"
           size="lg"
           onClick={() => router.push("/recetas")}
         >
@@ -37,14 +37,14 @@ const Hero = () => {
           alt="plato numero 1"
           width="343"
           height="338"
-          className="absolute -top-5 right-10"
+          className="absolute -top-5 right-10 z-20"
         />
         <Image
           src="/plate2.png"
           alt="plato numero 2"
           width="202"
           height="200"
-          className="absolute  right-[45%] top-[290px]"
+          className="absolute  right-[45%] top-[290px] z-10"
         />
         <Image
           src="/plate1.png"
