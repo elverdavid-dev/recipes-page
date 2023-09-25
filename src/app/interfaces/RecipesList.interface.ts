@@ -1,8 +1,8 @@
-import { Recipes } from "./Recipes.interface";
+import { type Recipes } from './Recipes.interface'
 
 export interface RecipeList {
-  page: number;
-  totalPages: number;
-  totalItems: number;
-  data: Recipes[];
+  page: number
+  totalPages: number
+  totalItems: number
+  data: Recipes[]
 }

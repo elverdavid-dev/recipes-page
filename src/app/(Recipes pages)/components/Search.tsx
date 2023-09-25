@@ -1,10 +1,10 @@
-import { Button, Input } from "@nextui-org/react";
-import { useState } from "react";
-import { FiSearch } from "react-icons/fi";
+import { Button, Input } from '@nextui-org/react'
+import { useState } from 'react'
+import { FiSearch } from 'react-icons/fi'
 
 interface Props {
-  value: string;
-  handleValue: (value: string) => void;
+  value: string
+  handleValue: (value: string) => void
 }
 const Search = ({ value, handleValue }: Props) => {
   return (
@@ -23,7 +23,7 @@ const Search = ({ value, handleValue }: Props) => {
         Buscar
       </Button> */}
     </section>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search
