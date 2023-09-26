@@ -1,12 +1,12 @@
-"use client";
+'use client'
 
-import { Button } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
+import { Button } from '@nextui-org/react'
+import { useRouter } from 'next/navigation'
 const NotFound = () => {
-  const router = useRouter();
+  const router = useRouter()
   const redirectToHome = () => {
-    router.push("/");
-  };
+    router.push('/')
+  }
   return (
     <section className="bg-white h-screen">
       <div className="flex justify-center">
@@ -31,7 +31,7 @@ const NotFound = () => {
         </Button>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

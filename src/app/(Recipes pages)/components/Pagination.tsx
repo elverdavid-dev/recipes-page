@@ -1,16 +1,16 @@
-"use client";
+'use client'
 
-import { Pagination } from "@nextui-org/react";
-import { useState } from "react";
+import { Pagination } from '@nextui-org/react'
+import { useState } from 'react'
 
 interface PaginateProps {
-  initialPage: number;
-  total: number;
+  initialPage: number
+  total: number
 }
 
 const PaginationComponent = ({ initialPage, total }: PaginateProps) => {
-  const [currentPage, setCurrentPage] = useState(initialPage);
-  console.log(currentPage);
+  const [currentPage, setCurrentPage] = useState(initialPage)
+  console.log(currentPage)
 
   return (
     <Pagination
@@ -25,7 +25,7 @@ const PaginationComponent = ({ initialPage, total }: PaginateProps) => {
       onChange={setCurrentPage}
       className="mt-10 flex justify-center"
     />
-  );
-};
+  )
+}
 
-export default PaginationComponent;
+export default PaginationComponent

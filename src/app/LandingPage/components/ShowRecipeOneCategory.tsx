@@ -1,23 +1,23 @@
-"use client";
+'use client'
 
-import { ChildrenProps } from "@interfaces/ChildrenProps.interface";
-import { useRouter } from "next/navigation";
+import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
+import { useRouter } from 'next/navigation'
 
 interface Props extends ChildrenProps {
-  id: string;
+  id: string
 }
 
 const ShowRecipeOneCategory = ({ children, id }: Props) => {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <section
-      onClick={() => router.push(`/categorias/${id}`)}
+      onClick={() => { router.push(`/categorias/${id}`) }}
       className="cursor-pointer"
     >
       {children}
     </section>
-  );
-};
+  )
+}
 
-export default ShowRecipeOneCategory;
+export default ShowRecipeOneCategory

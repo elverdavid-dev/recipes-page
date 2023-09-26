@@ -1,12 +1,12 @@
-"use client";
+'use client'
 
-import { Button } from "@nextui-org/react";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { FaCircle } from "react-icons/fa";
+import { Button } from '@nextui-org/react'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { FaCircle } from 'react-icons/fa'
 
 const Hero = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <section className="lg:px-20 px-4 grid lg:grid-cols-2 bg-light lg:h-[580px] relative">
@@ -17,7 +17,7 @@ const Hero = () => {
         </h1>
 
         <span className="text-lg font-inter text-slate-700 block mt-4">
-          Sumérgete en una experiencia gastronómica única que{" "}
+          Sumérgete en una experiencia gastronómica única que{' '}
           <br className="lg:block hidden" /> te lleva en un viaje por los
           sabores del mundo.
         </span>
@@ -25,7 +25,7 @@ const Hero = () => {
         <Button
           className="font-inter bg-gold mt-4 rounded-full capitalize text-slate-950"
           size="lg"
-          onClick={() => router.push("/recetas")}
+          onClick={() => { router.push('/recetas') }}
         >
           Ver recetas
         </Button>
@@ -52,7 +52,7 @@ const Hero = () => {
           width="275"
           height="262"
           className="absolute  -right-10 top-[300px]"
-        />{" "}
+        />{' '}
         <FaCircle
           size={56}
           className="text-gold lg:absolute lg:top-10 lg:inset-x-32 lg:block hidden"
@@ -76,7 +76,7 @@ const Hero = () => {
         <Image src="/decoration.svg" alt="decoration" width="179" height="37" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
