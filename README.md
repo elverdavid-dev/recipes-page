@@ -3,6 +3,7 @@
 ---
 
 ## Descripción
+
 Este proyecto es una página de recetas que esta desarrollandose en equipo para compartir una amplia variedad de recetas de cocina de todo el mundo.
 
 ## Intalacion
@@ -19,7 +20,13 @@ git clone https://github.com/ElverDavid07/Project_Recipe_Page
 cd recipes-project
 ```
 
-3. Intalar las dependencias
+3. Intalar pnpm si no lo tienes intalado
+
+```bash
+npm i pnpm -g
+```
+
+4. Intalar las dependencias
 
 ```bash
 pnpm i
@@ -31,10 +38,8 @@ pnpm i
 - Tailwind css
 - Typescript
 - NextUi
-- Zustand
 - React icons
 - React-multi-carrucel
-
 
 ## Docs de la api
 

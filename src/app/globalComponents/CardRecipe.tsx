@@ -8,7 +8,7 @@ interface Props {
 export default function CardRecipe({ img, name }: Props) {
   return (
     <>
-      <article className="flex flex-col cursor-pointer  group">
+      <article className="flex flex-wrap  cursor-pointer  group">
         <Image
           url={img}
           name={name}

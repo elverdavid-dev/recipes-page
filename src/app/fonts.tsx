@@ -1,11 +1,11 @@
-import { Kanit, Rubik, Inter } from "next/font/google";
+import { Inter, Kanit } from "next/font/google";
 
 export const kanit = Kanit({
   subsets: ["latin"],
   preload: true,
   display: "auto",
   fallback: ["system-ui", "arial"],
-  weight: ["500", "700"],
+  weight: "500",
   style: "normal",
   variable: "--kanit",
 });

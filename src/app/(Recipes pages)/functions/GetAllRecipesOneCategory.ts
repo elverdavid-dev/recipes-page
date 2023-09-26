@@ -5,7 +5,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 interface ApiResponse extends RecipeList {
   message?: string;
 }
-export async function GetAllRecipesOfOneCategory(id: string) {
+export async function GetAllRecipesOneCategory(id: string) {
   try {
     const response = await fetch(
       `${baseUrl}/recipes/filter/categories?CategoryId=${id}&page=1&limit=10`
