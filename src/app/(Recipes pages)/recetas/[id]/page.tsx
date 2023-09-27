@@ -1,24 +1,17 @@
-import { GetRecipeById } from '../../functions/GetRecipeById'
-import { type ParamProps } from '@interfaces/ParamProps.interface'
-import Image from '@/globalComponents/Image'
-import { notFound } from 'next/navigation'
+import Image from "@/globalComponents/Image";
+import { type ParamProps } from "@interfaces/ParamProps.interface";
+import { notFound } from "next/navigation";
+import { GetRecipeById } from "../../functions/GetRecipeById";
 const PageById = async ({ params }: ParamProps) => {
-  const recipe = await GetRecipeById(params.id)
+  const recipe = await GetRecipeById(params.id);
   if (!recipe) {
-    notFound()
+    notFound();
   }
-<<<<<<< HEAD
-
-=======
-  console.log('🇨🇴')
->>>>>>> 818af621508f64d2176f53ad905cd99dd79769bf
   return (
     <section>
-      {recipe === undefined
-        ? (
+      {recipe === undefined ? (
         <span>Cargando...</span>
-          )
-        : (
+      ) : (
         <div key={recipe._id}>
           <Image
             url={recipe.image}
@@ -41,9 +34,9 @@ const PageById = async ({ params }: ParamProps) => {
           </ol>
           <span>Categoria : {recipe.category.name} </span>
         </div>
-          )}
+      )}
     </section>
-  )
-}
+  );
+};
 
-export default PageById
+export default PageById;

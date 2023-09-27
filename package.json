@@ -15,14 +15,9 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
-<<<<<<< HEAD
     "eslint": "^8.50.0",
     "eslint-config-next": "^13.5.3",
     "framer-motion": "^10.16.4",
-=======
-    "eslint-config-next": "^13.4.19",
-    "framer-motion": "^10.16.2",
->>>>>>> 818af621508f64d2176f53ad905cd99dd79769bf
     "next": "13.5.2",
     "postcss": "8.4.29",
     "react": "18.2.0",
