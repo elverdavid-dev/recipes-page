@@ -1,8 +1,10 @@
-import Image from "next/image";
-import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
-import { BiLogoFacebook } from "react-icons/bi";
+import Image from 'next/image'
+import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { BiLogoFacebook } from 'react-icons/bi'
 
-export default function Footer() {
+import React from 'react'
+
+export default function Footer () {
   return (
     <section className="w-full bg-light  font-inter mt-16">
       <footer className="max-w-5xl m-auto px-10 lg:px-0">
@@ -53,7 +55,5 @@ export default function Footer() {
         </div>
       </footer>
     </section>
-  );
+  )
 }
-
-import React from "react";

@@ -1,7 +1,10 @@
+
 import { Inter, Kanit } from "next/font/google";
 
+
+
 export const kanit = Kanit({
-  subsets: ["latin"],
+  subsets: ['latin'],
   preload: true,
   display: "auto",
   fallback: ["system-ui", "arial"],
@@ -11,11 +14,11 @@ export const kanit = Kanit({
 });
 
 export const inter = Inter({
-  subsets: ["latin"],
+  subsets: ['latin'],
   preload: true,
-  display: "swap",
-  fallback: ["system-ui", "arial"],
-  weight: "400",
-  style: "normal",
-  variable: "--inter",
-});
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+  weight: '400',
+  style: 'normal',
+  variable: '--inter'
+})

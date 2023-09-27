@@ -1,8 +1,8 @@
 import Hero from "@/LandingPage/components/Hero";
 import SectionCategories from "@/LandingPage/components/SectionCategories";
-
 import SectionRecipesLatest from "@/LandingPage/components/SectionRecipesLatest";
 import SectionCountry from "./LandingPage/components/SectionCountry";
+
 
 const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage = () => {
       <SectionCountry />
       <SectionRecipesLatest />
     </main>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage
