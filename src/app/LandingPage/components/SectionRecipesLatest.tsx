@@ -3,7 +3,7 @@ import ShowOneRecipe from "@/globalComponents/ShowOneRecipe";
 import { GetLatestRecipes } from "../functions/GetLatestRecipes";
 
 const SectionRecipesLatest = async () => {
-  const Recipes = await GetLatestRecipes()
+  const Recipes = await GetLatestRecipes();
 
   return (
     <section className="mt-32 lg:px-20 mx-4">
@@ -18,7 +18,7 @@ const SectionRecipesLatest = async () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionRecipesLatest
+export default SectionRecipesLatest;
