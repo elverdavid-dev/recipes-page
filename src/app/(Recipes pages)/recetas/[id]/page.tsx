@@ -7,7 +7,11 @@ const PageById = async ({ params }: ParamProps) => {
   if (!recipe) {
     notFound()
   }
+<<<<<<< HEAD
+
+=======
   console.log('🇨🇴')
+>>>>>>> 818af621508f64d2176f53ad905cd99dd79769bf
   return (
     <section>
       {recipe === undefined

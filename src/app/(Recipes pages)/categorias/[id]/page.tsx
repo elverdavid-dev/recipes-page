@@ -1,9 +1,10 @@
-import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
-import { GetAllRecipesOfOneCategory } from '../../functions/GetAllRecipesOfOneCategory'
-import { type ParamProps } from '@interfaces/ParamProps.interface'
-import CardRecipe from '@/globalComponents/CardRecipe'
+import CardRecipe from "@/globalComponents/CardRecipe";
+import ShowOneRecipe from "@/globalComponents/ShowOneRecipe";
+import { ParamProps } from "@interfaces/ParamProps.interface";
+import { GetAllRecipesOneCategory } from "../../functions/GetAllRecipesOneCategory";
+
 const page = async ({ params }: ParamProps) => {
-  const recipes = await GetAllRecipesOfOneCategory(params.id)
+  const recipes = await GetAllRecipesOneCategory(params.id);
   return (
     <section>
       {Array.isArray(recipes?.data)

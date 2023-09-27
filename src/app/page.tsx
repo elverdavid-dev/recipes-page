@@ -1,13 +1,15 @@
-import SectionCategories from '@/LandingPage/components/SectionCategories'
-import Hero from '@/LandingPage/components/Hero'
+import Hero from "@/LandingPage/components/Hero";
+import SectionCategories from "@/LandingPage/components/SectionCategories";
+import SectionRecipesLatest from "@/LandingPage/components/SectionRecipesLatest";
+import SectionCountry from "./LandingPage/components/SectionCountry";
 
-import SectionRecipesLatest from '@/LandingPage/components/SectionRecipesLatest'
 
 const HomePage = () => {
   return (
     <main>
       <Hero />
       <SectionCategories />
+      <SectionCountry />
       <SectionRecipesLatest />
     </main>
   )
