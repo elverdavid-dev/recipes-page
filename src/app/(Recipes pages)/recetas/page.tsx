@@ -1,11 +1,15 @@
 import ContentRecipes from '../components/ContentRecipes'
-import Search from '../components/Search'
+import { MaxWidthWrapper } from '../components/MaxWidthWrapper'
 import { GetAllRecipes } from '../functions/GetAllRecipes'
+
 const RecipesPage = async () => {
   const data = await GetAllRecipes()
+  
   return (
     <>
-      <ContentRecipes data={data}/>
+      <MaxWidthWrapper>
+        <ContentRecipes data={data} />
+      </MaxWidthWrapper>
     </>
   )
 }

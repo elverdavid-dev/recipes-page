@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { FaCircle } from 'react-icons/fa'
 
 const Hero = () => {
+
   return (
     <section className='lg:px-20 px-4 grid lg:grid-cols-2 bg-light lg:h-[580px] relative'>
       <div className='lg:w-[600px]'>
