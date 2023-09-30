@@ -1,30 +1,62 @@
-'use client'
-
+import { GetAllRecipes } from '@/(Recipes pages)/functions/GetAllRecipes'
+import { SearchRecipe } from '@/(Recipes pages)/functions/SearchRecipe'
 import { type Recipes } from '@/interfaces/Recipes.interface'
 import { useEffect, useState } from 'react'
 
-export default function useRecipes (initialData: Recipes[]) {
-  const [value, setValue] = useState('')
-  const [recipes, setRecipes] = useState<Recipes[]>(initialData || [])
-  useEffect(() => {
-    // Create a new variable that contains the initial data filtered with the value passed from the input
-    const filterRecipes = initialData.filter(({ name }) =>
-      name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
-    )
+interface Props {
+  initialData?: Recipes[]
+  initialPage: number
+  productsPerPage?: number
+  countOfPages?: number
+}
 
-    // If the input value is empty, set the recipes to the initial data
-    if (value === '') {
+export default function useRecipes({
+  initialData = [],
+  initialPage,
+  productsPerPage = 12,
+  countOfPages = 1
+}: Props) {
+  const [recipes, setRecipes] = useState<Recipes[]>(initialData)
+  const [currentPage, setCurrentPage] = useState(initialPage)
+  const [isFilteredData, setIsFilteredData] = useState(false)
+  const [totalPages, setTotalPages] = useState(countOfPages)
+
+  const searchRecipeTyped = async (valueTyped: string) => {
+    if (valueTyped === '') {
+      setIsFilteredData(false)
       setRecipes(initialData)
-      return
+    } else {
+      setIsFilteredData(true)
+      setCurrentPage(1)
+      const data = await SearchRecipe(valueTyped)
+      setRecipes(data ?? [])
     }
-    // Set the recipes to the filtered data if it exists, otherwise set the recipes to an empty array
-    const newValue = filterRecipes.length !== 0 ? filterRecipes : []
-    setRecipes(newValue)
-  }, [value])
+  }
+
+  const updateRecipes = async () => {
+    if (!isFilteredData) {
+      const data = await GetAllRecipes(currentPage)
+      setRecipes(data?.data ?? [])
+    }
+  }
+
+  useEffect(() => {
+    updateRecipes()
+  }, [currentPage])
+
+  useEffect(() => {
+    if (isFilteredData) {
+      const newValueOfPages = recipes.length <= productsPerPage ? 1 : Math.ceil(recipes.length / productsPerPage)
+      setTotalPages(newValueOfPages)
+    }
+  }, [isFilteredData, recipes.length, productsPerPage]);
 
   return {
-    valueSearched: value,
-    handleValue: setValue,
-    recipes
+    recipes,
+    currentPage,
+    setCurrentPage,
+    searchRecipeTyped,
+    isFilteredData,
+    totalPages
   }
 }

@@ -1,29 +1,28 @@
-'use client'
-
 import { Pagination } from '@nextui-org/react'
-import { useState } from 'react'
 
 interface PaginateProps {
-  initialPage: number
+  currentPage: number
+  handlePage: (page: number) => void
   total: number
 }
 
-const PaginationComponent = ({ initialPage, total }: PaginateProps) => {
-  const [currentPage, setCurrentPage] = useState(initialPage)
-  console.log(currentPage)
-
+const PaginationComponent = ({
+  currentPage,
+  handlePage,
+  total
+}: PaginateProps) => {
   return (
     <Pagination
-      color="warning"
-      size="lg"
+      color='warning'
+      size='lg'
       loop
       showShadow
       showControls
-      initialPage={initialPage}
+      initialPage={1}
       total={total}
       page={currentPage}
-      onChange={setCurrentPage}
-      className="mt-10 flex justify-center"
+      onChange={handlePage}
+      className='mt-10 flex justify-center'
     />
   )
 }
