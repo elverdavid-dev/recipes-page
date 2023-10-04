@@ -16,7 +16,7 @@ const PageById = async ({ params }: ParamProps) => {
         {recipe === undefined ? (
           <span>Cargando...</span>
         ) : (
-          <div className='grid grid-cols-[40%_60%] justify-center items-center gap-10'>
+          <div className='md:grid md:grid-cols-[40%_60%] justify-center items-center gap-10'>
             <Image
               url={recipe.image}
               name={recipe.name}
@@ -26,7 +26,7 @@ const PageById = async ({ params }: ParamProps) => {
               customStyles='rounded-md mx-auto'
             />
             <div>
-              <span className='text-2xl font-bold uppercase flex justify-center mb-5'>
+              <span className='text-2xl font-bold uppercase flex justify-center mb-5 mt-5 md:mt-0'>
                 {recipe.name}
               </span>
 
