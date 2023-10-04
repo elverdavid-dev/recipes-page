@@ -4,7 +4,7 @@ import { GetAllRecipes } from '../functions/GetAllRecipes'
 
 const RecipesPage = async () => {
   const data = await GetAllRecipes()
-  
+
   return (
     <>
       <MaxWidthWrapper>
