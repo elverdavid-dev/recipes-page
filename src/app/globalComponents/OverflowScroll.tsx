@@ -8,5 +8,5 @@ interface Props extends ScrollShadowProps {
 }
 export default function OverflowScroll({ children, ...props }: Props) {
   const { className } = props
-  return <ScrollShadow className={cn(className)}>{children}</ScrollShadow>
+  return <ScrollShadow className={cn(className)} hideScrollBar>{children}</ScrollShadow>
 }
