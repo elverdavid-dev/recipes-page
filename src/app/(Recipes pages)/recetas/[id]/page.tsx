@@ -1,17 +1,22 @@
-import Image from "@/globalComponents/Image";
-import { type ParamProps } from "@interfaces/ParamProps.interface";
-import { notFound } from "next/navigation";
-import { GetRecipeById } from "../../functions/GetRecipeById";
+import Image from '@/globalComponents/Image'
+import { type ParamProps } from '@interfaces/ParamProps.interface'
+import { notFound } from 'next/navigation'
+import { GetRecipeById } from '../../functions/GetRecipeById'
 const PageById = async ({ params }: ParamProps) => {
-  const recipe = await GetRecipeById(params.id);
-  if (!recipe) {
-    notFound();
+  const recipe = await GetRecipeById(params.id)
+  if (recipe === null) {
+    notFound()
   }
+
+  // const rtf = new Intl.RelativeTimeFormat('es')
+  // console.log(rtf.format(-2, 'day'))
   return (
     <section>
-      {recipe === undefined ? (
+      {recipe === undefined
+        ? (
         <span>Cargando...</span>
-      ) : (
+          )
+        : (
         <div key={recipe._id}>
           <Image
             url={recipe.image}
@@ -34,9 +39,9 @@ const PageById = async ({ params }: ParamProps) => {
           </ol>
           <span>Categoria : {recipe.category.name} </span>
         </div>
-      )}
+          )}
     </section>
-  );
-};
+  )
+}
 
-export default PageById;
+export default PageById

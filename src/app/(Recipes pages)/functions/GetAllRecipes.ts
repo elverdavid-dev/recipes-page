@@ -1,6 +1,5 @@
+import { baseUrl } from '@/lib/utils'
 import { type RecipeList } from '@interfaces/RecipesList.interface'
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export async function GetAllRecipes (page = 1) {
   try {

@@ -1,6 +1,5 @@
+import { baseUrl } from '@/lib/utils'
 import { type Recipes } from '@interfaces/Recipes.interface'
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export async function SearchRecipe (name: string) {
   try {
@@ -9,10 +8,10 @@ export async function SearchRecipe (name: string) {
       throw new Error('Error al obtener  la receta')
     }
     const data: Recipes[] = await response.json()
-    if(Array.isArray(data)){
+    if (Array.isArray(data)) {
       return data
     }
-    return [] 
+    return []
   } catch (error) {
     console.log(error)
   }

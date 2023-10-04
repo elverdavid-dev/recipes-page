@@ -1,6 +1,5 @@
+import { baseUrl } from '@/lib/utils'
 import { type Categories } from '@interfaces/Categories.interface'
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string
 
 export async function GetAllCategories () {
   try {
