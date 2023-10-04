@@ -10,6 +10,9 @@ const PageById = async ({ params }: ParamProps) => {
   if (recipe === undefined) {
     notFound()
   }
+
+  // const rtf = new Intl.RelativeTimeFormat('es')
+  // console.log(rtf.format(-2, 'day'))
   return (
     <MaxWidthWrapper>
       <section>
@@ -62,6 +65,7 @@ const PageById = async ({ params }: ParamProps) => {
         )}
       </section>
     </MaxWidthWrapper>
+
   )
 }
 
