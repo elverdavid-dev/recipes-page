@@ -1,10 +1,10 @@
-import Image from "@/globalComponents/Image";
-import { GetAllCategories } from "../functions/GetAllCategories";
-import Carusel from "./Carusel";
-import ShowRecipesOneCategory from "./ShowRecipesOneCategory";
+import Image from '@/globalComponents/Image'
+import { GetAllCategories } from '../functions/GetAllCategories'
+import Carusel from './Carusel'
+import ShowRecipesOneCategory from './ShowRecipesOneCategory'
 
 const SectionCategories = async () => {
-  const Categories = await GetAllCategories();
+  const Categories = await GetAllCategories()
 
   return (
     <section className="mt-32 px-4 lg:px-20 my-10">
@@ -14,21 +14,21 @@ const SectionCategories = async () => {
           <ShowRecipesOneCategory id={_id} key={_id}>
             <section className="group">
               <Image
-                url={image}
-                name={name}
+                src={image}
+                alt={name}
                 width={280}
                 height={210}
-                customStyles="hover:scale-105 transition-all"
+                className="hover:scale-105 transition-all"
               />
               <span className="text-xl text-slate-950 font-inter block py-2 group-hover:text-gold transition-all ">
-                {name}{" "}
+                {name}{' '}
               </span>
             </section>
           </ShowRecipesOneCategory>
         ))}
       </Carusel>
     </section>
-  );
-};
+  )
+}
 
-export default SectionCategories;
+export default SectionCategories
