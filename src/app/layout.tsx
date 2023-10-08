@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
-import Providers from './providers'
+import Footer from '@/globalComponents/Footer'
+import Navbar from '@/globalComponents/Navbar'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import 'react-multi-carousel/lib/styles.css'
+import { inter, kanit } from './fonts'
+import Providers from './providers'
 import './styles/globals.css'
-import Footer from '@/globalComponents/Footer'
-import { kanit, inter } from './fonts'
-import Navbar from '@/globalComponents/Navbar'
 
 // Metadata
 export const metadata: Metadata = {
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     'Descubre una variedad exquisita de recetas culinarias para todos los gustos y ocasiones. Desde platos clásicos hasta creaciones innovadoras, encuentra inspiración para transformar tus ingredientes en obras maestras gastronómicas. ¡Explora, cocina y degusta la magia de la cocina con nosotros!'
 }
 
-export default function RootLayout ({ children }: ChildrenProps) {
+export default function RootLayout({ children }: ChildrenProps) {
   return (
-    <html lang="en" className={` ${kanit.variable} ${inter.variable}`}>
-      <body className="overflow-x-hidden">
+    <html lang="es" className={` ${kanit.variable} ${inter.variable}`}>
+      <body>
         <Navbar />
         <Providers>{children}</Providers>
         <Footer />

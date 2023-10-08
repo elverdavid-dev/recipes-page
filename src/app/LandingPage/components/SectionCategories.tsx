@@ -7,7 +7,7 @@ const SectionCategories = async () => {
   const Categories = await GetAllCategories()
 
   return (
-    <section className="mt-32 px-4 lg:px-20 my-10">
+    <section className="mt-32 px-4 lg:px-20 my-10 2xl:container mx-auto">
       <h2 className="Subtitle">Explora nuestras categorias</h2>
       <Carusel>
         {Categories?.map(({ _id, image, name }) => (

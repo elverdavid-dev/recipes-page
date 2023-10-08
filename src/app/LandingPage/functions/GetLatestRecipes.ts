@@ -1,7 +1,11 @@
 import { baseUrl } from '@/lib/utils'
 import { type Recipes } from '@interfaces/Recipes.interface'
 
-export async function GetLatestRecipes () {
+/**
+ * @description Obtiene las ultimas recetas agregadas a la base de datos
+ */
+
+export async function GetLatestRecipes() {
   try {
     const limit: number = 8
     const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`, {

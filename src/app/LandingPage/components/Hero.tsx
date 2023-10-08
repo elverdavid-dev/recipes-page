@@ -7,7 +7,7 @@ import { FaCircle } from 'react-icons/fa'
 
 const Hero = () => {
   return (
-    <section className="lg:px-20 px-4 grid lg:grid-cols-2 bg-light lg:h-[580px] relative">
+    <section className="lg:px-20 px-4 grid lg:grid-cols-2 bg-light lg:h-[580px] relative 2xl:container mx-auto">
       <div className="lg:w-[600px]">
         <h1 className="lg:text-5xl text-4xl font-kanit font-extrabold lg:mt-32 mt-16 text-slate-950">
           Explora recetas de <br className="lg:block hidden" /> todo el

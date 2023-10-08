@@ -2,11 +2,9 @@ import Image from 'next/image'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { BiLogoFacebook } from 'react-icons/bi'
 
-import React from 'react'
-
-export default function Footer () {
+export default function Footer() {
   return (
-    <section className="w-full bg-light  font-inter mt-16">
+    <section className="w-full bg-light  font-inter mt-16 2xl:container mx-auto">
       <footer className="max-w-5xl m-auto px-10 lg:px-0">
         <div className="flex justify-between py-20 flex-wrap gap-y-10">
           <article className="max-w-xs flex flex-col gap-6">

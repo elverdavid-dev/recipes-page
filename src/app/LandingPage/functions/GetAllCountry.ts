@@ -1,7 +1,11 @@
 import { type CountryData } from '@/interfaces/Cuntry.interface'
 import { baseUrl } from '@/lib/utils'
 
-export async function GetAllRecipesOneCountry() {
+/**
+ * @description Obtiene todos los paises o regiones disponible de la base de datos
+ */
+
+export async function GetAllCountry() {
   try {
     const response = await fetch(`${baseUrl}/countrys?page=1&limit=10`, {
       next: { revalidate: 60 }
