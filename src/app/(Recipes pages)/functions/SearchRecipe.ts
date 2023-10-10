@@ -1,7 +1,13 @@
 import { baseUrl } from '@/lib/utils'
 import { type Recipes } from '@interfaces/Recipes.interface'
 
-export async function SearchRecipe (name: string) {
+/**
+ * @description Busca recetas por nombre desde el servidor.
+ * @param name - El nombre de la receta que se desea buscar.
+ * @returns Una promesa que resuelve en una lista de recetas (Recipes) que coinciden con el nombre o un array vacío en caso de fallo o ausencia de resultados.
+ */
+
+export async function SearchRecipe(name: string) {
   try {
     const response = await fetch(`${baseUrl}/recipes/search?name=${name}`)
     if (!response.ok) {
@@ -13,6 +19,6 @@ export async function SearchRecipe (name: string) {
     }
     return []
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }

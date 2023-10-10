@@ -25,7 +25,6 @@ const optionsMenu = [
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   const pathName = usePathname()
-
   return (
     <>
       <header
@@ -43,7 +42,7 @@ const Navbar = () => {
         />
         <nav
           className={`flex justify-between items-center py-5 sm:px-20 px-4 ${
-            pathName === '/' ? 'bg-light' : 'bg-white'
+            pathName === '/' ? 'bg-light' : 'bg-[#f9f9f9]'
           }`}
         >
           {/* Logo */}

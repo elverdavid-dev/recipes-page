@@ -2,9 +2,9 @@ import { baseUrl } from '@/lib/utils'
 import { type Categories } from '@interfaces/Categories.interface'
 
 /**
- * @description  Obtiene todas las categorías disponibles en la base de datos
+ * @description Obtiene una lista de categorías desde el servidor.
+ * @returns Una promesa que resuelve en una lista de categorías (Categories) o muestra un error en la consola en caso de fallo.
  */
-
 export async function GetAllCategories() {
   try {
     const response = await fetch(`${baseUrl}/categories`, {
@@ -16,6 +16,6 @@ export async function GetAllCategories() {
     const data: Categories[] = await response.json()
     return data
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }

@@ -2,7 +2,8 @@ import { baseUrl } from '@/lib/utils'
 import { type Recipes } from '@interfaces/Recipes.interface'
 
 /**
- * @description Obtiene las ultimas recetas agregadas a la base de datos
+ * @description Obtiene una lista de las recetas más recientes desde el servidor.
+ * @returns Una promesa que resuelve en una lista de recetas (Recipes) o muestra un error en la consola en caso de fallo.
  */
 
 export async function GetLatestRecipes() {
@@ -17,6 +18,6 @@ export async function GetLatestRecipes() {
     const data: Recipes[] = await response.json()
     return data
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
