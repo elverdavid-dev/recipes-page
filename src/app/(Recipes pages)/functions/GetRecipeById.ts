@@ -1,7 +1,13 @@
 import { baseUrl } from '@/lib/utils'
 import { type Recipes } from '@interfaces/Recipes.interface'
 
-export async function GetRecipeById (id: string) {
+/**
+ * @description Obtiene una receta específica por su ID desde el servidor.
+ * @param id - El identificador de la receta que se desea obtener.
+ * @returns Una promesa que resuelve en una receta (Recipes) o muestra un error en la consola en caso de fallo.
+ */
+
+export async function GetRecipeById(id: string) {
   try {
     const response = await fetch(`${baseUrl}/recipes/${id}`)
     if (!response.ok) {
@@ -10,6 +16,6 @@ export async function GetRecipeById (id: string) {
     const data: Recipes = await response.json()
     return data
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }

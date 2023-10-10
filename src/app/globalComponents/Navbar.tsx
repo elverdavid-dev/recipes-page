@@ -25,19 +25,24 @@ const optionsMenu = [
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
   const pathName = usePathname()
-
   return (
     <>
-      <header className={`relative z-50 ${isOpenMenu && 'fixed'}`}>
+      <header
+        className={`relative z-50 2xl:container mx-auto ${
+          isOpenMenu && 'fixed'
+        }`}
+      >
         <div
           className={`${
             isOpenMenu ? 'bg-black/40' : 'bg-transparent'
           } fixed bottom-0 pointer-events-none left-0 right-0 top-0 z-10 h-screen w-screen transition-all duration-200 ease-linear sm:hidden`}
-          onClick={() => { setIsOpenMenu(false) }}
+          onClick={() => {
+            setIsOpenMenu(false)
+          }}
         />
         <nav
           className={`flex justify-between items-center py-5 sm:px-20 px-4 ${
-            pathName === '/' ? 'bg-light' : 'bg-white'
+            pathName === '/' ? 'bg-light' : 'bg-[#f9f9f9]'
           }`}
         >
           {/* Logo */}
@@ -55,7 +60,9 @@ const Navbar = () => {
               <FiX
                 size={30}
                 className="absolute left-4 top-4 h-8 w-8 sm:hidden cursor-pointer"
-                onClick={() => { setIsOpenMenu(false) }}
+                onClick={() => {
+                  setIsOpenMenu(false)
+                }}
               />
             )}
             {optionsMenu.map(({ title, href }, id) => (
@@ -74,7 +81,9 @@ const Navbar = () => {
           <FiMenu
             size={30}
             className="block h-8 sm:hidden z-20 cursor-pointer"
-            onClick={() => { setIsOpenMenu(!isOpenMenu) }}
+            onClick={() => {
+              setIsOpenMenu(!isOpenMenu)
+            }}
           />
         </nav>
       </header>

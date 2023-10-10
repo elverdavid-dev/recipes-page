@@ -13,8 +13,8 @@ const PaginationComponent = ({
 }: PaginateProps) => {
   return (
     <Pagination
-      color='warning'
-      size='lg'
+      color="warning"
+      size="lg"
       loop
       showShadow
       showControls
@@ -22,7 +22,7 @@ const PaginationComponent = ({
       total={total}
       page={currentPage}
       onChange={handlePage}
-      className='mt-10 flex justify-center'
+      className="mt-10 flex justify-center"
     />
   )
 }
