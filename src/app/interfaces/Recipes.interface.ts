@@ -1,4 +1,5 @@
 import { type Categories } from './Categories.interface'
+import { type Country } from './Cuntry.interface'
 
 export interface Recipes {
   _id: string
@@ -8,7 +9,7 @@ export interface Recipes {
   steps: string[]
   category: Categories
   duration: number
-  country?: string
+  country?: Country
   image: string
   createdAt: string
   updatedAt: string

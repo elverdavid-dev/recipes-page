@@ -14,7 +14,7 @@ const Hero = () => {
           <strong className="text-gold"> Mundo</strong>
         </h1>
 
-        <span className="text-lg font-inter text-slate-700 block mt-4">
+        <span className="text-lg font-nunito text-slate-700 block mt-4">
           Sumérgete en una experiencia gastronómica única que{' '}
           <br className="lg:block hidden" /> te lleva en un viaje por los
           sabores del mundo.
@@ -22,7 +22,7 @@ const Hero = () => {
 
         <Button
           as={Link}
-          className="font-inter bg-gold mt-4 rounded-full capitalize text-slate-950"
+          className="font-nunito bg-gold mt-4 rounded-full capitalize text-slate-950"
           size="lg"
           href="/recetas"
         >

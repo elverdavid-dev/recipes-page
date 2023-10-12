@@ -3,7 +3,7 @@ import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
 import { GetLatestRecipes } from '../functions/GetLatestRecipes'
 
 const SectionRecipesLatest = async () => {
-  const Recipes = await GetLatestRecipes()
+  const Recipes = await GetLatestRecipes(12)
 
   return (
     <section className="mt-32 lg:px-20 px-4 2xl:container mx-auto">

@@ -10,7 +10,7 @@ const RedirectPageCountry = () => {
       <Button
         size="lg"
         variant="ghost"
-        className="px-12 font-inter"
+        className="px-12 font-nunito"
         onClick={() => {
           router.push('/paises')
         }}

@@ -27,7 +27,7 @@ const ContentRecipes = ({ data }: { data: RecipeList | undefined }) => {
       <Search handleValue={searchRecipeTyped} />
       <div className="flex items-center justify-between px-5">
         <h2 className="Subtitle">Recetas</h2>
-        <span className="text-lg font-inter px-10">
+        <span className="text-lg font-nunito px-10">
           Total de recetas {totalRecipes}
         </span>
       </div>

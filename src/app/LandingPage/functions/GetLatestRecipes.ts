@@ -6,9 +6,8 @@ import { type Recipes } from '@interfaces/Recipes.interface'
  * @returns Una promesa que resuelve en una lista de recetas (Recipes) o muestra un error en la consola en caso de fallo.
  */
 
-export async function GetLatestRecipes() {
+export async function GetLatestRecipes(limit: number) {
   try {
-    const limit: number = 8
     const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`, {
       next: { revalidate: 60 }
     })

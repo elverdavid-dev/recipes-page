@@ -16,7 +16,8 @@ const config: Config = {
       },
       fontFamily: {
         kanit: ['var(--kanit)'],
-        inter: ['var(--inter)']
+        lora: ['var(--lora)'],
+        nunito: ['var(--nunito)']
       },
       gridTemplateColumns: {
         'auto-fit': 'repeat(auto-fit, minmax(200px, 1fr))'
