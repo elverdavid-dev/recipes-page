@@ -7,7 +7,7 @@ const PageById = async ({ params }: ParamProps) => {
 
   return (
     <>
-      <section className="container lg:px-10 px-4 mx-auto mt-16 lg:flex lg:justify-between gap-x-16">
+      <section className="container px-4 md:px-8 lg:px-10  mx-auto mt-16 lg:flex lg:justify-between gap-x-16">
         <ShowDataRecipe id={id} />
         <Aside />
       </section>
