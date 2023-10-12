@@ -20,7 +20,7 @@ const SectionCategories = async () => {
                 height={210}
                 className="hover:scale-105 transition-all"
               />
-              <span className="text-xl text-slate-950 font-inter block py-2 group-hover:text-gold transition-all ">
+              <span className="text-xl text-slate-950 font-nunito block py-2 group-hover:text-gold transition-all ">
                 {name}{' '}
               </span>
             </section>

@@ -21,7 +21,7 @@ export default function Search({ handleValue }: Props) {
         onValueChange={setEmptyValue}
         isClearable
         size="lg"
-        className="lg:w-[500px] font-inter"
+        className="lg:w-[500px] font-nunito"
         variant="faded"
         placeholder="Buscar recetas..."
         startContent={<FiSearch className="text-slate-500 text-lg" />}

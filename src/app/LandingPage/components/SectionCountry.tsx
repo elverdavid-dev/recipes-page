@@ -19,7 +19,7 @@ const SectionCountry = async () => {
               height={300}
               className="mx-auto"
             />
-            <span className="text-lg text-slate-800 font-inter">{name} </span>
+            <span className="text-lg text-slate-800 font-nunito">{name} </span>
           </ShowRecipesOneCountry>
         ))}
       </section>

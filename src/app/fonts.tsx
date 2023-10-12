@@ -1,21 +1,26 @@
-import { Inter, Kanit } from 'next/font/google'
+import { Kanit, Lora, Nunito } from 'next/font/google'
 
 export const kanit = Kanit({
   subsets: ['latin'],
   preload: true,
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
+  display: 'block',
   weight: '500',
   style: 'normal',
   variable: '--kanit'
 })
 
-export const inter = Inter({
+export const lora = Lora({
   subsets: ['latin'],
-  preload: true,
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  weight: '400',
+  display: 'block',
+  weight: '600',
   style: 'normal',
-  variable: '--inter'
+  variable: '--lora'
+})
+
+export const nunito = Nunito({
+  subsets: ['latin'],
+  display: 'block',
+  weight: '500',
+  style: 'normal',
+  variable: '--nunito'
 })

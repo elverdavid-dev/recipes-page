@@ -4,11 +4,11 @@ import { BiLogoFacebook } from 'react-icons/bi'
 
 export default function Footer() {
   return (
-    <section className="w-full bg-light  font-inter mt-16 2xl:container mx-auto">
+    <section className="w-full bg-light  font-nunito mt-16 2xl:container mx-auto">
       <footer className="max-w-5xl m-auto px-10 lg:px-0">
         <div className="flex justify-between py-20 flex-wrap gap-y-10">
           <article className="max-w-xs flex flex-col gap-6">
-            <Image src="logoFood.svg" alt="logo" width="120" height="40" />
+            <Image src="/logoFood.svg" alt="logo" width="120" height="40" />
             <span className="text-lg font-normal text-[#1d1d1db3] leading-none">
               Jalan Semangka Raya, Telaga Murni,Cikarang Barat, Kab. Bekasi
             </span>

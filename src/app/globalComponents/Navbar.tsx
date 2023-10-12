@@ -69,7 +69,7 @@ const Navbar = () => {
               <Link
                 key={title + id}
                 href={href}
-                className={`hover:text-gold transition-all  font-inter text-lg  ${
+                className={`hover:text-gold transition-all  font-nunito text-lg  ${
                   pathName === href ? 'text-gold' : 'text-slate-900'
                 }
                  }`}
