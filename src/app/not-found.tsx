@@ -8,7 +8,7 @@ const NotFound = () => {
     router.push('/')
   }
   return (
-    <section className="bg-white h-screen">
+    <section className="bg-[#f9f9f9] h-screen">
       <div className="flex justify-center">
         <video
           src="/404-NotFound.mp4"
@@ -17,6 +17,7 @@ const NotFound = () => {
           muted
           width="300"
           height="300"
+          className="rounded-full"
         />
       </div>
       <div className="text-center text-slate-950">

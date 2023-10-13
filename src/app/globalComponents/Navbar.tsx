@@ -19,6 +19,10 @@ const optionsMenu = [
   {
     title: 'Categorias',
     href: '/categorias'
+  },
+  {
+    title: 'Paises',
+    href: '/paises'
   }
 ]
 
