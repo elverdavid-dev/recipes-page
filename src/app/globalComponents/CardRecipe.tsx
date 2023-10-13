@@ -1,11 +1,7 @@
 import Image from '@/globalComponents/Image'
+import { type CardProps } from '@/interfaces/CardProps'
 
-interface Props {
-  img: string
-  name: string
-}
-
-export default function CardRecipe({ img, name }: Props) {
+export default function CardRecipe({ img, name }: CardProps) {
   return (
     <>
       <article className="flex flex-wrap  cursor-pointer  group">
@@ -14,7 +10,7 @@ export default function CardRecipe({ img, name }: Props) {
           alt={name}
           width={280}
           height={210}
-          className="hover:scale-105 transition-all"
+          className="hover:scale-105 transition-transform"
         />
         <span className="font-nunito capitalize text-lg text-slate-950 py-2  group-hover:text-gold transition-all">
           {name}

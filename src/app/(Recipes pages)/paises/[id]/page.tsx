@@ -1,4 +1,5 @@
 import { GetAllRecipesOneCountry } from '@/(Recipes pages)/functions/GetAllRecipesOneCountry'
+import ImageComponent from '@/globalComponents/Image'
 import { type ParamProps } from '@/interfaces/ParamProps.interface'
 import Image from 'next/image'
 
@@ -8,18 +9,16 @@ const page = async ({ params }: ParamProps) => {
 
   return (
     <section>
-      {Array.isArray(data)
-        ? (
+      {Array.isArray(data) ? (
         <section>
           {data.map(({ _id, image, name }) => (
             <section key={_id}>
-              <img src={image} alt={name} />
+              <ImageComponent src={image} alt={name} width={300} height={300} />
               <span>{name} </span>
             </section>
           ))}
         </section>
-          )
-        : (
+      ) : (
         <section>
           <Image
             src="/404-notFound.svg"
@@ -32,7 +31,7 @@ const page = async ({ params }: ParamProps) => {
             No hay recetas relacionadas a este pais
           </p>
         </section>
-          )}
+      )}
     </section>
   )
 }
