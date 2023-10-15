@@ -3,7 +3,7 @@ import ImageComponent from './Image'
 
 const CardCountry = ({ img, name }: CardProps) => {
   return (
-    <div className="relative group">
+    <div className="relative group cursor-pointer">
       <ImageComponent
         src={img}
         alt={name}

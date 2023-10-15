@@ -1,10 +1,10 @@
+import RedirectPageCountry from '@/LandingPage/components/RedirectPageCountry'
 import CardCountry from '@/globalComponents/CardCountry'
 import { GetAllCountry } from '../functions/GetAllCountry'
-import RedirectPageCountry from './RedirectPageCountry'
 import ShowRecipesOneCountry from './ShowRecipesOneCountry'
 
 const SectionCountry = async () => {
-  const countrys = await GetAllCountry()
+  const countrys = await GetAllCountry(6)
 
   return (
     <section className="mt-32 lg:px-20 py-4 2xl:container mx-auto">

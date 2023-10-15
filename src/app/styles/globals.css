@@ -9,3 +9,7 @@
 body {
   @apply bg-[#f9f9f9];
 }
+
+.Tags {
+  @apply flex items-center gap-x-2   text-sm;
+}

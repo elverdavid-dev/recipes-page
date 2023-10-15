@@ -6,9 +6,9 @@ import { baseUrl } from '@/lib/utils'
  * @returns Una promesa que resuelve en una lista de datos de países (CountryData) o muestra un error en la consola en caso de fallo.
  */
 
-export async function GetAllCountry() {
+export async function GetAllCountry(limit: number) {
   try {
-    const response = await fetch(`${baseUrl}/countrys?page=1&limit=10`, {
+    const response = await fetch(`${baseUrl}/countrys?page=1&limit=${limit}`, {
       next: { revalidate: 60 }
     })
     if (!response.ok) {

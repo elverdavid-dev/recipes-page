@@ -17,32 +17,46 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
   return (
     <section className="lg:w-[700px]">
       <h2 className="font-kanit text-lg text-gold">{recipe.country?.name}</h2>
+
+      {/* Title */}
+
       <h1 className="font-lora text-3xl text-slate-900 py-3 capitalize">
         {recipe.name}
       </h1>
+
+      {/* Image */}
+
       <ImageComponent
         src={recipe.image}
         alt={recipe.name}
         width={700}
         height={500}
       />
+
+      {/* Tags */}
+
       <div className="flex items-center gap-x-10 py-3 font-kanit">
-        <span className="flex items-center gap-x-2   text-sm">
+        <span className="Tags">
           <FiCalendar className="text-gold" size={20} /> {fechaFormateada}
         </span>
-        <span className="flex items-center gap-x-2   text-sm">
+        <span className="Tags">
           <FiClock className="text-gold" size={20} /> {recipe.duration}
           {' Mins '}
         </span>
-        <span className="flex items-center gap-x-2   text-sm">
+        <span className="Tags">
           <BiCategory className="text-gold" size={20} />
           {recipe.category.name}
         </span>
       </div>
 
+      {/* Description */}
+
       <article className="font-nunito text-lg  mt-10">
         {recipe.description}
       </article>
+
+      {/* Ingredients */}
+
       <div className="mt-16 flex items-center gap-x-2">
         <FiList className="text-gold" size={32} />
         <h2 className="Subtitle">Ingredientes</h2>
@@ -52,11 +66,14 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
           <CheckBoxComponent key={i + recipe}>{recipe} </CheckBoxComponent>
         ))}
       </div>
+
+      {/* Steps */}
+
       <div className="mt-16 flex items-center gap-x-2">
         <FiList className="text-gold" size={32} />
         <h2 className="Subtitle">Pasos </h2>
       </div>
-      <ul className="">
+      <ul className="lg:mb-16">
         {recipe.steps.map((recipe, i) => (
           <li key={i + recipe} className="py-5">
             <ChipComponent>Paso {i + 1} </ChipComponent>
