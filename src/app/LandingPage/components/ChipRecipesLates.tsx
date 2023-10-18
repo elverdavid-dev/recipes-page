@@ -1,6 +1,7 @@
 'use client'
 import { type ChildrenProps } from '@/interfaces/ChildrenProps.interface'
 import { Chip } from '@nextui-org/react'
+
 const ChipRecipesLates = ({ children }: ChildrenProps) => {
   return (
     <Chip

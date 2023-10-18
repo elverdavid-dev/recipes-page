@@ -7,6 +7,7 @@ interface Props extends ChildrenProps {
   id: string
 }
 
+// Al darle click a un pais redirigue a la pagina de ver todas las recetas de una pais
 const ShowRecipesOneCountry = ({ children, id }: Props) => {
   const router = useRouter()
 

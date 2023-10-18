@@ -3,6 +3,7 @@
 import { Button } from '@nextui-org/react'
 import { useRouter } from 'next/navigation'
 
+// Boton para ir a la pagina de paises
 const RedirectPageCountry = () => {
   const router = useRouter()
   return (

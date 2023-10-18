@@ -36,8 +36,9 @@ const CaruselComponent = ({ children }: ChildrenProps) => {
       responsive={Response}
       infinite
       autoPlay
-      autoPlaySpeed={5000}
+      autoPlaySpeed={4000}
       removeArrowOnDeviceType={['mobile', 'tablet']}
+      ssr={true}
       partialVisbile
     >
       {children}
