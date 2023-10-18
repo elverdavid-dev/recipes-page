@@ -19,6 +19,7 @@ export const lora = Lora({
 
 export const nunito = Nunito({
   subsets: ['latin'],
+  fallback: ['sans-serif'],
   display: 'block',
   weight: '500',
   style: 'normal',

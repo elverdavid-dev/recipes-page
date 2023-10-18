@@ -10,6 +10,10 @@ body {
   @apply bg-[#f9f9f9];
 }
 
-.Tags {
+.RecipeInfoTags {
   @apply flex items-center gap-x-2   text-sm;
+}
+
+.Text-balance {
+  text-wrap: balance;
 }

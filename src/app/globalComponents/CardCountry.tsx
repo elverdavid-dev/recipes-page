@@ -1,7 +1,11 @@
-import { type CardProps } from '@/interfaces/CardProps'
 import ImageComponent from './Image'
 
-const CardCountry = ({ img, name }: CardProps) => {
+interface CardCountryProps {
+  img: string
+  name: string
+}
+
+const CardCountry = ({ img, name }: CardCountryProps) => {
   return (
     <div className="relative group cursor-pointer">
       <ImageComponent
@@ -9,7 +13,7 @@ const CardCountry = ({ img, name }: CardProps) => {
         alt={name}
         width={400}
         height={300}
-        className="transition-transform group-hover:scale-105 "
+        className="transition-transform group-hover:scale-105 w-full"
       />
       <span className="text-2xl text-white font-kanit absolute bottom-4 left-5 z-10">
         {name}

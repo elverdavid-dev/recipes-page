@@ -1,5 +1,5 @@
 import { GetAllRecipesOneCountry } from '@/(Recipes pages)/functions/GetAllRecipesOneCountry'
-import ImageComponent from '@/globalComponents/Image'
+import CardRecipe from '@/globalComponents/CardRecipe'
 import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
 import { type ParamProps } from '@/interfaces/ParamProps.interface'
 import Image from 'next/image'
@@ -9,19 +9,19 @@ const page = async ({ params }: ParamProps) => {
   const data = await GetAllRecipesOneCountry(id)
 
   return (
-    <section className="mx-auto container mt-16">
+    <section className="mx-auto container mt-16 lg:px-20 px-4">
       {Array.isArray(data) ? (
-        <section className="grid grid-cols-3">
-          {data.map(({ _id, image, name }) => (
+        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {data.map(({ _id, image, name, category, portions, duration }) => (
             <section key={_id}>
               <ShowOneRecipe id={_id}>
-                <ImageComponent
-                  src={image}
-                  alt={name}
-                  width={300}
-                  height={300}
+                <CardRecipe
+                  name={name}
+                  img={image}
+                  category={category.name}
+                  duration={duration}
+                  portions={portions}
                 />
-                <span>{name} </span>
               </ShowOneRecipe>
             </section>
           ))}

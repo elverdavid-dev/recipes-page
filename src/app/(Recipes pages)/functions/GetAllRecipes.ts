@@ -10,7 +10,7 @@ import { type RecipeList } from '@interfaces/RecipesList.interface'
 
 export async function GetAllRecipes(page = 1): Promise<RecipeList | undefined> {
   try {
-    const response = await fetch(`${baseUrl}/recipes?page=${page}&limit=10`, {
+    const response = await fetch(`${baseUrl}/recipes?page=${page}&limit=20`, {
       next: { revalidate: 60 }
     })
     if (!response.ok) {
