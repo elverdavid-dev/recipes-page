@@ -7,6 +7,8 @@ interface Props extends ChildrenProps {
   id: string
 }
 
+// Al darle click a una categoria redirigue a la pagina de ver todas las recetas de una categoria
+
 const ShowRecipesOneCategory = ({ children, id }: Props) => {
   const router = useRouter()
 
