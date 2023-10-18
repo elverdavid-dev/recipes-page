@@ -1,16 +1,13 @@
-import ContentRecipes from '../components/ContentRecipes'
-import { MaxWidthWrapper } from '../components/MaxWidthWrapper'
 import { GetAllRecipes } from '../functions/GetAllRecipes'
+import ContentRecipes from './components/ContentRecipes'
 
 const RecipesPage = async () => {
   const data = await GetAllRecipes()
 
   return (
-    <>
-      <MaxWidthWrapper>
-        <ContentRecipes data={data} />
-      </MaxWidthWrapper>
-    </>
+    <main className="mx-auto container">
+      <ContentRecipes data={data} />
+    </main>
   )
 }
 

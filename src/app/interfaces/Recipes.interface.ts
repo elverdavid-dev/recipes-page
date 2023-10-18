@@ -9,6 +9,7 @@ export interface Recipes {
   steps: string[]
   category: Categories
   duration: number
+  portions: number
   country?: Country
   image: string
   createdAt: string

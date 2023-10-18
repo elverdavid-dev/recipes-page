@@ -4,8 +4,8 @@ import CheckBoxComponent from '@/(Recipes pages)/recetas/components/CheckBox'
 import ChipComponent from '@/(Recipes pages)/recetas/components/Chip'
 import ImageComponent from '@/globalComponents/Image'
 import { notFound } from 'next/navigation'
-import { BiCategory } from 'react-icons/bi'
-import { FiCalendar, FiClock, FiList } from 'react-icons/fi'
+import { FiList } from 'react-icons/fi'
+import RecipeInfoTags from './RecipeInfoTags'
 
 const ShowDataRecipe = async ({ id }: { id: string }) => {
   const recipe = await GetRecipeById(id)
@@ -13,7 +13,6 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
     notFound()
   }
   const fechaFormateada = FormatRelativeDate(recipe.createdAt)
-
   return (
     <section className="lg:w-[700px]">
       <h2 className="font-kanit text-lg text-gold">{recipe.country?.name}</h2>
@@ -35,19 +34,12 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 
       {/* Tags */}
 
-      <div className="flex items-center gap-x-10 py-3 font-kanit">
-        <span className="Tags">
-          <FiCalendar className="text-gold" size={20} /> {fechaFormateada}
-        </span>
-        <span className="Tags">
-          <FiClock className="text-gold" size={20} /> {recipe.duration}
-          {' Mins '}
-        </span>
-        <span className="Tags">
-          <BiCategory className="text-gold" size={20} />
-          {recipe.category.name}
-        </span>
-      </div>
+      <RecipeInfoTags
+        fecha={fechaFormateada}
+        category={recipe.category.name}
+        duration={recipe.duration}
+        portions={recipe.portions}
+      />
 
       {/* Description */}
 
