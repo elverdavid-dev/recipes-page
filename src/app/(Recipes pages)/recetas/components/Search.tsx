@@ -14,6 +14,19 @@ export default function Search({ handleValue }: Props) {
       handleValue(emptyValue)
     }
   }, [emptyValue])
+
+  // Hace la busqueda de la receta que se introdujo en el input
+  const handleSearch = () => {
+    handleValue(emptyValue)
+  }
+
+  // Si se presiona la tecla "Enter", se ejecuta la búsqueda de la receta.
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSearch()
+    }
+  }
+
   return (
     <div className="flex gap-x-2 mt-16 justify-center mx-4 items-center">
       <Input
@@ -25,14 +38,9 @@ export default function Search({ handleValue }: Props) {
         variant="faded"
         placeholder="Buscar recetas..."
         startContent={<FiSearch className="text-slate-500 text-lg" />}
+        onKeyDown={handleKeyDown}
       />
-      <Button
-        type="submit"
-        size="lg"
-        onClick={() => {
-          handleValue(emptyValue)
-        }}
-      >
+      <Button type="submit" size="lg" onClick={handleSearch}>
         Buscar
       </Button>
     </div>

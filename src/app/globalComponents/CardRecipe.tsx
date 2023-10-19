@@ -1,7 +1,7 @@
 import { formatDuration } from '@/(Recipes pages)/functions/FormayDurations'
 import ChipRecipesLates from '@/LandingPage/components/ChipRecipesLates'
 import Image from '@/globalComponents/Image'
-import { type CardProps } from '@/interfaces/CardProps.interface'
+import { type CardRecipeProps } from '@/interfaces/CardRecipeProps.interface'
 
 export default function CardRecipe({
   img,
@@ -9,7 +9,7 @@ export default function CardRecipe({
   category,
   duration,
   portions
-}: CardProps) {
+}: CardRecipeProps) {
   const durationFormat = formatDuration(duration)
   return (
     <>
