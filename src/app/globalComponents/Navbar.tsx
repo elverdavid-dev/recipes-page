@@ -51,7 +51,7 @@ const Navbar = () => {
         >
           {/* Logo */}
           <Link href={'/'}>
-            <Image src="/logoFood.svg" alt="logo" width="150" height="60" />
+            <Image src="/logo.svg" alt="logo" width="150" height="60" />
           </Link>
           <div
             className={`z-30 top-0 right-0 flex h-screen w-52 flex-col items-center justify-center gap-8 bg-light  fixed ${
