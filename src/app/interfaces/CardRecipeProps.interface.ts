@@ -1,4 +1,4 @@
-export interface CardProps {
+export interface CardRecipeProps {
   img: string
   name: string
   category: string

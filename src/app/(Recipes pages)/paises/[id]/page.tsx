@@ -1,13 +1,16 @@
 import { GetAllRecipesOneCountry } from '@/(Recipes pages)/functions/GetAllRecipesOneCountry'
 import CardRecipe from '@/globalComponents/CardRecipe'
+import NotFound from '@/globalComponents/NotFound'
 import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
 import { type ParamProps } from '@/interfaces/ParamProps.interface'
-import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
 const page = async ({ params }: ParamProps) => {
   const id = params.id
   const data = await GetAllRecipesOneCountry(id)
-
+  if (data === undefined) {
+    notFound()
+  }
   return (
     <section className="mx-auto container mt-16 lg:px-20 px-4">
       {Array.isArray(data) ? (
@@ -27,18 +30,7 @@ const page = async ({ params }: ParamProps) => {
           ))}
         </section>
       ) : (
-        <section>
-          <Image
-            src="/404-notFound.svg"
-            alt="404 not found"
-            width={400}
-            height={300}
-            className="mx-auto"
-          />
-          <p className="text-center text-3xl font-kanit text-slate-950">
-            No hay recetas relacionadas a este pais
-          </p>
-        </section>
+        <NotFound description="No hay recetas relacionadas a este pais" />
       )}
     </section>
   )

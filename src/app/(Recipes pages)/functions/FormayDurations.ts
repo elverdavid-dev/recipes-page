@@ -8,8 +8,13 @@ export function formatDuration(durationInMinutes: number): string {
   if (durationInMinutes < 60) {
     return `${durationInMinutes} min`
   } else {
-    const hours = Math.floor(durationInMinutes / 60)
-    const minutes = durationInMinutes % 60
-    return `${hours}:${minutes < 10 ? `0${minutes}` : minutes} hrs`
+    if (durationInMinutes % 60 === 0) {
+      const hours = durationInMinutes / 60
+      return `${hours} hrs`
+    } else {
+      const hours = Math.floor(durationInMinutes / 60)
+      const minutes = durationInMinutes % 60
+      return `${hours}:${minutes} hrs`
+    }
   }
 }

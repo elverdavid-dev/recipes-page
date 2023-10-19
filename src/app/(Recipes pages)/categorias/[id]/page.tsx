@@ -1,10 +1,16 @@
 import CardRecipe from '@/globalComponents/CardRecipe'
+import NotFound from '@/globalComponents/NotFound'
 import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
 import { type ParamProps } from '@interfaces/ParamProps.interface'
+import { notFound } from 'next/navigation'
 import { GetAllRecipesOneCategory } from '../../functions/GetAllRecipesOneCategory'
 
-const page = async ({ params }: ParamProps) => {
+const CategoryPage = async ({ params }: ParamProps) => {
   const recipes = await GetAllRecipesOneCategory(params.id)
+
+  if (recipes === undefined) {
+    notFound()
+  }
   return (
     <section className="mx-auto container">
       {Array.isArray(recipes?.data) ? (
@@ -24,12 +30,10 @@ const page = async ({ params }: ParamProps) => {
           )}
         </section>
       ) : (
-        <span className="mt-10 text-lg flex justify-center">
-          {recipes?.message}
-        </span>
+        <NotFound description={recipes?.message} />
       )}
     </section>
   )
 }
 
-export default page
+export default CategoryPage
