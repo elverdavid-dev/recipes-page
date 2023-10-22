@@ -10,7 +10,7 @@ const NotFound = ({ description }: { description: string | undefined }) => {
         height={300}
         className="mx-auto"
       />
-      <p className="text-center text-3xl font-kanit text-slate-950">
+      <p className="text-center text-3xl font-readexPro text-slate-950">
         {description}
       </p>
     </section>

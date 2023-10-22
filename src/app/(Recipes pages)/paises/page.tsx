@@ -6,7 +6,7 @@ const pageAllCountry = async () => {
   const dataCountry = await GetAllCountry(12)
   return (
     <section className="mx-auto container px-4 mt-20">
-      <h3 className="text-end py-5 text-2xl font-kanit">
+      <h3 className="text-end py-5 text-2xl font-readexPro">
         {dataCountry?.totalItems} Paises{' '}
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

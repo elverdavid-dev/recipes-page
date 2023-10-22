@@ -4,7 +4,7 @@ import Footer from '@/globalComponents/Footer'
 import Navbar from '@/globalComponents/Navbar'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import 'react-multi-carousel/lib/styles.css'
-import { kanit, lora, nunito } from './fonts'
+import { lora, nunito, readexPro } from './fonts'
 import Providers from './providers'
 import './styles/globals.css'
 
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html
       lang="es"
-      className={` ${kanit.variable}  ${lora.variable} ${nunito.variable}`}
+      className={`  ${lora.variable} ${nunito.variable} ${readexPro.variable}`}
     >
       <body>
         <Navbar />
