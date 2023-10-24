@@ -1,30 +1,12 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
+import { optionsMenu } from '@/lib/optionsMenu'
 import { FiMenu, FiX } from 'react-icons/fi'
-
-const optionsMenu = [
-  {
-    title: 'Inicio',
-    href: '/'
-  },
-  {
-    title: 'Recetas',
-    href: '/recetas'
-  },
-  {
-    title: 'Categorias',
-    href: '/categorias'
-  },
-  {
-    title: 'Paises',
-    href: '/paises'
-  }
-]
+import Logo from './Logo'
 
 const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
@@ -49,10 +31,7 @@ const Navbar = () => {
             pathName === '/' ? 'bg-light' : 'bg-[#f9f9f9]'
           }`}
         >
-          {/* Logo */}
-          <Link href={'/'}>
-            <Image src="/logo.svg" alt="logo" width="150" height="60" />
-          </Link>
+          <Logo />
           <div
             className={`z-30 top-0 right-0 flex h-screen w-52 flex-col items-center justify-center gap-8 bg-light  fixed ${
               isOpenMenu ? 'right-0' : 'translate-x-96'

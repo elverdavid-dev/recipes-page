@@ -22,7 +22,7 @@ const Hero = () => {
 
         <Button
           as={Link}
-          className="font-nunito bg-gold mt-4 rounded-full capitalize text-slate-950"
+          className="font-nunito bg-gold mt-4 rounded-full capitalize"
           size="lg"
           href="/recetas"
         >

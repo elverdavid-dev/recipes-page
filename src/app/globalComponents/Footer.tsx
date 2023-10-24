@@ -1,57 +1,41 @@
-import Image from 'next/image'
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
-import { BiLogoFacebook } from 'react-icons/bi'
+import Link from 'next/link'
+import Logo from './Logo'
 
 export default function Footer() {
   return (
-    <section className="w-full bg-light  font-nunito mt-16 2xl:container mx-auto">
-      <footer className="max-w-5xl m-auto px-10 lg:px-0">
-        <div className="flex justify-between py-20 flex-wrap gap-y-10">
-          <article className="max-w-xs flex flex-col gap-6">
-            <Image src="/logo.svg" alt="logo" width="120" height="40" />
-            <span className="text-lg font-normal text-[#1d1d1db3] leading-none">
-              Elver David Peñate
-            </span>
-            <ul className="flex gap-8">
-              <li className="bg-white p-2 rounded-full shadow-md shadow-black/50 cursor-pointer">
-                <AiOutlineInstagram className="w-full" />
-              </li>
-              <li className="bg-gold p-2 rounded-full shadow-md shadow-black/50 cursor-pointer">
-                <BiLogoFacebook />
-              </li>
-              <li className="bg-white p-2 rounded-full shadow-md shadow-black/50 cursor-pointer">
-                <AiOutlineTwitter />
-              </li>
-            </ul>
-          </article>
-          <article>
-            <h3 className="text-xl font-semibold">Company</h3>
-            <ul className="[&>li]:text-lg [&>li]:font-normal [&>li]:text-[#1d1d1db3] flex flex-col gap-3 mt-4">
-              <li>About Us</li>
-              <li>Career</li>
-              <li>How It Work</li>
-            </ul>
-          </article>
-          <article>
-            <h3 className="text-xl font-semibold">Policy</h3>
-            <ul className="[&>li]:text-lg [&>li]:font-normal [&>li]:text-[#1d1d1db3] flex flex-col gap-3 mt-4">
-              <li>FAQ</li>
-              <li>Privacy</li>
-              <li>Shipping</li>
-            </ul>
-          </article>
-          <article>
-            <h3 className="text-xl font-semibold">Get In Touch</h3>
-            <ul className="[&>li]:text-lg [&>li]:font-normal [&>li]:text-[#1d1d1db3] flex flex-col gap-3 mt-4">
-              <li>+62 896 7311 2766</li>
-              <li>food@example.com</li>
-            </ul>
-          </article>
-        </div>
-        <div className="border-t border-black/70 p-10 flex justify-center">
-          <p>© 2022 Let’sFood. ALL RIGHT RESERVED.</p>
-        </div>
-      </footer>
-    </section>
+    <footer className="bg-light flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between w-full p-5 mt-44 font-nunito">
+      <div>
+        <Logo />
+      </div>
+      <div>
+        <p className="text-gray-800 text-center md:text-left flex gap-2">
+          &copy; 2023
+          <span className="text-gray-900 font-bold">GlobalFood.</span>{' '}
+          <a
+            href="https://www.elvportafolio.website"
+            target="_blank"
+            rel="noreferrer"
+            className="border-b-2 border-transparent hover:border-gold transition-colors text-gray-700 hover:text-gray-900"
+          >
+            Elver David Peñate
+          </a>
+        </p>
+      </div>
+      <div className="flex flex-col xl:flex-row items-center gap-2">
+        <Link
+          href="#"
+          className="text-gray-700  hover:text-gray-900 transition-colors duration-300"
+        >
+          Terminos y condiciones
+        </Link>
+        <span className="hidden xl:flex">|</span>
+        <Link
+          href="#"
+          className="text-gray-700  hover:text-gray-900  transition-colors duration-300"
+        >
+          Política de privacidad
+        </Link>
+      </div>
+    </footer>
   )
 }
