@@ -39,7 +39,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpenMenu ? 'bg-black/40' : 'bg-transparent'
-          } fixed bottom-0 pointer-events-none left-0 right-0 top-0 z-10 h-screen w-screen transition-all duration-200 ease-linear sm:hidden`}
+          } fixed  pointer-events-none inset-0 z-10 h-screen w-screen transition-all duration-200 ease-linear sm:hidden`}
           onClick={() => {
             setIsOpenMenu(false)
           }}

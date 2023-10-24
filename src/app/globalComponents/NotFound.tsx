@@ -4,7 +4,7 @@ const NotFound = ({ description }: { description: string | undefined }) => {
   return (
     <section>
       <Image
-        src="/404-notFound.svg"
+        src="/404/404-notFound.svg"
         alt="404 not found"
         width={400}
         height={300}

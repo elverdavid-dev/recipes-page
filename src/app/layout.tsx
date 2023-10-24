@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
 import Footer from '@/globalComponents/Footer'
-import Navbar from '@/globalComponents/Navbar'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import 'react-multi-carousel/lib/styles.css'
 import { lora, nunito, readexPro } from './fonts'
+import Navbar from './globalComponents/Navbar'
 import Providers from './providers'
 import './styles/globals.css'
 
@@ -22,6 +22,7 @@ export default function RootLayout({ children }: ChildrenProps) {
       className={`  ${lora.variable} ${nunito.variable} ${readexPro.variable}`}
     >
       <body>
+        {/* <NavbarUi /> */}
         <Navbar />
         <Providers>{children}</Providers>
         <Footer />

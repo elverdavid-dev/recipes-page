@@ -11,7 +11,7 @@ const NotFound = () => {
     <section className="bg-[#f9f9f9] h-screen">
       <div className="flex justify-center">
         <video
-          src="/404-NotFound.mp4"
+          src="/404/404-NotFound.mp4"
           autoPlay
           loop
           muted

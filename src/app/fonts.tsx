@@ -1,22 +1,21 @@
-import { Lora, Nunito, Readex_Pro } from 'next/font/google'
+import localFont from 'next/font/local'
 
-export const lora = Lora({
-  subsets: ['latin'],
-  display: 'block',
-  weight: '600',
-  variable: '--lora'
-})
-
-export const nunito = Nunito({
-  subsets: ['latin'],
-  display: 'block',
-  weight: '500',
+export const nunito = localFont({
+  src: '../../public/font/nunito.woff2',
+  display: 'swap',
+  preload: true,
   variable: '--nunito'
 })
 
-export const readexPro = Readex_Pro({
-  subsets: ['latin'],
+export const lora = localFont({
+  src: '../../public/font/lora.woff2',
+  display: 'swap',
+  variable: '--lora'
+})
+
+export const readexPro = localFont({
+  src: '../../public/font/readexPro.woff2',
+  display: 'swap',
   preload: true,
-  weight: ['700', '500'],
   variable: '--readexPro'
 })
