@@ -19,7 +19,7 @@ const AsideSection = async () => {
                 className="rounded-md group-hover:scale-105 transition-all"
               />
               <div>
-                <p className="font-kanit">{category.name} </p>
+                <p className="font-readexPro">{category.name} </p>
                 <h2 className="font-nunito group-hover:text-gold group-hover:underline transition-all">
                   {name}{' '}
                 </h2>

@@ -15,13 +15,11 @@ const config: Config = {
         gold: '#FFAC4B'
       },
       fontFamily: {
-        kanit: ['var(--kanit)'],
         lora: ['var(--lora)'],
-        nunito: ['var(--nunito)']
-      },
-      gridTemplateColumns: {
-        'auto-fit': 'repeat(auto-fit, minmax(200px, 1fr))'
+        nunito: ['var(--nunito)'],
+        readexPro: ['var(--readexPro)']
       }
+
     }
   },
   plugins: [nextui()]

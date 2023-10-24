@@ -1,27 +1,21 @@
-import { Kanit, Lora, Nunito } from 'next/font/google'
+import localFont from 'next/font/local'
 
-export const kanit = Kanit({
-  subsets: ['latin'],
+export const nunito = localFont({
+  src: '../../public/font/nunito.woff2',
+  display: 'swap',
   preload: true,
-  display: 'block',
-  weight: '500',
-  style: 'normal',
-  variable: '--kanit'
+  variable: '--nunito'
 })
 
-export const lora = Lora({
-  subsets: ['latin'],
-  display: 'block',
-  weight: '600',
-  style: 'normal',
+export const lora = localFont({
+  src: '../../public/font/lora.woff2',
+  display: 'swap',
   variable: '--lora'
 })
 
-export const nunito = Nunito({
-  subsets: ['latin'],
-  fallback: ['sans-serif'],
-  display: 'block',
-  weight: '500',
-  style: 'normal',
-  variable: '--nunito'
+export const readexPro = localFont({
+  src: '../../public/font/readexPro.woff2',
+  display: 'swap',
+  preload: true,
+  variable: '--readexPro'
 })

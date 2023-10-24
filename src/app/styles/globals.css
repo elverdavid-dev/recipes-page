@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .Subtitle {
-  @apply py-10 text-3xl font-kanit text-slate-950  capitalize;
+  @apply py-10 text-3xl font-readexPro text-slate-950  capitalize;
 }
 
 body {

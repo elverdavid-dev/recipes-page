@@ -15,7 +15,9 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
   const fechaFormateada = FormatRelativeDate(recipe.createdAt)
   return (
     <section className="lg:w-[700px]">
-      <h2 className="font-kanit text-lg text-gold">{recipe.country?.name}</h2>
+      <h2 className="font-readexPro text-lg text-gold">
+        {recipe.country?.name}
+      </h2>
 
       {/* Title */}
 

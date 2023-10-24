@@ -11,7 +11,7 @@ const SectionCategories = async () => {
       <h2 className="Subtitle">Explora nuestras categorias</h2>
       <Carusel>
         {Categories?.map(({ _id, image, name }) => (
-          <ShowRecipesOneCategory id={_id} key={_id}>
+          <ShowRecipesOneCategory id={_id} key={_id} category={name}>
             <section className="group">
               <Image
                 src={image}

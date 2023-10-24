@@ -11,7 +11,7 @@ const NotFound = () => {
     <section className="bg-[#f9f9f9] h-screen">
       <div className="flex justify-center">
         <video
-          src="/404-NotFound.mp4"
+          src="/404/404-NotFound.mp4"
           autoPlay
           loop
           muted
@@ -22,7 +22,7 @@ const NotFound = () => {
       </div>
       <div className="text-center text-slate-950">
         <strong className="font-extrabold text-7xl">Oops!</strong>
-        <p className="text-2xl font-kanit mt-5">Esta pagina no existe!</p>
+        <p className="text-2xl font-readexPro mt-5">Esta pagina no existe!</p>
         <Button
           size="lg"
           className="mt-5 bg-gold  text-slate-950 rounded-full capitalize font-nunito"
