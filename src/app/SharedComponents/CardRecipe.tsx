@@ -1,6 +1,6 @@
 import { formatDuration } from '@/(Recipes pages)/functions/FormayDurations'
 import ChipRecipesLates from '@/LandingPage/components/ChipRecipesLates'
-import Image from '@/globalComponents/Image'
+import Image from '@/SharedComponents/Image'
 import { type CardRecipeProps } from '@/interfaces/CardRecipeProps.interface'
 
 export default function CardRecipe({

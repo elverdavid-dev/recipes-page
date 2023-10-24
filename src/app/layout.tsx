@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
-import Footer from '@/globalComponents/Footer'
+import Footer from '@/SharedComponents/Footer'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import 'react-multi-carousel/lib/styles.css'
+import Navbar from './SharedComponents/Navbar'
 import { lora, nunito, readexPro } from './fonts'
-import Navbar from './globalComponents/Navbar'
 import Providers from './providers'
 import './styles/globals.css'
 

@@ -1,4 +1,4 @@
-import Image from '@/globalComponents/Image'
+import Image from '@/SharedComponents/Image'
 import { GetAllCategories } from '../functions/GetAllCategories'
 import Carusel from './Carusel'
 import ShowRecipesOneCategory from './ShowRecipesOneCategory'

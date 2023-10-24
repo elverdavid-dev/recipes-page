@@ -1,6 +1,6 @@
 'use client'
-import CardRecipe from '@/globalComponents/CardRecipe'
-import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
+import CardRecipe from '@/SharedComponents/CardRecipe'
+import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
 import useRecipes from '@/hooks/useRecipes'
 import { type RecipeList } from '@/interfaces/RecipesList.interface'
 import PaginationComponent from './Pagination'
