@@ -1,7 +1,7 @@
 import Image from '@/SharedComponents/Image'
-import { GetAllCategories } from '../functions/GetAllCategories'
-import Carusel from './Carusel'
-import ShowRecipesOneCategory from './ShowRecipesOneCategory'
+import { GetAllCategories } from '../../functions/GetAllCategories'
+import Carusel from '../Carusel'
+import ShowRecipesOneCategory from '../ShowRecipesOneCategory'
 
 const SectionCategories = async () => {
   const Categories = await GetAllCategories()

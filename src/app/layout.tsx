@@ -22,7 +22,6 @@ export default function RootLayout({ children }: ChildrenProps) {
       className={`  ${lora.variable} ${nunito.variable} ${readexPro.variable}`}
     >
       <body>
-        {/* <NavbarUi /> */}
         <Navbar />
         <Providers>{children}</Providers>
         <Footer />
