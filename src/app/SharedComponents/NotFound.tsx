@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const NotFound = ({ description }: { description: string | undefined }) => {
   return (
-    <section>
+    <section className="mx-auto">
       <Image
         src="/404/404-notFound.svg"
         alt="404 not found"

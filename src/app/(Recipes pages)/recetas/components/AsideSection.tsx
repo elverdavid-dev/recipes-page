@@ -1,6 +1,6 @@
 import { GetLatestRecipes } from '@/LandingPage/functions/GetLatestRecipes'
-import Image from '@/globalComponents/Image'
-import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
+import Image from '@/SharedComponents/Image'
+import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
 
 const AsideSection = async () => {
   const Recipes = await GetLatestRecipes(7)

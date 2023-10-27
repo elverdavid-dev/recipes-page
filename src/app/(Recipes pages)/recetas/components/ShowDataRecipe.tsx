@@ -2,7 +2,7 @@ import { FormatRelativeDate } from '@/(Recipes pages)/functions/FormatRelativeDa
 import { GetRecipeById } from '@/(Recipes pages)/functions/GetRecipeById'
 import CheckBoxComponent from '@/(Recipes pages)/recetas/components/CheckBox'
 import ChipComponent from '@/(Recipes pages)/recetas/components/Chip'
-import ImageComponent from '@/globalComponents/Image'
+import ImageComponent from '@/SharedComponents/Image'
 import { notFound } from 'next/navigation'
 import { FiList } from 'react-icons/fi'
 import RecipeInfoTags from './RecipeInfoTags'

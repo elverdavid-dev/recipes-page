@@ -7,13 +7,21 @@
 }
 
 body {
-  @apply bg-[#f9f9f9];
+  @apply bg-base;
 }
 
 .RecipeInfoTags {
   @apply flex items-center gap-x-2   text-sm;
 }
 
-.Text-balance {
-  text-wrap: balance;
+.Content-menu-items {
+  @apply md:flex md:items-center md:static md:z-auto md:w-auto absolute gap-x-4 left-0 z-10 w-full transition-all shadow-md md:shadow-none pb-5;
+}
+
+.Menu-item {
+  @apply font-nunito text-lg hover:text-gold border-b-2 border-transparent hover:border-b-gold transition-all;
+}
+
+.Active-link {
+  text-shadow: 0px 0px 10px #ffac4b;
 }

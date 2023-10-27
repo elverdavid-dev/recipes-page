@@ -11,6 +11,15 @@ export function FormatRelativeDate(fechaISO: string): string {
   // Obtiene la fecha actual
   const fechaActual = new Date()
 
+  // Si es el mismo día, mostrar "hoy".
+  if (
+    fecha.getDate() === fechaActual.getDate() &&
+    fecha.getMonth() === fechaActual.getMonth() &&
+    fecha.getFullYear() === fechaActual.getFullYear()
+  ) {
+    return 'hoy'
+  }
+
   // Calcula la diferencia de tiempo en milisegundos
   const diferenciaTiempo = fecha.getTime() - fechaActual.getTime()
 

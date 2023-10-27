@@ -1,6 +1,6 @@
 import ShowRecipesOneCountry from '@/LandingPage/components/ShowRecipesOneCountry'
 import { GetAllCountry } from '@/LandingPage/functions/GetAllCountry'
-import CardCountry from '@/globalComponents/CardCountry'
+import CardCountry from '@/SharedComponents/CardCountry'
 
 const pageAllCountry = async () => {
   const dataCountry = await GetAllCountry(12)

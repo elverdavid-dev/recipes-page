@@ -1,10 +1,10 @@
 import { GetAllRecipesOneCountry } from '@/(Recipes pages)/functions/GetAllRecipesOneCountry'
-import CardRecipe from '@/globalComponents/CardRecipe'
-import NotFound from '@/globalComponents/NotFound'
-import ShowOneRecipe from '@/globalComponents/ShowOneRecipe'
+import CardRecipe from '@/SharedComponents/CardRecipe'
+import NotFound from '@/SharedComponents/NotFound'
+import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
 import { type ParamProps } from '@/interfaces/ParamProps.interface'
 import { notFound } from 'next/navigation'
-import DynamicTitle from '../../../globalComponents/DynamicTitle'
+import DynamicTitle from '../../../SharedComponents/DynamicTitle'
 
 const page = async ({ params }: ParamProps) => {
   const id = params.id
