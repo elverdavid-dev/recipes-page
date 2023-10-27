@@ -24,7 +24,7 @@ const Navbar = () => {
           pathName === '/' ? 'bg-light' : 'bg-base'
         }`}
       >
-        <div className="flex justify-between items-center mx-2">
+        <section className="flex justify-between items-center mx-2">
           <Logo />
           {/* Open menu in mobile */}
           <div
@@ -34,7 +34,7 @@ const Navbar = () => {
           >
             {isOpenMenu ? <FiX /> : <FiMenu />}
           </div>
-        </div>
+        </section>
 
         {/* Menu list */}
         <ul
@@ -43,7 +43,7 @@ const Navbar = () => {
           } ${pathName === '/' ? 'bg-light' : 'bg-base'}`}
         >
           {optionsMenu.map(({ href, title }, i) => (
-            <li key={title + i} className="py-5 px-3">
+            <li key={title + i} className="m-3 lg:m-auto p-2 ">
               <Link
                 onClick={closeMenu}
                 href={href}
