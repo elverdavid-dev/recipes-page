@@ -43,7 +43,7 @@ const Navbar = () => {
           } ${pathName === '/' ? 'bg-light' : 'bg-base'}`}
         >
           {optionsMenu.map(({ href, title }, i) => (
-            <li key={title + i} className="m-3 lg:m-auto p-2 ">
+            <li key={title + i} className="m-3 md:m-auto p-2">
               <Link
                 onClick={closeMenu}
                 href={href}

@@ -26,7 +26,7 @@ const ImageComponent = ({ src, width, alt, height, className }: ImageProps) => {
           height={height}
           className={className}
           // Callback que se ejecuta cuando la imagen se carga completamente.
-          onLoadingComplete={() => {
+          onLoad={() => {
             setIsLoaded(!isLoaded)
           }}
         />

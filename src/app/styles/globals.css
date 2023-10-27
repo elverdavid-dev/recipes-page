@@ -15,7 +15,7 @@ body {
 }
 
 .Content-menu-items {
-  @apply md:flex md:items-center md:static md:z-auto md:w-auto absolute gap-x-4 left-0 z-10 w-full transition-all shadow-md md:shadow-none pb-5;
+  @apply md:flex md:items-center md:static md:z-auto md:w-auto absolute gap-x-4 left-0 z-10 w-full transition-all shadow-md md:shadow-none pb-5 md:pb-0;
 }
 
 .Menu-item {
