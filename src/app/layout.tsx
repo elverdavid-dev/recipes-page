@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 
 import Footer from '@/SharedComponents/Footer'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
+import { Analytics } from '@vercel/analytics/react'
 import 'react-multi-carousel/lib/styles.css'
-import Navbar from './SharedComponents/Navbar'
+import Navbar from './SharedComponents/navbar/Navbar'
 import { lora, nunito, readexPro } from './fonts'
 import Providers from './providers'
 import './styles/globals.css'
@@ -23,7 +24,10 @@ export default function RootLayout({ children }: ChildrenProps) {
     >
       <body>
         <Navbar />
-        <Providers>{children}</Providers>
+          <Analytics/>
+        <Providers>
+          {children}
+          </Providers>
         <Footer />
       </body>
     </html>
