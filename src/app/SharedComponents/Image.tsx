@@ -16,6 +16,9 @@ import { useState } from 'react'
 
 const ImageComponent = ({ src, width, alt, height, className }: ImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false)
+  const closeSkeleton = () => {
+    setIsLoaded(!isLoaded)
+  }
   return (
     <>
       <Skeleton isLoaded={isLoaded} className={'rounded-md '}>
@@ -26,9 +29,7 @@ const ImageComponent = ({ src, width, alt, height, className }: ImageProps) => {
           height={height}
           className={className}
           // Callback que se ejecuta cuando la imagen se carga completamente.
-          onLoadingComplete={() => {
-            setIsLoaded(!isLoaded)
-          }}
+          onLoad={closeSkeleton}
         />
       </Skeleton>
     </>
