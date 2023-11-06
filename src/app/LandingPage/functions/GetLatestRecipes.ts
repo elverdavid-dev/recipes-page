@@ -8,9 +8,7 @@ import { type Recipes } from '@interfaces/Recipes.interface'
 
 export async function GetLatestRecipes(limit: number) {
   try {
-    const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`, {
-      next: { revalidate: 60 }
-    })
+    const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`)
     if (!response.ok) {
       throw new Error('Error al obtener las recetas')
     }

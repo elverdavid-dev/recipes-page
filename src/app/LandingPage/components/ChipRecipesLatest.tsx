@@ -2,7 +2,7 @@
 import { type ChildrenProps } from '@/interfaces/ChildrenProps.interface'
 import { Chip } from '@nextui-org/react'
 
-const ChipRecipesLates = ({ children }: ChildrenProps) => {
+const ChipRecipesLatest = ({ children }: ChildrenProps) => {
   return (
     <Chip
       variant="flat"
@@ -13,4 +13,4 @@ const ChipRecipesLates = ({ children }: ChildrenProps) => {
   )
 }
 
-export default ChipRecipesLates
+export default ChipRecipesLatest

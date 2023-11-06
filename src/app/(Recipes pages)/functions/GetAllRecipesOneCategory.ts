@@ -16,8 +16,7 @@ export async function GetAllRecipesOneCategory(
 ): Promise<ApiResponse | undefined> {
   try {
     const response = await fetch(
-      `${baseUrl}/recipes/filter/categories?CategoryId=${id}&page=1&limit=10`,
-      { next: { revalidate: 60 } }
+      `${baseUrl}/recipes/filter/categories?CategoryId=${id}&page=1&limit=10`
     )
     if (!response.ok) {
       throw new Error('Error al obtener las recetas de una categoria')

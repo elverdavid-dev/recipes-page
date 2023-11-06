@@ -1,6 +1,6 @@
 import { type ParamProps } from '@interfaces/ParamProps.interface'
-import Aside from '../components/AsideSection'
-import ShowDataRecipe from '../components/ShowDataRecipe'
+import Aside from '../components/oneRecipe/AsideSection'
+import ShowDataRecipe from '../components/oneRecipe/ShowDataRecipe'
 
 const PageById = async ({ params }: ParamProps) => {
   const id = params.id

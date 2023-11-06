@@ -7,9 +7,7 @@ import { type Categories } from '@interfaces/Categories.interface'
  */
 export async function GetAllCategories() {
   try {
-    const response = await fetch(`${baseUrl}/categories`, {
-      next: { revalidate: 60 }
-    })
+    const response = await fetch(`${baseUrl}/categories`)
     if (!response.ok) {
       throw Error('Error al obtener las categorias')
     }

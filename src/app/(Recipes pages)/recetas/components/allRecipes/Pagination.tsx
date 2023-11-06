@@ -1,3 +1,4 @@
+'use client'
 import { Pagination } from '@nextui-org/react'
 
 interface PaginateProps {

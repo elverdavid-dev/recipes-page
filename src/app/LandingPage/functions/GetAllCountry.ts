@@ -8,9 +8,7 @@ import { baseUrl } from '@/lib/utils'
 
 export async function GetAllCountry(limit: number) {
   try {
-    const response = await fetch(`${baseUrl}/countrys?page=1&limit=${limit}`, {
-      next: { revalidate: 60 }
-    })
+    const response = await fetch(`${baseUrl}/countrys?page=1&limit=${limit}`)
     if (!response.ok) {
       throw new Error('Error a el obtener todas las recetas de un pais')
     }

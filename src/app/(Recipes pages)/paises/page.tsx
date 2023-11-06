@@ -4,7 +4,6 @@ import CardCountry from '@/SharedComponents/CardCountry'
 
 const pageAllCountry = async () => {
   const dataCountry = await GetAllCountry(12)
-  console.log(dataCountry)
   return (
     <section className="mx-auto container px-4 mt-20">
       <h3 className="text-end py-5 text-2xl font-readexPro">

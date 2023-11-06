@@ -1,5 +1,5 @@
 import { formatDuration } from '@/(Recipes pages)/functions/FormayDurations'
-import ChipRecipesLates from '@/LandingPage/components/ChipRecipesLates'
+import ChipRecipesLatest from '@/LandingPage/components/ChipRecipesLatest'
 import Image from '@/SharedComponents/Image'
 import { type CardRecipeProps } from '@/interfaces/CardRecipeProps.interface'
 
@@ -14,7 +14,7 @@ export default function CardRecipe({
   return (
     <>
       <article className="flex flex-col  cursor-pointer  group relative bg-white rounded-md shadow border">
-        <ChipRecipesLates>{category} </ChipRecipesLates>
+        <ChipRecipesLatest>{category} </ChipRecipesLatest>
         <Image
           src={img}
           alt={name}

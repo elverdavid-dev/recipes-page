@@ -1,4 +1,4 @@
-import { SearchRecipe } from '@/(Recipes pages)/functions/SearchRecipe'
+import { SearchRecipeByName } from '@/(Recipes pages)/functions/SearchRecipe'
 import { type Recipes } from '@/interfaces/Recipes.interface'
 import { useEffect, useState } from 'react'
 
@@ -27,7 +27,7 @@ export default function useRecipes({
     } else {
       setIsFilteredData(true)
       setCurrentPage(1)
-      const data = await SearchRecipe(valueTyped)
+      const data = await SearchRecipeByName(valueTyped)
       setRecipes(data ?? [])
     }
   }
