@@ -1,12 +1,12 @@
 export interface Country {
-  _id: string
-  name: string
-  image: string
+	_id: string
+	name: string
+	image: string
 }
 
 export interface CountryData {
-  page: number
-  totalPages: number
-  totalItems: number
-  data: Country[]
+	page: number
+	totalPages: number
+	totalItems: number
+	data: Country[]
 }

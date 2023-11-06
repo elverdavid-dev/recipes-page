@@ -1,5 +1,5 @@
-import { baseUrl } from '@/lib/utils'
-import { type Recipes } from '@interfaces/Recipes.interface'
+import { baseUrl } from "@/lib/utils"
+import { type Recipes } from "@interfaces/Recipes.interface"
 
 /**
  * @description Obtiene una lista de las recetas más recientes desde el servidor.
@@ -7,14 +7,14 @@ import { type Recipes } from '@interfaces/Recipes.interface'
  */
 
 export async function GetLatestRecipes(limit: number) {
-  try {
-    const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`)
-    if (!response.ok) {
-      throw new Error('Error al obtener las recetas')
-    }
-    const data: Recipes[] = await response.json()
-    return data
-  } catch (error) {
-    console.error(error)
-  }
+	try {
+		const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`)
+		if (!response.ok) {
+			throw new Error("Error al obtener las recetas")
+		}
+		const data: Recipes[] = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
 }

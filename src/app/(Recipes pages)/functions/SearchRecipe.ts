@@ -1,8 +1,8 @@
-import { baseUrl } from '@/lib/utils'
-import { type Recipes } from '@interfaces/Recipes.interface'
+import { baseUrl } from "@/lib/utils"
+import { type Recipes } from "@interfaces/Recipes.interface"
 
 interface Props extends Recipes {
-  message: { message: string }
+	message: { message: string }
 }
 
 /**
@@ -12,18 +12,18 @@ interface Props extends Recipes {
  */
 
 export async function SearchRecipeByName(name: string) {
-  try {
-    const response = await fetch(`${baseUrl}/recipes/search?name=${name}`)
-    if (!response.ok) {
-      throw new Error('Error al obtener  la receta')
-    }
-    const data: Props = await response.json()
+	try {
+		const response = await fetch(`${baseUrl}/recipes/search?name=${name}`)
+		if (!response.ok) {
+			throw new Error("Error al obtener  la receta")
+		}
+		const data: Props = await response.json()
 
-    if (Array.isArray(data)) {
-      return data
-    }
-    return []
-  } catch (error) {
-    console.error(error)
-  }
+		if (Array.isArray(data)) {
+			return data
+		}
+		return []
+	} catch (error) {
+		console.error(error)
+	}
 }

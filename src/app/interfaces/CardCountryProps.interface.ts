@@ -1,4 +1,4 @@
 export interface CardCountryProps {
-  img: string
-  name: string
+	img: string
+	name: string
 }
