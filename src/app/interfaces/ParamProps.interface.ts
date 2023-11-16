@@ -1,3 +1,3 @@
 export interface ParamProps {
-  params: { id: string }
+	params: { id: string }
 }

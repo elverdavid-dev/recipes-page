@@ -5,30 +5,30 @@
  */
 
 export function FormatRelativeDate(fechaISO: string): string {
-  // Convierte la fecha en un objeto Date
-  const fecha = new Date(fechaISO)
+	// Convierte la fecha en un objeto Date
+	const fecha = new Date(fechaISO)
 
-  // Obtiene la fecha actual
-  const fechaActual = new Date()
+	// Obtiene la fecha actual
+	const fechaActual = new Date()
 
-  // Si es el mismo día, mostrar "hoy".
-  if (
-    fecha.getDate() === fechaActual.getDate() &&
-    fecha.getMonth() === fechaActual.getMonth() &&
-    fecha.getFullYear() === fechaActual.getFullYear()
-  ) {
-    return 'hoy'
-  }
+	// Si es el mismo día, mostrar "hoy".
+	if (
+		fecha.getDate() === fechaActual.getDate() &&
+		fecha.getMonth() === fechaActual.getMonth() &&
+		fecha.getFullYear() === fechaActual.getFullYear()
+	) {
+		return "hoy"
+	}
 
-  // Calcula la diferencia de tiempo en milisegundos
-  const diferenciaTiempo = fecha.getTime() - fechaActual.getTime()
+	// Calcula la diferencia de tiempo en milisegundos
+	const diferenciaTiempo = fecha.getTime() - fechaActual.getTime()
 
-  // Calcula la diferencia en días
-  const diferenciaDias = Math.floor(diferenciaTiempo / (1000 * 60 * 60 * 24))
+	// Calcula la diferencia en días
+	const diferenciaDias = Math.floor(diferenciaTiempo / (1000 * 60 * 60 * 24))
 
-  // Crea una instancia de Intl.RelativeTimeFormat para formatear la diferencia de días
-  const rtf = new Intl.RelativeTimeFormat('es', { numeric: 'auto' })
+	// Crea una instancia de Intl.RelativeTimeFormat para formatear la diferencia de días
+	const rtf = new Intl.RelativeTimeFormat("es", { numeric: "auto" })
 
-  // Formatea la diferencia de días y devuelve la cadena resultante
-  return rtf.format(diferenciaDias, 'day')
+	// Formatea la diferencia de días y devuelve la cadena resultante
+	return rtf.format(diferenciaDias, "day")
 }

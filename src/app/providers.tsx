@@ -1,13 +1,14 @@
-'use client'
-import { NextUIProvider } from '@nextui-org/react'
-import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
-
+"use client"
+import { type ChildrenProps } from "@interfaces/ChildrenProps.interface"
+import { NextUIProvider } from "@nextui-org/react"
+import { useRouter } from "next/navigation"
 const providers = ({ children }: ChildrenProps) => {
-  return (
-    <>
-      <NextUIProvider>{children}</NextUIProvider>
-    </>
-  )
+	const router = useRouter()
+	return (
+		<>
+			<NextUIProvider navigate={router.push}>{children}</NextUIProvider>
+		</>
+	)
 }
 
 export default providers

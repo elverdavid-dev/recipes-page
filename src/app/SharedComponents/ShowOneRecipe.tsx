@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
-import { useRouter } from 'next/navigation'
+import { type ChildrenProps } from "@interfaces/ChildrenProps.interface"
+import { useRouter } from "next/navigation"
 
 interface RecipeProps extends ChildrenProps {
-  id: string
+	id: string
 }
 
 /**
@@ -14,18 +14,18 @@ interface RecipeProps extends ChildrenProps {
  */
 
 const ShowOneRecipe = ({ children, id }: RecipeProps) => {
-  const router = useRouter()
+	const router = useRouter()
 
-  return (
-    <section
-      onClick={() => {
-        router.push(`/recetas/${id}`)
-      }}
-      className="cursor-pointer"
-    >
-      {children}
-    </section>
-  )
+	return (
+		<section
+			onClick={() => {
+				router.push(`/recetas/${id}`)
+			}}
+			className="cursor-pointer"
+		>
+			{children}
+		</section>
+	)
 }
 
 export default ShowOneRecipe
