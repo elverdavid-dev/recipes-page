@@ -1,11 +1,11 @@
-import { FormatRelativeDate } from "@/(Recipes pages)/functions/FormatRelativeDate"
-import { GetRecipeById } from "@/(Recipes pages)/functions/GetRecipeById"
-import CheckBoxComponent from "@/(Recipes pages)/recetas/components/oneRecipe/CheckBox"
-import ChipComponent from "@/(Recipes pages)/recetas/components/oneRecipe/Chip"
-import ImageComponent from "@/SharedComponents/Image"
-import { notFound } from "next/navigation"
-import { FiList } from "react-icons/fi"
-import RecipeInfoTags from "./RecipeInfoTags"
+import { FormatRelativeDate } from '@/(Recipes pages)/functions/FormatRelativeDate'
+import { GetRecipeById } from '@/(Recipes pages)/functions/GetRecipeById'
+import CheckBoxComponent from '@/(Recipes pages)/recetas/components/oneRecipe/CheckBox'
+import ChipComponent from '@/(Recipes pages)/recetas/components/oneRecipe/Chip'
+import ImageComponent from '@/SharedComponents/Image'
+import { notFound } from 'next/navigation'
+import { FiList } from 'react-icons/fi'
+import RecipeInfoTags from './RecipeInfoTags'
 
 const ShowDataRecipe = async ({ id }: { id: string }) => {
 	const recipe = await GetRecipeById(id)

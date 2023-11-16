@@ -8,7 +8,7 @@
 		"start": "next start",
 		"lint": "biome lint ./src",
 		"lint:apply": "biome check --apply ./src",
-		"format": "format --write ./src"
+		"format": "biome format --write ./src"
 	},
 	"dependencies": {
 		"@nextui-org/react": "^2.2.3",

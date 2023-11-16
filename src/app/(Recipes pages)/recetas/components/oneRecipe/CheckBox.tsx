@@ -1,6 +1,6 @@
-"use client"
-import { type ChildrenProps } from "@/interfaces/ChildrenProps.interface"
-import { Checkbox } from "@nextui-org/react"
+'use client'
+import { type ChildrenProps } from '@/interfaces/ChildrenProps.interface'
+import { Checkbox } from '@nextui-org/react'
 
 const CheckBoxComponent = ({ children }: ChildrenProps) => {
 	return (

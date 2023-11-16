@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
-import { Button } from "@nextui-org/react"
-import { useRouter } from "next/navigation"
+import { Button } from '@nextui-org/react'
+import { useRouter } from 'next/navigation'
 const NotFound = () => {
 	const router = useRouter()
 	const redirectToHome = () => {
-		router.push("/")
+		router.push('/')
 	}
 	return (
 		<section className="bg-[#f9f9f9] h-screen">

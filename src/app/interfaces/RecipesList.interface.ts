@@ -1,4 +1,4 @@
-import { type Recipes } from "./Recipes.interface"
+import { type Recipes } from './Recipes.interface'
 
 export interface RecipeList {
 	page: number

@@ -1,5 +1,5 @@
-import { baseUrl } from "@/lib/utils"
-import { type Recipes } from "@interfaces/Recipes.interface"
+import { baseUrl } from '@/lib/utils'
+import { type Recipes } from '@interfaces/Recipes.interface'
 
 /**
  * @description Obtiene una receta específica por su ID desde el servidor.
@@ -11,7 +11,7 @@ export async function GetRecipeById(id: string) {
 	try {
 		const response = await fetch(`${baseUrl}/recipes/${id}`)
 		if (!response.ok) {
-			throw new Error("Error al obtener  la receta")
+			throw new Error('Error al obtener  la receta')
 		}
 		const data: Recipes = await response.json()
 		return data

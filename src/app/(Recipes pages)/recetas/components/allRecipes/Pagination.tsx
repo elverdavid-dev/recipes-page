@@ -1,5 +1,5 @@
-"use client"
-import { Pagination } from "@nextui-org/react"
+'use client'
+import { Pagination } from '@nextui-org/react'
 
 interface PaginateProps {
 	currentPage: number

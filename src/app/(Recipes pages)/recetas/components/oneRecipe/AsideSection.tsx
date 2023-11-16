@@ -1,6 +1,6 @@
-import { GetLatestRecipes } from "@/LandingPage/functions/GetLatestRecipes"
-import Image from "@/SharedComponents/Image"
-import ShowOneRecipe from "@/SharedComponents/ShowOneRecipe"
+import { GetLatestRecipes } from '@/LandingPage/functions/GetLatestRecipes'
+import Image from '@/SharedComponents/Image'
+import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
 
 const AsideSection = async () => {
 	const Recipes = await GetLatestRecipes(7)
@@ -21,7 +21,7 @@ const AsideSection = async () => {
 							<div>
 								<p className="font-readexPro">{category.name} </p>
 								<h2 className="font-nunito group-hover:text-gold group-hover:underline transition-all">
-									{name}{" "}
+									{name}{' '}
 								</h2>
 							</div>
 						</div>

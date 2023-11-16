@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { type ChildrenProps } from "@interfaces/ChildrenProps.interface"
-import { useRouter } from "next/navigation"
+import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
+import { useRouter } from 'next/navigation'
 
 interface Props extends ChildrenProps {
 	id: string

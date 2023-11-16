@@ -1,7 +1,7 @@
-import { formatDuration } from "@/(Recipes pages)/functions/FormayDurations"
-import ChipRecipesLatest from "@/LandingPage/components/ChipRecipesLatest"
-import Image from "@/SharedComponents/Image"
-import { type CardRecipeProps } from "@/interfaces/CardRecipeProps.interface"
+import { formatDuration } from '@/(Recipes pages)/functions/FormayDurations'
+import ChipRecipesLatest from '@/LandingPage/components/ChipRecipesLatest'
+import Image from '@/SharedComponents/Image'
+import { type CardRecipeProps } from '@/interfaces/CardRecipeProps.interface'
 
 export default function CardRecipe({
 	img,
@@ -26,7 +26,7 @@ export default function CardRecipe({
 					{name}
 				</span>
 				<span className="py-3 px-3 font-nunito text-sm text-slate-700">
-					{durationFormat} | {portions} Porciones{" "}
+					{durationFormat} | {portions} Porciones{' '}
 				</span>
 			</article>
 		</>

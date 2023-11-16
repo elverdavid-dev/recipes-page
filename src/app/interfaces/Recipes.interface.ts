@@ -1,5 +1,5 @@
-import { type Categories } from "./Categories.interface"
-import { type Country } from "./Cuntry.interface"
+import { type Categories } from './Categories.interface'
+import { type Country } from './Cuntry.interface'
 
 export interface Recipes {
 	_id: string

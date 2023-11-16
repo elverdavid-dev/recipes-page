@@ -1,6 +1,6 @@
-import { SearchRecipeByName } from "@/(Recipes pages)/functions/SearchRecipe"
-import { type RecipeList } from "@/interfaces/RecipesList.interface"
-import { useEffect, useState } from "react"
+import { SearchRecipeByName } from '@/(Recipes pages)/functions/SearchRecipe'
+import { type RecipeList } from '@/interfaces/RecipesList.interface'
+import { useEffect, useState } from 'react'
 
 interface Props {
 	data: RecipeList | undefined
@@ -14,7 +14,7 @@ const useRecipes2 = ({ data }: Props) => {
 	console.log(page)
 	// Functions
 	const findRecipeByName = async (name: string) => {
-		if (name === "") {
+		if (name === '') {
 			setRecipesData(initialData)
 		} else {
 			const data = await SearchRecipeByName(name)

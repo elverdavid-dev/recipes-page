@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import type { ChildrenProps } from "@interfaces/ChildrenProps.interface"
-import Carusel from "react-multi-carousel"
+import type { ChildrenProps } from '@interfaces/ChildrenProps.interface'
+import Carusel from 'react-multi-carousel'
 
 const CaruselComponent = ({ children }: ChildrenProps) => {
 	const response = {
@@ -37,7 +37,7 @@ const CaruselComponent = ({ children }: ChildrenProps) => {
 			infinite={true}
 			autoPlay={true}
 			autoPlaySpeed={4000}
-			removeArrowOnDeviceType={["mobile", "tablet"]}
+			removeArrowOnDeviceType={['mobile', 'tablet']}
 			ssr={true}
 			partialVisbile={true}
 		>

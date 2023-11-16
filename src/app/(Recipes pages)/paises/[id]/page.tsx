@@ -1,10 +1,15 @@
-import { GetAllRecipesOneCountry } from "@/(Recipes pages)/functions/GetAllRecipesOneCountry"
-import CardRecipe from "@/SharedComponents/CardRecipe"
-import NotFound from "@/SharedComponents/NotFound"
-import ShowOneRecipe from "@/SharedComponents/ShowOneRecipe"
-import { type ParamProps } from "@/interfaces/ParamProps.interface"
-import { notFound } from "next/navigation"
-import DynamicTitle from "../../../SharedComponents/DynamicTitle"
+import { GetAllRecipesOneCountry } from '@/(Recipes pages)/functions/GetAllRecipesOneCountry'
+import CardRecipe from '@/SharedComponents/CardRecipe'
+import DynamicTitle from '@/SharedComponents/DynamicTitle'
+import NotFound from '@/SharedComponents/NotFound'
+import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
+import { type ParamProps } from '@/interfaces/ParamProps.interface'
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+
+export const metadata: Metadata = {
+	title: 'Paises',
+}
 
 const page = async ({ params }: ParamProps) => {
 	const id = params.id

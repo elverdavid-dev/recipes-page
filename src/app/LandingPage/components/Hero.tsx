@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { Button } from "@nextui-org/react"
-import Image from "next/image"
-import Link from "next/link"
-import { FaCircle } from "react-icons/fa"
+import { Button } from '@nextui-org/react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { FaCircle } from 'react-icons/fa'
 
 const Hero = () => {
 	return (
@@ -15,7 +15,7 @@ const Hero = () => {
 				</h1>
 
 				<span className="text-lg font-nunito text-slate-700 block mt-4">
-					Sumérgete en una experiencia gastronómica única que{" "}
+					Sumérgete en una experiencia gastronómica única que{' '}
 					<br className="lg:block hidden" /> te lleva en un viaje por los
 					sabores del mundo.
 				</span>
@@ -51,7 +51,7 @@ const Hero = () => {
 					width="275"
 					height="262"
 					className="absolute  -right-10 top-[300px]"
-				/>{" "}
+				/>{' '}
 				<FaCircle
 					size={56}
 					className="text-gold lg:absolute lg:top-10 lg:inset-x-32 lg:block hidden"

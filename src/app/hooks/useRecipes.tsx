@@ -1,6 +1,6 @@
-import { SearchRecipeByName } from "@/(Recipes pages)/functions/SearchRecipe"
-import { type Recipes } from "@/interfaces/Recipes.interface"
-import { useEffect, useState } from "react"
+import { SearchRecipeByName } from '@/(Recipes pages)/functions/SearchRecipe'
+import { type Recipes } from '@/interfaces/Recipes.interface'
+import { useEffect, useState } from 'react'
 
 interface Props {
 	initialData?: Recipes[]
@@ -21,7 +21,7 @@ export default function useRecipes({
 	const [totalPages, setTotalPages] = useState(countOfPages)
 
 	const searchRecipeTyped = async (valueTyped: string) => {
-		if (valueTyped === "") {
+		if (valueTyped === '') {
 			setIsFilteredData(false)
 			setRecipes(initialData)
 		} else {

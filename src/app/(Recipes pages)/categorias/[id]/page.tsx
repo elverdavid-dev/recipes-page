@@ -1,10 +1,15 @@
-import CardRecipe from "@/SharedComponents/CardRecipe"
-import DynamicTitle from "@/SharedComponents/DynamicTitle"
-import NotFound from "@/SharedComponents/NotFound"
-import ShowOneRecipe from "@/SharedComponents/ShowOneRecipe"
-import { type ParamProps } from "@interfaces/ParamProps.interface"
-import { notFound } from "next/navigation"
-import { GetAllRecipesOneCategory } from "../../functions/GetAllRecipesOneCategory"
+import CardRecipe from '@/SharedComponents/CardRecipe'
+import DynamicTitle from '@/SharedComponents/DynamicTitle'
+import NotFound from '@/SharedComponents/NotFound'
+import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
+import { type ParamProps } from '@interfaces/ParamProps.interface'
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { GetAllRecipesOneCategory } from '../../functions/GetAllRecipesOneCategory'
+
+export const metadata: Metadata = {
+	title: 'Categorias',
+}
 
 const CategoryPage = async ({ params }: ParamProps) => {
 	const recipes = await GetAllRecipesOneCategory(params.id)

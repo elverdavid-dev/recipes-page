@@ -1,30 +1,30 @@
-"use client"
-import { Button, Input } from "@nextui-org/react"
-import { useEffect, useState } from "react"
-import { FiSearch } from "react-icons/fi"
+'use client'
+import { Button, Input } from '@nextui-org/react'
+import { useEffect, useState } from 'react'
+import { FiSearch } from 'react-icons/fi'
 
 interface Props {
 	handleValue: (value: string) => Promise<void>
 }
 export default function Search({ handleValue }: Props) {
-	const [emptyValue, setEmptyValue] = useState("")
+	const [emptyValue, setEmptyValue] = useState('')
 
 	// Hace la busqueda de la receta que se introdujo en el input
 	const handleSearch = () => {
 		handleValue(emptyValue).catch(() => {
-			console.error("error al buscar recetas por nombre")
+			console.error('error al buscar recetas por nombre')
 		})
 	}
 
 	useEffect(() => {
-		if (emptyValue === "") {
+		if (emptyValue === '') {
 			handleSearch()
 		}
 	}, [emptyValue])
 
 	// Si se presiona la tecla "Enter", se ejecuta la búsqueda de la receta.
 	const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-		if (e.key === "Enter") {
+		if (e.key === 'Enter') {
 			handleSearch()
 		}
 	}

@@ -1,12 +1,12 @@
-"use client"
-import CardRecipe from "@/SharedComponents/CardRecipe"
-import NotFound from "@/SharedComponents/NotFound"
-import ShowOneRecipe from "@/SharedComponents/ShowOneRecipe"
-import useRecipes from "@/hooks/useRecipes"
-import useRecipes2 from "@/hooks/useRecipes2"
-import { type RecipeList } from "@/interfaces/RecipesList.interface"
-import PaginationComponent from "./Pagination"
-import Search from "./Search"
+'use client'
+import CardRecipe from '@/SharedComponents/CardRecipe'
+import NotFound from '@/SharedComponents/NotFound'
+import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
+import useRecipes from '@/hooks/useRecipes'
+import useRecipes2 from '@/hooks/useRecipes2'
+import { type RecipeList } from '@/interfaces/RecipesList.interface'
+import PaginationComponent from './Pagination'
+import Search from './Search'
 
 const ContentRecipes = ({ data }: { data: RecipeList | undefined }) => {
 	const { currentPage, totalPages, isFilteredData, setCurrentPage } =

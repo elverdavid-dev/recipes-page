@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import { Skeleton } from "@nextui-org/react"
-import Image, { type ImageProps } from "next/image"
-import { useState } from "react"
+import { Skeleton } from '@nextui-org/react'
+import Image, { type ImageProps } from 'next/image'
+import { useState } from 'react'
 
 /**
  * @description Componente de imagen que muestra una imagen con un esqueleto de carga.
@@ -21,7 +21,7 @@ const ImageComponent = ({ src, width, alt, height, className }: ImageProps) => {
 	}
 	return (
 		<>
-			<Skeleton isLoaded={isLoaded} className={"rounded-md "}>
+			<Skeleton isLoaded={isLoaded} className={'rounded-md '}>
 				<Image
 					src={src}
 					alt={`Imagen ${alt}`}
