@@ -6,8 +6,10 @@ import { lora, nunito, readexPro } from '@/fonts'
 import Providers from '@/providers'
 import '@/styles/globals.css'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
+import { Suspense } from 'react'
 // import { Analytics } from '@vercel/analytics/react'
 import 'react-multi-carousel/lib/styles.css'
+import Loading from './loading'
 
 // Metadata
 export const metadata: Metadata = {
@@ -27,7 +29,9 @@ export default function RootLayout({ children }: ChildrenProps) {
 			<body>
 				<Navbar />
 				{/* <Analytics/> */}
-				<Providers>{children}</Providers>
+				<Suspense fallback={<Loading />}>
+					<Providers>{children}</Providers>
+				</Suspense>
 				<Footer />
 			</body>
 		</html>

@@ -20,7 +20,6 @@ const config: Config = {
         nunito: ['var(--nunito)'],
         readexPro: ['var(--readexPro)']
       }
-
     }
   },
   plugins: [nextui()]

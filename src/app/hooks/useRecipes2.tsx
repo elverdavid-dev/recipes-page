@@ -24,7 +24,7 @@ const useRecipes2 = ({ data }: Props) => {
 	}
 
 	// Effects
-	useEffect(() => {}, [recipesData, recipesData.length])
+	useEffect(() => { }, [recipesData])
 	return { recipesData, findRecipeByName }
 }
 

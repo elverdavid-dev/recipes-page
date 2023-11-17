@@ -11,9 +11,7 @@ export default function Search({ handleValue }: Props) {
 
 	// Hace la busqueda de la receta que se introdujo en el input
 	const handleSearch = () => {
-		handleValue(emptyValue).catch(() => {
-			console.error('error al buscar recetas por nombre')
-		})
+		handleValue(emptyValue)
 	}
 
 	useEffect(() => {
