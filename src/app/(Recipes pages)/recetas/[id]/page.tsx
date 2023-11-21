@@ -4,7 +4,7 @@ import Aside from '../components/oneRecipe/AsideSection'
 import ShowDataRecipe from '../components/oneRecipe/ShowDataRecipe'
 
 export const metadata: Metadata = {
-	title: 'Recetas',
+	title: 'Receta•GlobalFood',
 }
 
 const PageById = async ({ params }: ParamProps) => {

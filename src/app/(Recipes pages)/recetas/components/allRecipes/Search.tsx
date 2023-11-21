@@ -1,23 +1,25 @@
 'use client'
-import { Button, Input } from '@nextui-org/react'
+import { Button, CircularProgress, Input } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 
 interface Props {
 	handleValue: (value: string) => Promise<void>
+	handleLoader: () => void
+	isLoader: boolean
 }
-export default function Search({ handleValue }: Props) {
-	const [emptyValue, setEmptyValue] = useState('')
-
+export default function Search({ handleValue, handleLoader, isLoader }: Props) {
+	const [emptyValue, setEmptyValue] = useState<string | undefined>('')
 	// Hace la busqueda de la receta que se introdujo en el input
 	const handleSearch = () => {
-		handleValue(emptyValue)
+		handleValue(emptyValue ?? '')
 	}
 
 	useEffect(() => {
 		if (emptyValue === '') {
 			handleSearch()
 		}
+
 	}, [emptyValue])
 
 	// Si se presiona la tecla "Enter", se ejecuta la búsqueda de la receta.
@@ -33,7 +35,7 @@ export default function Search({ handleValue }: Props) {
 				value={emptyValue}
 				onValueChange={setEmptyValue}
 				isClearable
-				size="md"
+				size="sm"
 				className="lg:w-[500px] font-nunito"
 				variant="faded"
 				placeholder="Buscar recetas..."
@@ -41,7 +43,7 @@ export default function Search({ handleValue }: Props) {
 				onKeyDown={handleKeyDown}
 			/>
 			<Button type="submit" size="lg" onClick={handleSearch}>
-				Buscar
+				{isLoader ? <CircularProgress color="default" /> : 'Buscar'}
 			</Button>
 		</div>
 	)

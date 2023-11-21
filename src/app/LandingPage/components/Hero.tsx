@@ -15,7 +15,10 @@ const Hero = () => {
 				</h1>
 
 				<span className="text-lg font-nunito text-slate-700 block mt-4">
-					Sumérgete en una experiencia gastronómica única que te lleva en un viaje por los sabores del mundo. Explora platos tradicionales arraigados en la cultura de diferentes países o déjate sorprender por creaciones culinarias que rompen fronteras.
+					Sumérgete en una experiencia gastronómica única que te lleva en un
+					viaje por los sabores del mundo. Explora platos tradicionales
+					arraigados en la cultura de diferentes países o déjate sorprender por
+					creaciones culinarias que rompen fronteras.
 				</span>
 
 				<Button

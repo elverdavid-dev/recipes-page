@@ -4,17 +4,20 @@ import CardCountry from '@/SharedComponents/CardCountry'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-	title: 'Paises',
+	title: 'Paises•GlobalFood',
 }
 
 const pageAllCountry = async () => {
 	const dataCountry = await GetAllCountry(12)
 	return (
 		<section className="mx-auto container px-4 mt-20">
-			<h3 className="text-end py-5 text-2xl font-readexPro">
-				{dataCountry?.totalItems} Paises{' '}
-			</h3>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+			<div className="flex justify-between items-center">
+				<h1 className="lg:text-4xl text-2xl font-readexPro">Paises</h1>
+				<h3 className="text-xl font-nunito">
+					{dataCountry?.totalItems} Paises totales
+				</h3>
+			</div>
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
 				{dataCountry?.data.map(({ _id, image, name }) => (
 					<div key={_id}>
 						<ShowRecipesOneCountry id={_id} name={name}>

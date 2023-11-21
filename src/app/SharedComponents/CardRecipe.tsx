@@ -14,7 +14,11 @@ export default function CardRecipe({
 	return (
 		<>
 			<article className="flex flex-col  cursor-pointer  group relative bg-white rounded-md shadow border">
-				<ChipRecipesLatest>{category} </ChipRecipesLatest>
+				<ChipRecipesLatest
+					className={`${category === undefined ? 'hidden' : ''}`}
+				>
+					{category}{' '}
+				</ChipRecipesLatest>
 				<Image
 					src={img}
 					alt={name}

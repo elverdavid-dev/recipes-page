@@ -3,7 +3,7 @@ import { GetAllRecipes } from '../functions/GetAllRecipes'
 import ContentRecipes from './components/allRecipes/ContentRecipes'
 
 export const metadata: Metadata = {
-	title: 'Recetas',
+	title: 'Recetas•GlobalFood',
 }
 
 const RecipesPage = async () => {

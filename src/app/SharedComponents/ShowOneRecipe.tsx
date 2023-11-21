@@ -1,7 +1,7 @@
 'use client'
 
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next-nprogress-bar'
 
 interface RecipeProps extends ChildrenProps {
 	id: string

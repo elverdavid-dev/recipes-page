@@ -9,19 +9,30 @@ import PaginationComponent from './Pagination'
 import Search from './Search'
 
 const ContentRecipes = ({ data }: { data: RecipeList | undefined }) => {
-	const { currentPage, totalPages, isFilteredData, setCurrentPage } =
-		useRecipes({
-			initialData: data?.data,
-			initialPage: 1,
-			productsPerPage: data?.data.length,
-			countOfPages: data?.totalPages,
-		})
-	const { recipesData, findRecipeByName } = useRecipes2({ data })
+	const { totalPages } = useRecipes({
+		initialData: data?.data,
+		initialPage: 1,
+		productsPerPage: data?.data.length,
+		countOfPages: data?.totalPages,
+	})
+	const {
+		recipesData,
+		findRecipeByName,
+		handleLoader,
+		isLoader,
+		currentPage,
+		isFilteredData,
+		setCurrentPage
+	} = useRecipes2({ data })
 	const totalRecipes = isFilteredData ? recipesData.length : data?.totalItems
-
+	console.log(isLoader)
 	return (
 		<>
-			<Search handleValue={findRecipeByName} />
+			<Search
+				handleValue={findRecipeByName}
+				handleLoader={handleLoader}
+				isLoader={isLoader}
+			/>
 			<div className="flex items-center justify-between px-5">
 				<h2 className="Subtitle">Recetas</h2>
 				<span className="text-lg font-nunito">

@@ -7,8 +7,15 @@ import { type ParamProps } from '@/interfaces/ParamProps.interface'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-export const metadata: Metadata = {
-	title: 'Paises',
+type Props = {
+	searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+	const name = searchParams.name
+	return {
+		title: `Recetas de ${name}`,
+	}
 }
 
 const page = async ({ params }: ParamProps) => {
