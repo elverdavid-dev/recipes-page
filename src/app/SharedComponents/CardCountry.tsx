@@ -1,5 +1,5 @@
-import { type CardCountryProps } from "@/interfaces/CardCountryProps.interface"
-import ImageComponent from "./Image"
+import { type CardCountryProps } from '@interfaces/CardCountryProps.interface'
+import ImageComponent from './Image'
 
 const CardCountry = ({ img, name }: CardCountryProps) => {
 	return (

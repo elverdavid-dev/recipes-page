@@ -1,14 +1,20 @@
-"use client"
+'use client'
 
-import { Button } from "@nextui-org/react"
-import { useRouter } from "next/navigation"
+import { Button } from '@nextui-org/react'
+import { Metadata } from 'next'
+import { useRouter } from 'next/navigation'
+
+export const metadata: Metadata = {
+	title: 'Pagina no encontrada',
+}
+
 const NotFound = () => {
 	const router = useRouter()
 	const redirectToHome = () => {
-		router.push("/")
+		router.push('/')
 	}
 	return (
-		<section className="bg-[#f9f9f9] h-screen">
+		<main className="bg-base h-screen">
 			<div className="flex justify-center">
 				<video
 					src="/404/404-NotFound.mp4"
@@ -31,7 +37,7 @@ const NotFound = () => {
 					Regresar al inicio
 				</Button>
 			</div>
-		</section>
+		</main>
 	)
 }
 

@@ -1,4 +1,4 @@
-import { FiMenu, FiX } from "react-icons/fi"
+import { FiMenu, FiX } from 'react-icons/fi'
 
 interface Props {
 	isOpenMenu: boolean

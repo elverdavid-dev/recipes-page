@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { Button } from "@nextui-org/react"
-import { useRouter } from "next/navigation"
+import { Button } from '@nextui-org/react'
+import { useRouter } from 'next-nprogress-bar'
 
 // Boton para ir a la pagina de paises
 const RedirectPageCountry = () => {
@@ -14,7 +14,7 @@ const RedirectPageCountry = () => {
 				radius="sm"
 				className="px-32 font-nunito"
 				onClick={() => {
-					router.push("/paises")
+					router.push('/paises')
 				}}
 			>
 				Ver mas

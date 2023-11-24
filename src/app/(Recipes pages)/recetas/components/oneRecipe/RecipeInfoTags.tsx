@@ -1,10 +1,10 @@
-import { formatDuration } from "@/(Recipes pages)/functions/FormayDurations"
+import { formatDuration } from '@/(Recipes pages)/functions/FormayDurations'
 import {
 	RiCalendarLine,
 	RiFunctionLine,
 	RiRestaurant2Line,
 	RiTimeLine,
-} from "react-icons/ri"
+} from 'react-icons/ri'
 
 interface RecipeInfo {
 	fecha: string
@@ -38,7 +38,7 @@ const RecipeInfoTags = ({
 			{/* Porciones */}
 			<span className="RecipeInfoTags">
 				<RiRestaurant2Line className="text-gold" size={20} />
-				{portions} {"Porciones"}
+				{portions} {'Porciones'}
 			</span>
 		</div>
 	)

@@ -1,5 +1,5 @@
-import { baseUrl } from "@/lib/utils"
-import { type RecipeList } from "@interfaces/RecipesList.interface"
+import { baseUrl } from '@/lib/utils'
+import { type RecipeList } from '@interfaces/RecipesList.interface'
 
 /**
  * @description Obtiene una lista de recetas desde el servidor con paginación.
@@ -10,9 +10,9 @@ import { type RecipeList } from "@interfaces/RecipesList.interface"
 
 export async function GetAllRecipes(page = 1): Promise<RecipeList | undefined> {
 	try {
-		const response = await fetch(`${baseUrl}/recipes?page=${page}&limit=20`)
+		const response = await fetch(`${baseUrl}/recipes?page=${page}`)
 		if (!response.ok) {
-			throw new Error("Error al obtener todas las recetas")
+			throw new Error('Error al obtener todas las recetas')
 		}
 		const data: RecipeList = await response.json()
 		return data

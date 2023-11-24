@@ -1,7 +1,7 @@
-import RedirectPageCountry from "@/LandingPage/components/RedirectPageCountry"
-import CardCountry from "@/SharedComponents/CardCountry"
-import { GetAllCountry } from "../../functions/GetAllCountry"
-import ShowRecipesOneCountry from "../ShowRecipesOneCountry"
+import RedirectPageCountry from '@/LandingPage/components/RedirectPageCountry'
+import CardCountry from '@/SharedComponents/CardCountry'
+import { GetAllCountry } from '../../functions/GetAllCountry'
+import ShowRecipesOneCountry from '../ShowRecipesOneCountry'
 
 const SectionCountry = async () => {
 	const countrys = await GetAllCountry(6)

@@ -1,5 +1,5 @@
-import { baseUrl } from "@/lib/utils"
-import { type Categories } from "@interfaces/Categories.interface"
+import { baseUrl } from '@/lib/utils'
+import { type Categories } from '@interfaces/Categories.interface'
 
 /**
  * @description Obtiene una lista de categorías desde el servidor.
@@ -9,7 +9,7 @@ export async function GetAllCategories() {
 	try {
 		const response = await fetch(`${baseUrl}/categories`)
 		if (!response.ok) {
-			throw Error("Error al obtener las categorias")
+			throw Error('Error al obtener las categorias')
 		}
 		const data: Categories[] = await response.json()
 		return data

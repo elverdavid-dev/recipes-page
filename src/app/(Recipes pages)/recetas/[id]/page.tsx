@@ -1,6 +1,11 @@
-import { type ParamProps } from "@interfaces/ParamProps.interface"
-import Aside from "../components/oneRecipe/AsideSection"
-import ShowDataRecipe from "../components/oneRecipe/ShowDataRecipe"
+import { type ParamProps } from '@interfaces/ParamProps.interface'
+import { Metadata } from 'next'
+import Aside from '../components/oneRecipe/AsideSection'
+import ShowDataRecipe from '../components/oneRecipe/ShowDataRecipe'
+
+export const metadata: Metadata = {
+	title: 'Receta•GlobalFood',
+}
 
 const PageById = async ({ params }: ParamProps) => {
 	const id = params.id

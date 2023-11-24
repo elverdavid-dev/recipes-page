@@ -1,7 +1,7 @@
-import Image from "@/SharedComponents/Image"
-import { GetAllCategories } from "../../functions/GetAllCategories"
-import Carusel from "../Carusel"
-import ShowRecipesOneCategory from "../ShowRecipesOneCategory"
+import Image from '@/SharedComponents/Image'
+import { GetAllCategories } from '../../functions/GetAllCategories'
+import Carusel from '../Carusel'
+import ShowRecipesOneCategory from '../ShowRecipesOneCategory'
 
 const SectionCategories = async () => {
 	const Categories = await GetAllCategories()
@@ -21,7 +21,7 @@ const SectionCategories = async () => {
 								className="hover:scale-105 transition-all"
 							/>
 							<span className="text-xl text-slate-950 font-nunito block py-2 group-hover:text-gold transition-all ">
-								{name}{" "}
+								{name}{' '}
 							</span>
 						</section>
 					</ShowRecipesOneCategory>

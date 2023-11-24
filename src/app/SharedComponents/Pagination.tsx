@@ -1,17 +1,19 @@
-"use client"
-import { Pagination } from "@nextui-org/react"
+'use client'
+import { Pagination } from '@nextui-org/react'
+import { useRouter } from 'next/navigation'
 
 interface PaginateProps {
 	currentPage: number
-	handlePage: (page: number) => void
 	total: number
 }
 
-const PaginationComponent = ({
-	currentPage,
-	handlePage,
-	total,
-}: PaginateProps) => {
+const PaginationComponent = ({ currentPage, total }: PaginateProps) => {
+	const router = useRouter()
+
+	const handlePage = (page: number) => {
+		router.push(`/recetas?page=${page}`)
+	}
+
 	return (
 		<Pagination
 			color="warning"
