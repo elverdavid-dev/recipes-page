@@ -4,10 +4,8 @@ import { lora, nunito, readexPro } from '@/fonts'
 import Providers from '@/providers'
 import '@/styles/globals.css'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
-import { Suspense } from 'react'
 // import { Analytics } from '@vercel/analytics/react'
 import 'react-multi-carousel/lib/styles.css'
-import Loading from './loading'
 import { metadata } from './metadata'
 
 // Metadata
@@ -24,9 +22,7 @@ export default function RootLayout({ children }: ChildrenProps) {
 			<body>
 				<Navbar />
 				{/* <Analytics/> */}
-				<Suspense fallback={<Loading />}>
-					<Providers>{children}</Providers>
-				</Suspense>
+				<Providers>{children}</Providers>
 				<Footer />
 			</body>
 		</html>

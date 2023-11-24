@@ -11,12 +11,12 @@ const Navbar = () => {
 	const { isOpenMenu, closeMenu } = useNavbar()
 
 	return (
-		<header
-			className={`${
-				pathName !== '/' ? 'sticky' : ''
-			} top-0 z-50 2xl:container mx-auto`}
-		>
-			<nav className={`Navbar ${pathName === '/' ? 'bg-light' : 'bg-base'}`}>
+		<header className="sticky top-0 z-50 2xl:container mx-auto">
+			<nav
+				className={`Navbar ${
+					pathName === '/' ? 'bg-light initial-navbar' : 'bg-base'
+				}`}
+			>
 				<section className="flex justify-between items-center mx-2">
 					<Logo />
 					<MenuButton isOpenMenu={isOpenMenu} closeMenu={closeMenu} />

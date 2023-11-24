@@ -1,36 +1,26 @@
 'use client'
-import { Button, CircularProgress, Input } from '@nextui-org/react'
-import { useEffect, useState } from 'react'
+import { Button, Input } from '@nextui-org/react'
+import { useRouter } from 'next/navigation'
+import { FormEvent, useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 
-interface Props {
-	handleValue: (value: string) => Promise<void>
-	handleLoader: () => void
-	isLoader: boolean
-}
-export default function Search({ handleValue, handleLoader, isLoader }: Props) {
+export default function Search() {
+	const router = useRouter()
 	const [emptyValue, setEmptyValue] = useState<string | undefined>('')
-	// Hace la busqueda de la receta que se introdujo en el input
+
 	const handleSearch = () => {
-		handleValue(emptyValue ?? '')
+		router.push(`/recetas?name=${emptyValue}`)
 	}
 
-	useEffect(() => {
-		if (emptyValue === '') {
-			handleSearch()
-		}
-
-	}, [emptyValue])
-
-	// Si se presiona la tecla "Enter", se ejecuta la búsqueda de la receta.
-	const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-		if (e.key === 'Enter') {
-			handleSearch()
-		}
+	const handleSubmit = (e: FormEvent) => {
+		e.preventDefault()
 	}
 
 	return (
-		<div className="flex gap-x-2 mt-16 justify-center mx-4 items-center">
+		<form
+			className="flex gap-x-2 mt-16 justify-center mx-4 items-center"
+			onSubmit={handleSubmit}
+		>
 			<Input
 				value={emptyValue}
 				onValueChange={setEmptyValue}
@@ -40,11 +30,11 @@ export default function Search({ handleValue, handleLoader, isLoader }: Props) {
 				variant="faded"
 				placeholder="Buscar recetas..."
 				startContent={<FiSearch className="text-slate-500 text-lg" />}
-				onKeyDown={handleKeyDown}
+				role="search"
 			/>
 			<Button type="submit" size="lg" onClick={handleSearch}>
-				{isLoader ? <CircularProgress color="default" /> : 'Buscar'}
+				Buscar
 			</Button>
-		</div>
+		</form>
 	)
 }

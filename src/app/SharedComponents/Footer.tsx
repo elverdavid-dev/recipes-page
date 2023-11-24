@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Logo from './Logo'
 
 export default function Footer() {
+	const date = new Date()
+	const CurrentYear = date.getFullYear()
 	return (
 		<footer className="bg-light flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between w-full p-5 mt-44 font-nunito 2xl:container mx-auto">
 			<div>
@@ -9,8 +11,8 @@ export default function Footer() {
 			</div>
 			<div>
 				<p className="text-gray-800 text-center md:text-left flex gap-2">
-					&copy; 2023
-					<span className="text-gray-900 font-bold">GlobalFood.</span>{' '}
+					&copy; {CurrentYear}
+					<span className="text-gray-900 font-bold">GlobalFood</span>{' '}
 					<span className="text-gray-700">• By</span>
 					<a
 						href="https://www.elvportafolio.website"

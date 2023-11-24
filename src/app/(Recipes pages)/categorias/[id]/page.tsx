@@ -7,12 +7,13 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { GetAllRecipesOneCategory } from '../../functions/GetAllRecipesOneCategory'
 
-
 type Props = {
 	searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+export async function generateMetadata({
+	searchParams,
+}: Props): Promise<Metadata> {
 	const name = searchParams.name
 	return {
 		title: `Categoria•${name}`,

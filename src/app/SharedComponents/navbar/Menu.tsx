@@ -12,7 +12,7 @@ const Menu = ({ isOpenMenu, closeMenu, pathName }: Props) => {
 		<ul
 			className={`Content-menu-items ${
 				isOpenMenu ? 'opacity-100' : 'top-[-450px] opacity-0 md:opacity-100'
-			} ${pathName === '/' ? 'bg-light' : 'bg-base'}`}
+			} ${pathName === '/' ? 'bg-light initial-navbar' : 'bg-base'}`}
 		>
 			{optionsMenu.map(({ href, title }, i) => (
 				<li key={title + i} className="m-3 md:m-auto p-2">

@@ -1,8 +1,8 @@
+import type { RecipeList } from '@/interfaces/RecipesList.interface'
 import { baseUrl } from '@/lib/utils'
-import { type Recipes } from '@interfaces/Recipes.interface'
 
-interface Props extends Recipes {
-	message: { message: string }
+interface Props extends RecipeList {
+	message: string
 }
 
 /**
@@ -18,11 +18,7 @@ export async function SearchRecipeByName(name: string) {
 			throw new Error('Error al obtener  la receta')
 		}
 		const data: Props = await response.json()
-
-		if (Array.isArray(data)) {
-			return data
-		}
-		return []
+		return data
 	} catch (error) {
 		console.error(error)
 	}

@@ -6,4 +6,5 @@ export interface RecipeList {
 	itemsPerPage: number
 	totalItems: number
 	data: Recipes[]
+	message?: string
 }

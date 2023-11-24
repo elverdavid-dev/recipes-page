@@ -7,7 +7,12 @@ const providers = ({ children }: ChildrenProps) => {
 	const router = useRouter()
 	return (
 		<>
-			<ProgressBar color='#FFAC4B' height='4px' options={{ showSpinner: false }} shallowRouting />
+			<ProgressBar
+				color="#FFAC4B"
+				height="4px"
+				options={{ showSpinner: false }}
+				shallowRouting
+			/>
 			<NextUIProvider navigate={router.push}>{children}</NextUIProvider>
 		</>
 	)
