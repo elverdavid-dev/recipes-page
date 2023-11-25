@@ -1,6 +1,6 @@
 'use client'
 import { Pagination } from '@nextui-org/react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 interface PaginateProps {
 	currentPage: number
@@ -9,11 +9,15 @@ interface PaginateProps {
 
 const PaginationComponent = ({ currentPage, total }: PaginateProps) => {
 	const router = useRouter()
+	const pathName = usePathname()
+	const searchParams = useSearchParams()
 
 	const handlePage = (page: number) => {
-		router.push(`/recetas?page=${page}`)
+		const params = new URLSearchParams(searchParams)
+		params.set('page', page.toString())
+		router.replace(`${pathName}?${params.toString()}`)
 	}
-
+	const currentPages = Number(searchParams.get('page')) || 1
 	return (
 		<Pagination
 			color="warning"

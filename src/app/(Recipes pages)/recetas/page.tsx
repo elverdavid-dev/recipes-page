@@ -14,14 +14,15 @@ interface SearchProps {
 }
 
 const RecipesPage = async ({ searchParams }: SearchProps) => {
-	const recipesData = await GetAllRecipes(parseInt(searchParams.page ?? ''))
+	const recipesData = await GetAllRecipes(Number(searchParams.page))
 
 	const getDataSearch = async () => {
 		if (searchParams.name) {
-			const searchData = await SearchRecipeByName(searchParams.name ?? 'pollo')
+			const searchData = await SearchRecipeByName(searchParams.name)
 			return searchData
 		}
 	}
+
 	const dataSearch = await getDataSearch()
 	const currentPage = searchParams.name ? dataSearch?.page : recipesData?.page
 	const totalPages = searchParams.name

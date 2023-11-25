@@ -1,40 +1,40 @@
 'use client'
-import { Button, Input } from '@nextui-org/react'
-import { useRouter } from 'next/navigation'
-import { FormEvent, useState } from 'react'
+import { Input } from '@nextui-org/react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { FiSearch } from 'react-icons/fi'
+import { useDebouncedCallback } from 'use-debounce'
 
 export default function Search() {
-	const router = useRouter()
-	const [emptyValue, setEmptyValue] = useState<string | undefined>('')
+	const { replace } = useRouter()
+	const searchParams = useSearchParams()
+	const pathName = usePathname()
 
-	const handleSearch = () => {
-		router.push(`/recetas?name=${emptyValue}`)
-	}
+	const handleSearch = useDebouncedCallback((value: string) => {
+		const params = new URLSearchParams(searchParams)
+		if (searchParams.get('page')) {
+			params.set('page', '1')
+		}
+		if (value) {
+			params.set('name', value)
+		} else {
+			params.delete('name')
+		}
+		replace(`${pathName}?${params.toString()}`)
+	}, 300)
 
-	const handleSubmit = (e: FormEvent) => {
-		e.preventDefault()
-	}
-
+	const defaultValueInput = searchParams.get('name')?.toString()
 	return (
-		<form
-			className="flex gap-x-2 mt-16 justify-center mx-4 items-center"
-			onSubmit={handleSubmit}
-		>
+		<section className="flex gap-x-2 mt-16 justify-center mx-4 items-center">
 			<Input
-				value={emptyValue}
-				onValueChange={setEmptyValue}
-				isClearable
+				onChange={(event) => handleSearch(event.target.value)}
 				size="sm"
 				className="lg:w-[500px] font-nunito"
 				variant="faded"
 				placeholder="Buscar recetas..."
 				startContent={<FiSearch className="text-slate-500 text-lg" />}
 				role="search"
+				defaultValue={defaultValueInput}
 			/>
-			<Button type="submit" size="lg" onClick={handleSearch}>
-				Buscar
-			</Button>
-		</form>
+		</section>
 	)
 }
