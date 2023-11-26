@@ -33,7 +33,7 @@ const ContentRecipes = async ({
 				{data?.message ? (
 					<NotFound description={data.message} />
 				) : (
-					<section className="mt-16 px-4 mx-auto  grid grid-cols-2 lg:grid-cols-4 lg:gap-5 gap-3">
+					<section className="mt-16 px-4 mx-auto  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-3">
 						{data?.data.map(
 							({ _id, image, name, category, duration, portions }) => (
 								<div key={_id}>
