@@ -1,11 +1,26 @@
-'use client'
+import { GetAllRecipes } from '@/(Recipes pages)/functions/GetAllRecipes'
+import { SearchRecipeByName } from '@/(Recipes pages)/functions/SearchRecipe'
 import CardRecipe from '@/SharedComponents/CardRecipe'
 import NotFound from '@/SharedComponents/NotFound'
+import Pagination from '@/SharedComponents/Pagination'
 import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
-import { type RecipeList } from '@/interfaces/RecipesList.interface'
 
-const ContentRecipes = ({ data }: { data: RecipeList | undefined }) => {
-	console.log(data)
+const ContentRecipes = async ({
+	page,
+	name,
+}: { name?: string; page?: string }) => {
+	const recipesData = await GetAllRecipes(Number(page) || 1)
+
+	const getDataSearch = async () => {
+		if (name) {
+			const searchData = await SearchRecipeByName(name)
+			return searchData
+		}
+	}
+
+	const searchData = await getDataSearch()
+
+	const data = name ? searchData : recipesData
 	return (
 		<>
 			<div className="flex items-center justify-between px-5">
@@ -37,6 +52,7 @@ const ContentRecipes = ({ data }: { data: RecipeList | undefined }) => {
 					</section>
 				)}
 			</section>
+			<Pagination currentPage={data?.page ?? 1} total={data?.totalPages ?? 1} />
 		</>
 	)
 }

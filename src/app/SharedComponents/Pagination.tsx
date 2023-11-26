@@ -17,7 +17,7 @@ const PaginationComponent = ({ currentPage, total }: PaginateProps) => {
 		params.set('page', page.toString())
 		router.replace(`${pathName}?${params.toString()}`)
 	}
-	const currentPages = Number(searchParams.get('page')) || 1
+
 	return (
 		<Pagination
 			color="warning"
