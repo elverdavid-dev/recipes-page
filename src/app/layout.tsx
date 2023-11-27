@@ -21,8 +21,10 @@ export default function RootLayout({ children }: ChildrenProps) {
 		>
 			<body>
 				<Navbar />
-				<Analytics />
-				<Providers>{children}</Providers>
+				<Providers>
+					{children}
+					<Analytics mode='auto' />
+				</Providers>
 				<Footer />
 			</body>
 		</html>
