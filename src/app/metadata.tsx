@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 		'globalfood',
 		'deliciosas preparaciones',
 		'recetas de diferentes paises',
-		''
 	],
 	alternates: { canonical: 'https://globalfood.site' },
 	publisher: 'vercel',
