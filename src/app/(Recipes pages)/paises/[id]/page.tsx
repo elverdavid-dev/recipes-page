@@ -32,7 +32,7 @@ const page = async ({ params }: ParamProps) => {
 			<DynamicTitle message="Recetas de " />
 			<section className="mx-auto container mt-16 lg:px-20 px-4">
 				{Array.isArray(recipes) ? (
-					<section className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 						{recipes.map(
 							({ _id, image, name, category, portions, duration }) => (
 								<section key={_id}>

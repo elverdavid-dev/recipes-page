@@ -1,9 +1,8 @@
-import Pagination from '@/SharedComponents/Pagination'
 import { Metadata } from 'next'
-import { GetAllRecipes } from '../functions/GetAllRecipes'
-import { SearchRecipeByName } from '../functions/SearchRecipe'
+import { Suspense } from 'react'
 import ContentRecipes from './components/allRecipes/ContentRecipes'
 import Search from './components/allRecipes/Search'
+import SkeletonRecipe from './components/allRecipes/SkeletonRecipe'
 
 export const metadata: Metadata = {
 	title: 'Recetas•GlobalFood',
@@ -14,24 +13,15 @@ interface SearchProps {
 }
 
 const RecipesPage = async ({ searchParams }: SearchProps) => {
-	const recipesData = await GetAllRecipes(parseInt(searchParams.page ?? ''))
-
-	const getDataSearch = async () => {
-		if (searchParams.name) {
-			const searchData = await SearchRecipeByName(searchParams.name ?? 'pollo')
-			return searchData
-		}
-	}
-	const dataSearch = await getDataSearch()
-	const currentPage = searchParams.name ? dataSearch?.page : recipesData?.page
-	const totalPages = searchParams.name
-		? dataSearch?.totalPages
-		: recipesData?.totalPages
+	const name = searchParams.name ?? 'key'
+	const page = searchParams.page ?? '1'
+	const dinamyKey = name + page
 	return (
 		<main className="mx-auto container">
 			<Search />
-			<ContentRecipes data={searchParams.name ? dataSearch : recipesData} />
-			<Pagination currentPage={currentPage ?? 1} total={totalPages ?? 1} />
+			<Suspense key={dinamyKey} fallback={<SkeletonRecipe />}>
+				<ContentRecipes page={searchParams.page} name={searchParams.name} />
+			</Suspense>
 		</main>
 	)
 }
