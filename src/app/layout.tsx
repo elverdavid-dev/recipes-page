@@ -4,7 +4,7 @@ import { lora, nunito, readexPro } from '@/fonts'
 import Providers from '@/providers'
 import '@/styles/globals.css'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
-// import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/react'
 import 'react-multi-carousel/lib/styles.css'
 import { metadata } from './metadata'
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: ChildrenProps) {
 		>
 			<body>
 				<Navbar />
-				{/* <Analytics/> */}
+				<Analytics />
 				<Providers>{children}</Providers>
 				<Footer />
 			</body>
