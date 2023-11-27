@@ -1,6 +1,6 @@
 import SkeletonCard from '@/SharedComponents/SkeletonCard'
 
-const Skeleton = () => {
+const SkeletonRecipe = () => {
 	return (
 		<>
 			<div className="flex items-center justify-between px-5">
@@ -19,4 +19,4 @@ const Skeleton = () => {
 	)
 }
 
-export default Skeleton
+export default SkeletonRecipe

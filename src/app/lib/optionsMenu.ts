@@ -7,10 +7,7 @@ export const optionsMenu = [
 		title: 'Recetas',
 		href: '/recetas',
 	},
-	{
-		title: 'Categorias',
-		href: '/categorias',
-	},
+
 	{
 		title: 'Paises',
 		href: '/paises',
