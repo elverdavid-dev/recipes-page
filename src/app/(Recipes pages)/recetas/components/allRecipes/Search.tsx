@@ -24,11 +24,11 @@ export default function Search() {
 
 	const defaultValueInput = searchParams.get('name')?.toString()
 	return (
-		<section className="flex gap-x-2 mt-16 justify-center mx-4 items-center">
+		<section className="flex mt-16 justify-center mx-2 items-center">
 			<Input
 				onChange={(event) => handleSearch(event.target.value)}
 				size="sm"
-				className="lg:w-[500px] font-nunito"
+				className="lg:w-[600px] font-nunito"
 				variant="faded"
 				placeholder="Buscar recetas..."
 				startContent={<FiSearch className="text-slate-500 text-lg" />}

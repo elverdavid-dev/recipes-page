@@ -17,7 +17,7 @@ const RecipesPage = async ({ searchParams }: SearchProps) => {
 	const page = searchParams.page ?? '1'
 	const dinamyKey = name + page
 	return (
-		<main className="mx-auto container">
+		<main className="2xl:mx-auto 2xl:container">
 			<Search />
 			<Suspense key={dinamyKey} fallback={<SkeletonRecipe />}>
 				<ContentRecipes page={searchParams.page} name={searchParams.name} />

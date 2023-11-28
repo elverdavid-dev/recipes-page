@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://www.globalfood.site'),
@@ -35,5 +35,9 @@ export const metadata: Metadata = {
 			'Sumérgete en una experiencia gastronómica única que te lleva en un viaje por los sabores del mundo. Explora platos tradicionales arraigados en la cultura de diferentes países',
 		images: 'https://www.globalfood.site/og-image.png',
 	},
-	robots: 'index,follow',
+	robots: { index: true, follow: true }
+}
+
+export const viewport: Viewport = {
+	themeColor: "#f6f6f6",
 }
