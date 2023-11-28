@@ -23,7 +23,7 @@ const ContentRecipes = async ({
 	const data = name ? searchData : recipesData
 	return (
 		<>
-			<div className="flex items-center justify-between px-5">
+			<div className="flex items-center justify-between px-2 lg:px-4">
 				<h2 className="Subtitle">Recetas</h2>
 				<span className="text-lg font-nunito">
 					{data?.totalItems ?? 0} Recetas totales
@@ -33,7 +33,7 @@ const ContentRecipes = async ({
 				{data?.message ? (
 					<NotFound description={data.message} />
 				) : (
-					<section className="mt-16 px-2 mx-auto  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2">
+					<section className="mt-16 px-2 lg:px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2">
 						{data?.data.map(
 							({ _id, image, name, category, duration, portions }) => (
 								<div key={_id}>
