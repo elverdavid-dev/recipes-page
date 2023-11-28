@@ -29,7 +29,7 @@ const PaginationComponent = ({ currentPage, total }: PaginateProps) => {
 			total={total}
 			page={currentPage}
 			onChange={handlePage}
-			className="mt-10 flex justify-center"
+			className="mt-10 flex justify-center mx-1"
 		/>
 	)
 }
