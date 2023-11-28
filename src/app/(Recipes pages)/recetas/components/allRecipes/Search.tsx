@@ -24,7 +24,7 @@ export default function Search() {
 
 	const defaultValueInput = searchParams.get('name')?.toString()
 	return (
-		<section className="flex mt-16 justify-center mx-2 items-center">
+		<section className="flex mt-16 justify-center items-center">
 			<Input
 				onChange={(event) => handleSearch(event.target.value)}
 				size="sm"
