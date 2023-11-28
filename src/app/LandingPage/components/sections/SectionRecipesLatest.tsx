@@ -6,9 +6,9 @@ const SectionRecipesLatest = async () => {
 	const Recipes = await GetLatestRecipes(12)
 
 	return (
-		<section className="mt-32 lg:px-20 px-4 2xl:container mx-auto">
+		<section className="mt-32 lg:px-20 px-2 2xl:container mx-auto">
 			<h2 className="Subtitle">Ultimas recetas</h2>
-			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5">
+			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5">
 				{Recipes?.map(({ _id, name, image, category, duration, portions }) => (
 					<div key={_id}>
 						<ShowOneRecipe id={_id}>
