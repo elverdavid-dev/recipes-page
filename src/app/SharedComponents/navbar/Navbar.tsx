@@ -13,9 +13,7 @@ const Navbar = () => {
 	return (
 		<header className="sticky top-0 z-50 2xl:container mx-auto">
 			<nav
-				className={`Navbar ${
-					pathName === '/' ? 'bg-light initial-navbar' : 'bg-base'
-				}`}
+				className="Navbar"
 			>
 				<section className="flex justify-between items-center mx-2">
 					<Logo />
