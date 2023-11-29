@@ -26,7 +26,7 @@ export default function CardRecipe({
 					height={210}
 					className="group-hover:scale-105 transition-transform w-full h-full"
 				/>
-				<span className=" font-readexPro capitalize text-xl text-slate-950 pt-3 px-3  group-hover:text-gold transition-all">
+				<span className=" font-readexPro capitalize text-xl text-slate-950 pt-3 px-3  group-hover:text-gold transition-all truncate">
 					{name}
 				</span>
 				<span className="py-3 px-3 font-nunito text-sm text-slate-700">

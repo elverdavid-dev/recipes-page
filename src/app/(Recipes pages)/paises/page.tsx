@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 const pageAllCountry = async () => {
 	const dataCountry = await GetAllCountry(12)
 	return (
-		<section className="mx-auto container px-4 mt-20">
+		<section className="mx-auto container px-2 mt-20">
 			<div className="flex justify-between items-center">
 				<h1 className="lg:text-4xl text-2xl font-readexPro">Paises</h1>
 				<h3 className="text-xl font-nunito">
 					{dataCountry?.totalItems} Paises totales
 				</h3>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10  gap-y-5 mt-16">
 				{dataCountry?.data.map(({ _id, image, name }) => (
 					<div key={_id}>
 						<ShowRecipesOneCountry id={_id} name={name}>
