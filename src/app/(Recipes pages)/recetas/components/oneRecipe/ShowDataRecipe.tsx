@@ -2,9 +2,10 @@ import { FormatRelativeDate } from '@/(Recipes pages)/functions/FormatRelativeDa
 import { GetRecipeById } from '@/(Recipes pages)/functions/GetRecipeById'
 import CheckBoxComponent from '@/(Recipes pages)/recetas/components/oneRecipe/CheckBox'
 import ChipComponent from '@/(Recipes pages)/recetas/components/oneRecipe/Chip'
-import ImageComponent from '@/SharedComponents/Image'
+import Image from '@/SharedComponents/Image'
 import { notFound } from 'next/navigation'
 import { FiList } from 'react-icons/fi'
+import { Recipe, WithContext } from 'schema-dts'
 import RecipeInfoTags from './RecipeInfoTags'
 
 const ShowDataRecipe = async ({ id }: { id: string }) => {
@@ -13,6 +14,18 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 		notFound()
 	}
 	const fechaFormateada = FormatRelativeDate(recipe.createdAt)
+
+	const jsonLd: WithContext<Recipe> = {
+		'@context': 'https://schema.org',
+		'@type': 'Recipe',
+		name: recipe.name,
+		image: recipe.image,
+		description: recipe.description,
+		datePublished: fechaFormateada,
+		recipeYield: recipe.portions.toString(),
+		recipeIngredient: recipe.ingredients,
+		recipeInstructions: recipe.steps
+	}
 	return (
 		<section className="lg:w-[700px]">
 			<h2 className="font-readexPro text-lg text-gold">
@@ -27,7 +40,7 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 
 			{/* Image */}
 
-			<ImageComponent
+			<Image
 				src={recipe.image}
 				alt={recipe.name}
 				width={700}
@@ -75,6 +88,10 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 					</li>
 				))}
 			</ul>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
 		</section>
 	)
 }

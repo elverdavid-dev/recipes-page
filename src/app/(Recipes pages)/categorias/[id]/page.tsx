@@ -31,7 +31,7 @@ const CategoryPage = async ({ params }: ParamProps) => {
 			<DynamicTitle message="Recetas de la categoria " />
 			<section className="mx-auto container">
 				{Array.isArray(recipes?.data) ? (
-					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:px-20 px-4 mt-20">
+					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 lg:px-16 px-2 mt-20">
 						{recipes?.data.map(
 							({ _id, name, image, duration, portions, country }) => (
 								<ShowOneRecipe id={_id} key={_id}>
