@@ -16,7 +16,7 @@ export async function generateMetadata({
 }: Props): Promise<Metadata> {
 	const name = searchParams.name
 	return {
-		title: `Categoria•${name}`,
+		title: `Recetas de la categoría ${name} | GlobalFood`,
 	}
 }
 

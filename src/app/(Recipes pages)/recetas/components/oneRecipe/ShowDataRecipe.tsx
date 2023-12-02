@@ -6,6 +6,7 @@ import Image from '@/SharedComponents/Image'
 import { notFound } from 'next/navigation'
 import { FiList } from 'react-icons/fi'
 import { Recipe, WithContext } from 'schema-dts'
+import BreadcrumbsComponent from './Breadcrumbs'
 import RecipeInfoTags from './RecipeInfoTags'
 
 const ShowDataRecipe = async ({ id }: { id: string }) => {
@@ -15,6 +16,7 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 	}
 	const fechaFormateada = FormatRelativeDate(recipe.createdAt)
 
+	//Creación de datos estructurados JSON-LD para describir la receta y mejorar la indexación en motores de búsqueda
 	const jsonLd: WithContext<Recipe> = {
 		'@context': 'https://schema.org',
 		'@type': 'Recipe',
@@ -24,10 +26,19 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 		datePublished: fechaFormateada,
 		recipeYield: recipe.portions.toString(),
 		recipeIngredient: recipe.ingredients,
-		recipeInstructions: recipe.steps
+		recipeInstructions: recipe.steps,
+		keywords: [
+			`${recipe.name}`,
+			`${recipe.category.name},${recipe.country?.name}`,
+			'Platos',
+			'Receta',
+			'Gastronomia',
+			'Preparaciones',
+		],
 	}
 	return (
 		<section className="lg:w-[700px]">
+			<BreadcrumbsComponent name={recipe.name} />
 			<h2 className="font-readexPro text-lg text-gold">
 				{recipe.country?.name}
 			</h2>
@@ -40,12 +51,7 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 
 			{/* Image */}
 
-			<Image
-				src={recipe.image}
-				alt={recipe.name}
-				width={700}
-				height={500}
-			/>
+			<Image src={recipe.image} alt={recipe.name} width={700} height={500} />
 
 			{/* Tags */}
 

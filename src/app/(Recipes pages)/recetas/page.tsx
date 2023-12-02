@@ -5,7 +5,7 @@ import Search from './components/allRecipes/Search'
 import SkeletonRecipe from './components/allRecipes/SkeletonRecipe'
 
 export const metadata: Metadata = {
-	title: 'Recetas•GlobalFood',
+	title: 'Recetas del Mundo para Tu Paladar | GlobalFood',
 }
 
 interface SearchProps {

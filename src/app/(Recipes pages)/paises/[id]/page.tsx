@@ -16,7 +16,7 @@ export async function generateMetadata({
 }: Props): Promise<Metadata> {
 	const name = searchParams.name
 	return {
-		title: `Recetas de ${name}`,
+		title: `Explora Cocinas del Mundo | ${name} | GlobalFood`,
 	}
 }
 
