@@ -7,7 +7,7 @@ const SkeletonRecipe = () => {
 				<h2 className="Subtitle">Recetas</h2>
 				<span className="inline-block h-5 w-32 rounded-full bg-gray-300 animate-pulse" />
 			</div>
-			<section className="mt-16 px-4 mx-auto  grid grid-cols-2 lg:grid-cols-4 lg:gap-5 gap-3">
+			<section className="mt-16 px-2 mx-auto  grid grid-cols-2 lg:grid-cols-4 lg:gap-5 gap-3">
 				{[...Array(8)].map((_, index) => (
 					<SkeletonCard key={index + 1} />
 				))}

@@ -4,7 +4,7 @@ import CardCountry from '@/SharedComponents/CardCountry'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-	title: 'Paises•GlobalFood',
+	title: 'Explora la Gastronomía Internacional por Países | GlobalFood',
 }
 
 const pageAllCountry = async () => {

@@ -11,7 +11,6 @@ import { metadata } from './metadata'
 // Metadata
 export { metadata }
 
-
 export const revalidate = 60 // revalidate at most every hour
 
 export default function RootLayout({ children }: ChildrenProps) {
@@ -24,7 +23,7 @@ export default function RootLayout({ children }: ChildrenProps) {
 				<Navbar />
 				<Providers>
 					{children}
-					<Analytics mode='auto' />
+					<Analytics mode="auto" />
 				</Providers>
 				<Footer />
 			</body>
