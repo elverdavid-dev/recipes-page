@@ -31,3 +31,8 @@ body {
   text-shadow: 0px 0px 10px #ffac4b;
 }
 
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(255, 162, 0);
+  opacity: 1;
+}

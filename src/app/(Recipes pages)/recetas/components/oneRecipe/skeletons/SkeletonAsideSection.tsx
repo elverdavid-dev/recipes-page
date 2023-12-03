@@ -1,9 +1,9 @@
 const SkeletonAsideSection = () => {
 	return (
-		<div className="flex flex-col ">
-			<p className="h-4 w-28 bg-gray-300 rounded-full animate-pulse" />
+		<div className="flex flex-col mt-4">
+			<p className="h-4 w-36 bg-gray-300 rounded-full animate-pulse my-3 mx-2 lg:mx-0" />
 			<aside className="max-w-sm">
-				{[...Array(8)]?.map((_, index) => (
+				{[...Array(7)]?.map((_, index) => (
 					<div
 						className="flex items-start gap-x-3 py-3 px-2 group"
 						key={index + 1}

@@ -5,9 +5,12 @@ import Providers from '@/providers'
 import '@/styles/globals.css'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import { Analytics } from '@vercel/analytics/react'
-import 'react-multi-carousel/lib/styles.css'
-import { metadata } from './metadata'
+// Styles of carusel
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/pagination'
 
+import { metadata } from './metadata'
 // Metadata
 export { metadata }
 
