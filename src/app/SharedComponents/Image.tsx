@@ -21,13 +21,13 @@ const ImageComponent = ({ src, width, alt, height, className }: ImageProps) => {
 	}
 	return (
 		<>
-			<Skeleton isLoaded={isLoaded} className={'rounded-md '}>
+			<Skeleton isLoaded={isLoaded} className={'rounded-md'}>
 				<Image
 					src={src}
 					alt={`Imagen ${alt}`}
 					width={width}
 					height={height}
-					className={className}
+					className={`${className} h-auto w-auto`}
 					// Callback que se ejecuta cuando la imagen se carga completamente.
 					onLoad={closeSkeleton}
 				/>

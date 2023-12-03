@@ -1,6 +1,9 @@
 const SkeletonOneRecipe = () => {
 	return (
-		<section className="container px-2 md:px-8 lg:px-10  mx-auto mt-16 lg:flex lg:justify-between gap-x-16 " role="status">
+		<section
+			className="container px-2 md:px-8 lg:px-10  mx-auto mt-16 lg:flex lg:justify-between gap-x-16 "
+			role="status"
+		>
 			<div className="lg:w-[700px] w-full">
 				<p className="h-3 w-20 bg-gray-300 rounded-full animate-pulse" />
 				<p className="h-6 w-[40%] bg-gray-300 rounded-full my-3 animate-pulse" />
