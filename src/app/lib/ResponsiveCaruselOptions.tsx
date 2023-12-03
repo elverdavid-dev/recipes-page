@@ -1,8 +1,8 @@
 export const ResponsiveOptions = {
 	// cuando el ancho de la ventana sea  <= 300px
 	300: {
-		slidesPerView: 2,
-		spaceBetween: 20,
+		slidesPerView: 1.90,
+		spaceBetween: 10,
 	},
 	480: {
 		slidesPerView: 2.2,

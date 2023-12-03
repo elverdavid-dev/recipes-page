@@ -27,7 +27,7 @@ const ImageComponent = ({ src, width, alt, height, className }: ImageProps) => {
 					alt={`Imagen ${alt}`}
 					width={width}
 					height={height}
-					className={`${className} h-auto w-auto`}
+					className={`${className} h-[${height}] w-[${width}]`}
 					// Callback que se ejecuta cuando la imagen se carga completamente.
 					onLoad={closeSkeleton}
 				/>
