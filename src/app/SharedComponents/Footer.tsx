@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 import Logo from './Logo'
 
 export default function Footer() {
@@ -24,20 +24,39 @@ export default function Footer() {
 					</a>
 				</p>
 			</div>
-			<div className="flex flex-col xl:flex-row items-center gap-2">
-				<Link
-					href="#"
-					className="text-gray-700  hover:text-gray-900 transition-colors duration-300"
+			<div className="flex items-center gap-2">
+				<a
+					href="https://instagram.com/elver.dev?igshid=OGQ5ZDc2ODk2ZA=="
+					target="_blank"
+					rel="noopener noreferrer"
+					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					Terminos y condiciones
-				</Link>
-				<span className="hidden xl:flex">|</span>
-				<Link
-					href="#"
-					className="text-gray-700  hover:text-gray-900  transition-colors duration-300"
+					<FiInstagram />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/elver-peñate"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					Política de privacidad
-				</Link>
+					<FiLinkedin />
+				</a>
+				<a
+					href="https://github.com/ElverDavid07"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
+				>
+					<FiGithub />
+				</a>
+				<a
+					href="https://www.facebook.com/elverdavid.penatepacheco.3"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
+				>
+					<FiFacebook />
+				</a>
 			</div>
 		</footer>
 	)

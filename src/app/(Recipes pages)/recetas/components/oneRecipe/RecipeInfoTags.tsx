@@ -1,4 +1,4 @@
-import { formatDuration } from '@/(Recipes pages)/functions/FormayDurations'
+import { formatDuration } from '@/(Recipes pages)/functions/FormatDurations'
 import {
 	RiCalendarLine,
 	RiFunctionLine,

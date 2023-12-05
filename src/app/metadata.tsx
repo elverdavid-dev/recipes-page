@@ -1,7 +1,7 @@
 import { Metadata, Viewport } from 'next'
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://www.globalfood.site'),
+	metadataBase: new URL('https://www.globalfood.site/'),
 	title: 'Explora Recetas de el Mundo en GlobalFood',
 	description:
 		'Sumérgete en una experiencia gastronómica única que te lleva en un viaje por los sabores del mundo. Explora platos tradicionales arraigados en la cultura de diferentes países o déjate sorprender por creaciones culinarias que rompen fronteras.',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 		type: 'website',
 		title: 'Explora Recetas de el Mundo en GlobalFood',
 		url: 'https://www.globalfood.site',
-		images: [{ url: 'https://www.globalfood.site/og-image.png' }],
+		images: 'https://www.globalfood.site/og-image.png',
 		description:
 			'Sumérgete en una experiencia gastronómica única que te lleva en un viaje por los sabores del mundo. Explora platos tradicionales arraigados en la cultura de diferentes países o déjate sorprender por creaciones culinarias que rompen fronteras.',
 		siteName: 'GlobalFood',
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
 			'Sumérgete en una experiencia gastronómica única que te lleva en un viaje por los sabores del mundo. Explora platos tradicionales arraigados en la cultura de diferentes países',
 		images: 'https://www.globalfood.site/og-image.png',
 	},
+	robots: "index,follow"
 }
 
 export const viewport: Viewport = {

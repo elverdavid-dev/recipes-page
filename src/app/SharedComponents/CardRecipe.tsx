@@ -1,4 +1,4 @@
-import { formatDuration } from '@/(Recipes pages)/functions/FormayDurations'
+import { formatDuration } from '@/(Recipes pages)/functions/FormatDurations'
 import ChipRecipesLatest from '@/LandingPage/components/ChipRecipesLatest'
 import Image from '@/SharedComponents/Image'
 import { type CardRecipeProps } from '@/interfaces/CardRecipeProps.interface'
