@@ -15,7 +15,6 @@ import { metadata } from './metadata'
 export { metadata }
 
 export const revalidate = 60 // revalidate at most every hour
-
 export default function RootLayout({ children }: ChildrenProps) {
 	return (
 		<html

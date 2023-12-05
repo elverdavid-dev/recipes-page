@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import ShowRecipesOneCategory from './ShowRecipesOneCategory'
 
 const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
+
 	return (
 		<section>
 			<Swiper
@@ -19,7 +20,6 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 				pagination={{
 					el: '.pagination',
 					dynamicBullets: true,
-
 				}}
 			>
 				{categories?.map(({ name, image, _id }, i) => (
@@ -41,8 +41,8 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<section className='flex justify-center mt-2 pl-16'>
-				<div className='pagination' />
+			<section className="flex justify-center mt-2 pl-16">
+				<div className="pagination" />
 			</section>
 		</section>
 	)
