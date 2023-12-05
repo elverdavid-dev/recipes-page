@@ -1,4 +1,3 @@
-import { formatDuration } from '@/(Recipes pages)/functions/FormatDurations'
 import { FormatRelativeDate } from '@/(Recipes pages)/functions/FormatRelativeDate'
 import { GetRecipeById } from '@/(Recipes pages)/functions/GetRecipeById'
 import CheckBoxComponent from '@/(Recipes pages)/recetas/components/oneRecipe/CheckBox'
@@ -16,7 +15,8 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 		notFound()
 	}
 	const fechaFormateada = FormatRelativeDate(recipe.createdAt)
-	const durationFormat = formatDuration(recipe.duration)
+	//duracion de la receta Representada en formato ISO 8601
+	const timeISO = `PT${recipe.duration}M`;
 	//Creación de datos estructurados JSON-LD para describir la receta y mejorar la indexación en motores de búsqueda
 	const jsonLd: WithContext<Recipe> = {
 		'@context': 'https://schema.org',
@@ -25,8 +25,8 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 		image: recipe.image,
 		description: recipe.description,
 		recipeCategory: `${recipe.category.name}`,
-		prepTime: `${durationFormat}`,
-		cookTime: `${durationFormat}`,
+		prepTime: timeISO,
+		cookTime: timeISO,
 		recipeCuisine: recipe.country ? recipe.country.name : 'Cocina Internacional',
 		datePublished: fechaFormateada,
 		recipeYield: recipe.portions.toString(),
