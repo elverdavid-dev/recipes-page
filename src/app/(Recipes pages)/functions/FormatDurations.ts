@@ -5,15 +5,15 @@
  */
 
 export function formatDuration(durationInMinutes: number): string {
-  if (durationInMinutes < 60) {
-    return `${durationInMinutes} min`
-  }
+	if (durationInMinutes < 60) {
+		return `${durationInMinutes} min`
+	}
 
-  if (durationInMinutes % 60 === 0) {
-    const hours = durationInMinutes / 60
-    return `${hours} hrs`
-  }
-  const hours = Math.floor(durationInMinutes / 60)
-  const minutes = durationInMinutes % 60
-  return `${hours}:${minutes} hrs`
+	if (durationInMinutes % 60 === 0) {
+		const hours = durationInMinutes / 60
+		return `${hours} hrs`
+	}
+	const hours = Math.floor(durationInMinutes / 60)
+	const minutes = durationInMinutes % 60
+	return `${hours}:${minutes} hrs`
 }
