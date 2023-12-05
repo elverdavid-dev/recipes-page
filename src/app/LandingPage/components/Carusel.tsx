@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import ShowRecipesOneCategory from './ShowRecipesOneCategory'
 
 const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
-
 	return (
 		<section>
 			<Swiper
