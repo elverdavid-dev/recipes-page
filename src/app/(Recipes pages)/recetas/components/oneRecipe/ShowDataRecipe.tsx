@@ -16,7 +16,7 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 	}
 	const fechaFormateada = FormatRelativeDate(recipe.createdAt)
 	//duracion de la receta Representada en formato ISO 8601
-	const timeISO = `PT${recipe.duration}M`;
+	const timeISO = `PT${recipe.duration}M`
 	//Creación de datos estructurados JSON-LD para describir la receta y mejorar la indexación en motores de búsqueda
 	const jsonLd: WithContext<Recipe> = {
 		'@context': 'https://schema.org',
@@ -27,7 +27,9 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 		recipeCategory: `${recipe.category.name}`,
 		prepTime: timeISO,
 		cookTime: timeISO,
-		recipeCuisine: recipe.country ? recipe.country.name : 'Cocina Internacional',
+		recipeCuisine: recipe.country
+			? recipe.country.name
+			: 'Cocina Internacional',
 		datePublished: fechaFormateada,
 		recipeYield: recipe.portions.toString(),
 		recipeIngredient: recipe.ingredients,
