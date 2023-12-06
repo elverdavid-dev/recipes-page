@@ -3,6 +3,7 @@ import { GetAllCountry } from '@/LandingPage/functions/GetAllCountry'
 import CardCountry from '@/SharedComponents/CardCountry'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
+import SkeletonAllCountry from './components/SkeletonAllCountry'
 
 export const metadata: Metadata = {
 	title: 'Explora la Gastronomía Internacional por Países | GlobalFood',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 const pageAllCountry = async () => {
 	const dataCountry = await GetAllCountry(12)
 	return (
-		<Suspense fallback={<div>Cargando...</div>}>
+		<Suspense fallback={<SkeletonAllCountry />}>
 			<section className="mx-auto container px-2 mt-20">
 				<div className="flex justify-between items-center">
 					<h1 className="lg:text-4xl text-2xl font-readexPro">Paises</h1>

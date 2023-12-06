@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 			'Sumérgete en una experiencia gastronómica única que te lleva en un viaje por los sabores del mundo. Explora platos tradicionales arraigados en la cultura de diferentes países',
 		images: 'https://www.globalfood.site/og-image.png',
 	},
-	robots: "index,follow"
+	robots: 'index,follow',
 }
 
 export const viewport: Viewport = {

@@ -31,7 +31,7 @@ export default function Footer() {
 					rel="noopener noreferrer"
 					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					<FiInstagram />
+					<FiInstagram aria-label="Link a instagram" />
 				</a>
 				<a
 					href="https://www.linkedin.com/in/elver-peñate"
@@ -39,7 +39,7 @@ export default function Footer() {
 					rel="noopener noreferrer"
 					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					<FiLinkedin />
+					<FiLinkedin aria-label="Link a linkedin" />
 				</a>
 				<a
 					href="https://github.com/ElverDavid07"
@@ -47,7 +47,7 @@ export default function Footer() {
 					rel="noopener noreferrer"
 					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					<FiGithub />
+					<FiGithub aria-label="Link a github" />
 				</a>
 				<a
 					href="https://www.facebook.com/elverdavid.penatepacheco.3"
@@ -55,7 +55,7 @@ export default function Footer() {
 					rel="noopener noreferrer"
 					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					<FiFacebook />
+					<FiFacebook aria-label="Link a facebook" />
 				</a>
 			</div>
 		</footer>
