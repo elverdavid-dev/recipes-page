@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 		'Gastronomia',
 		'Preparaciones',
 	],
-	alternates: { canonical: 'https://globalfood.site' },
+	alternates: { canonical: 'https://www.globalfood.site' },
 	publisher: 'vercel',
 	openGraph: {
 		type: 'website',
