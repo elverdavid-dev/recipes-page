@@ -24,7 +24,7 @@ export default function CardRecipe({
 					alt={name}
 					width={280}
 					height={210}
-					className="group-hover:scale-105 transition-transform w-full h-full"
+					className="group-hover:scale-105 transition-transform w-full h-auto"
 				/>
 				<span className=" font-readexPro capitalize text-xl text-slate-950 pt-3 px-3  group-hover:text-gold transition-all truncate">
 					{name}
