@@ -20,7 +20,6 @@ const HomePage = () => {
 			<Suspense fallback={<RecipesLatestSkeleton />}>
 				<SectionRecipesLatest />
 			</Suspense>
-			<RecipesLatestSkeleton />
 		</main>
 	)
 }

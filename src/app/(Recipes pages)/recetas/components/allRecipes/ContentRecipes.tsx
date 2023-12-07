@@ -23,7 +23,7 @@ const ContentRecipes = async ({
 	const data = name ? searchData : recipesData
 	return (
 		<>
-			<div className="flex items-center justify-between px-2 lg:px-4">
+			<div className="flex items-center justify-between px-2 md:px-4 lg:px-16">
 				<h2 className="Subtitle">Recetas</h2>
 				<span className="text-lg font-nunito">
 					{data?.totalItems ?? 0} Recetas totales
