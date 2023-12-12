@@ -5,7 +5,7 @@ const BreadcrumbsComponent = ({ name }: { name: string }) => {
 		<Breadcrumbs size="lg" className="font-nunito mb-3">
 			<BreadcrumbItem href="/">Inicio</BreadcrumbItem>
 			<BreadcrumbItem href="/recetas">Recetas</BreadcrumbItem>
-			<BreadcrumbItem>{name}</BreadcrumbItem>
+			<BreadcrumbItem className='capitalize'>{name}</BreadcrumbItem>
 		</Breadcrumbs>
 	)
 }
