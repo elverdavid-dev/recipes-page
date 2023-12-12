@@ -1,46 +1,21 @@
-# Project recipes page 🍜🍛
+<h1 style="color:#FFAC4B">GlobalFood Page 🍜🍛</h1>
+
+GlobalFood es una emocionante plataforma de recetas diseñada con la última tecnología. Desarrollada utilizando Next.js, esta página web ofrece una experiencia dinámica y receptiva para todos los amantes de la cocina.
+
+
+## Tecnologías utilizadas
+
+- Next.js
+- Tailwind CSS
+- TypeScript
+- Next UI
+- React Icons
+- Swiper
+- BiomeJs
 
 ---
 
-## Descripción
+## Enlaces
 
-Este proyecto es una página de recetas que esta desarrollandose en equipo para compartir una amplia variedad de recetas de cocina de todo el mundo.
-
-## Intalacion
-
-1. clonar repositiorio
-
-```bash
-git clone https://github.com/ElverDavid07/Project_Recipe_Page
-```
-
-2. Acceder al projecto
-
-```bash
-cd recipes-project
-```
-
-3. Intalar pnpm si no lo tienes intalado
-
-```bash
-npm i pnpm -g
-```
-
-4. Intalar las dependencias
-
-```bash
-pnpm i
-```
-
-## Tecnologias utilizadas
-
-- Next.js
-- Tailwind css
-- Typescript
-- NextUi
-- React icons
-- React-multi-carrucel
-
-## Docs de la api
-
-Link a la documentacion de la api que se esta utilizando [Docs de la api](https://recipes-api-r43i.onrender.com/docs#/)
+- [Página Web GlobalFood](https://www.globalfood.site/) 🔗
+- [Documentación de la API utilizada](https://recipes-api-r43i.onrender.com/docs#/) 🔗

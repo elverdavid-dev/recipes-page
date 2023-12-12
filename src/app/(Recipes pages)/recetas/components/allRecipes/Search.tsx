@@ -25,18 +25,16 @@ export default function Search() {
 	const defaultValueInput = searchParams.get('name')?.toString()
 	return (
 		<section className="flex mt-16 justify-center items-center">
-			<form onSubmit={(e) => e.preventDefault()}>
-				<Input
-					onChange={(event) => handleSearch(event.target.value)}
-					size="sm"
-					className="lg:w-[600px] mx-2 md:mx-4 lg:mx-0 font-nunito"
-					variant="faded"
-					placeholder="Buscar recetas..."
-					startContent={<FiSearch className="text-slate-500 text-lg" />}
-					role="search"
-					defaultValue={defaultValueInput}
-				/>
-			</form>
+			<Input
+				onChange={(event) => handleSearch(event.target.value)}
+				size="sm"
+				className="lg:w-[600px] mx-2 md:mx-4 lg:mx-0 font-nunito"
+				variant="faded"
+				placeholder="Buscar recetas..."
+				startContent={<FiSearch className="text-slate-500 text-lg" />}
+				role="search"
+				defaultValue={defaultValueInput}
+			/>
 		</section>
 	)
 }
