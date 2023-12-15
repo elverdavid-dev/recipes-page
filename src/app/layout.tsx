@@ -11,11 +11,10 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 
-import { metadata } from './metadata'
 // Metadata
-export { metadata }
+export { metadata } from './metadata'
 
-export const revalidate = 60 // revalidate at most every hour
+export const revalidate = 60 // revalidar los datos de la api cada 60 segundos
 export default function RootLayout({ children }: ChildrenProps) {
 	return (
 		<html
