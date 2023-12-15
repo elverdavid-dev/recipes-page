@@ -1,10 +1,10 @@
+import { UiImage } from '@/components/ui'
 import { type CardCountryProps } from '@interfaces/CardCountryProps.interface'
-import ImageComponent from './Image'
 
 const CardCountry = ({ img, name }: CardCountryProps) => {
 	return (
 		<div className="relative group cursor-pointer">
-			<ImageComponent
+			<UiImage
 				src={img}
 				alt={name}
 				width={400}

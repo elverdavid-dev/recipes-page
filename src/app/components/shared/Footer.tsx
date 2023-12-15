@@ -1,5 +1,5 @@
+import { Logo } from '@/components/ui'
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
-import Logo from './Logo'
 
 export default function Footer() {
 	const date = new Date()

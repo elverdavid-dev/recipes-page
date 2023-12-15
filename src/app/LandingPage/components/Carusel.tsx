@@ -1,7 +1,7 @@
 'use client'
+import { UiImage } from '@/components/ui'
 import { Categories } from '@/interfaces/Categories.interface'
 import { ResponsiveOptions } from '@/lib/ResponsiveCaruselOptions'
-import Image from 'next/image'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import ShowRecipesOneCategory from './ShowRecipesOneCategory'
@@ -25,7 +25,7 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 					<SwiperSlide key={_id} virtualIndex={i}>
 						<ShowRecipesOneCategory id={_id} category={name}>
 							<section className="group">
-								<Image
+								<UiImage
 									src={image}
 									alt={name}
 									width={264}

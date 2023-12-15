@@ -1,9 +1,9 @@
 import { GetAllRecipes } from '@/(Recipes pages)/functions/GetAllRecipes'
 import { SearchRecipeByName } from '@/(Recipes pages)/functions/SearchRecipe'
-import CardRecipe from '@/SharedComponents/CardRecipe'
-import NotFound from '@/SharedComponents/NotFound'
-import Pagination from '@/SharedComponents/Pagination'
-import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
+import CardRecipe from '@/components/shared/CardRecipe'
+import NotFound from '@/components/shared/NotFound'
+import ShowOneRecipe from '@/components/shared/ShowOneRecipe'
+import { UiPagination } from '@/components/ui'
 
 const ContentRecipes = async ({
 	page,
@@ -52,7 +52,10 @@ const ContentRecipes = async ({
 					</section>
 				)}
 			</section>
-			<Pagination currentPage={data?.page ?? 1} total={data?.totalPages ?? 1} />
+			<UiPagination
+				currentPage={data?.page ?? 1}
+				total={data?.totalPages ?? 1}
+			/>
 		</>
 	)
 }
