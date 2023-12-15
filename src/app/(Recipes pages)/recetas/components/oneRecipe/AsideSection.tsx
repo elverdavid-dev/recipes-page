@@ -1,6 +1,6 @@
 import { GetLatestRecipes } from '@/LandingPage/functions/GetLatestRecipes'
-import Image from '@/SharedComponents/Image'
-import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
+import ShowOneRecipe from '@/components/shared/ShowOneRecipe'
+import { UiImage } from '@/components/ui'
 
 const AsideSection = async () => {
 	const Recipes = await GetLatestRecipes(7)
@@ -11,12 +11,12 @@ const AsideSection = async () => {
 				{Recipes?.map(({ _id, image, name, category }) => (
 					<ShowOneRecipe id={_id} key={_id}>
 						<div className="flex items-start gap-x-3 py-3 px-2 group">
-							<Image
+							<UiImage
 								src={image}
 								alt={name}
 								width={100}
 								height={70}
-								className="rounded-md group-hover:scale-105 transition-all"
+								className="rounded-md group-hover:scale-105 transition-all w-[100px] h-[70px]"
 							/>
 							<div>
 								<p className="font-readexPro">{category.name} </p>

@@ -1,5 +1,5 @@
-import CardRecipe from '@/SharedComponents/CardRecipe'
-import ShowOneRecipe from '@/SharedComponents/ShowOneRecipe'
+import CardRecipe from '@/components/shared/CardRecipe'
+import ShowOneRecipe from '@/components/shared/ShowOneRecipe'
 import { GetLatestRecipes } from '../../functions/GetLatestRecipes'
 
 const SectionRecipesLatest = async () => {

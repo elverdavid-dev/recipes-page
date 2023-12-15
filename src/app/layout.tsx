@@ -1,10 +1,11 @@
-import Footer from '@/SharedComponents/Footer'
-import Navbar from '@/SharedComponents/navbar/Navbar'
+import Navbar from '@/components/navbar/Navbar'
+import Footer from '@/components/shared/Footer'
 import { lora, nunito, readexPro } from '@/fonts'
 import Providers from '@/providers'
 import '@/styles/globals.css'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 // Styles of carusel
 import 'swiper/css'
 import 'swiper/css/autoplay'
@@ -22,11 +23,10 @@ export default function RootLayout({ children }: ChildrenProps) {
 			className={`  ${lora.variable} ${nunito.variable} ${readexPro.variable}`}
 		>
 			<body>
+				<Analytics mode="auto" />
+				<SpeedInsights />
 				<Navbar />
-				<Providers>
-					{children}
-					<Analytics mode="auto" />
-				</Providers>
+				<Providers>{children}</Providers>
 				<Footer />
 			</body>
 		</html>

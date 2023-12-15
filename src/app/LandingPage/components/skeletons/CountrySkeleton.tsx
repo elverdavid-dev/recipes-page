@@ -1,4 +1,4 @@
-import SkeletonCardCountry from '@/SharedComponents/skeletons/SkeletonCardCountry'
+import SkeletonCardCountry from '@/components/skeletons/SkeletonCardCountry'
 
 const CountrySkeleton = () => {
 	return (

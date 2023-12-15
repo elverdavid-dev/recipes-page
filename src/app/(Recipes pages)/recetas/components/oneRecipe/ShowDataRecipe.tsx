@@ -2,10 +2,10 @@ import { FormatRelativeDate } from '@/(Recipes pages)/functions/FormatRelativeDa
 import { GetRecipeById } from '@/(Recipes pages)/functions/GetRecipeById'
 import CheckBoxComponent from '@/(Recipes pages)/recetas/components/oneRecipe/CheckBox'
 import ChipComponent from '@/(Recipes pages)/recetas/components/oneRecipe/Chip'
-import Image from '@/SharedComponents/Image'
+import { UiImage } from '@/components/ui'
+import GenerateJsonLD from '@/lib/GenerateJsonLD'
 import { notFound } from 'next/navigation'
 import { FiList } from 'react-icons/fi'
-import { Recipe, WithContext } from 'schema-dts'
 import BreadcrumbsComponent from './Breadcrumbs'
 import RecipeInfoTags from './RecipeInfoTags'
 
@@ -15,35 +15,8 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 		notFound()
 	}
 	const fechaFormateada = FormatRelativeDate(recipe.createdAt)
-	//duracion de la receta Representada en formato ISO 8601
-	const timeISO = `PT${recipe.duration}M`
-	//Creación de datos estructurados JSON-LD para describir la receta y mejorar la indexación en motores de búsqueda
-	const jsonLd: WithContext<Recipe> = {
-		'@context': 'https://schema.org',
-		'@type': 'Recipe',
-		name: recipe.name,
-		image: recipe.image,
-		description: recipe.description,
-		recipeCategory: `${recipe.category.name}`,
-		prepTime: timeISO,
-		cookTime: timeISO,
-		recipeCuisine: recipe.country
-			? recipe.country.name
-			: 'Cocina Internacional',
-		datePublished: fechaFormateada,
-		recipeYield: recipe.portions.toString(),
-		recipeIngredient: recipe.ingredients,
-		recipeInstructions: recipe.steps,
-		keywords: [
-			recipe.name,
-			recipe.category.name,
-			recipe.country ? recipe.country.name : 'Cocina Internacional',
-			'Platos',
-			'Receta',
-			'Gastronomia',
-			'Preparaciones',
-		],
-	}
+
+	const jsonLd = GenerateJsonLD(recipe)
 	return (
 		<section className="lg:w-[700px]">
 			<BreadcrumbsComponent name={recipe.name} />
@@ -59,7 +32,13 @@ const ShowDataRecipe = async ({ id }: { id: string }) => {
 
 			{/* Image */}
 
-			<Image src={recipe.image} alt={recipe.name} width={700} height={500} />
+			<UiImage
+				src={recipe.image}
+				alt={recipe.name}
+				width={700}
+				height={500}
+				className="w-full h-auto"
+			/>
 
 			{/* Tags */}
 
