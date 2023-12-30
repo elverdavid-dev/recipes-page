@@ -1,7 +1,7 @@
 'use client'
 import { UiImage } from '@/components/ui'
-import { ResponsiveOptions } from '@/lib/ResponsiveCaruselOptions'
 import { Categories } from '@interfaces/Categories.interface'
+import { ResponsiveOptions } from '@libs/ResponsiveCaruselOptions'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import ShowRecipesOneCategory from './ShowRecipesOneCategory'

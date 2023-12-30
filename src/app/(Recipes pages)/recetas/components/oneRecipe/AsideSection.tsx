@@ -1,4 +1,4 @@
-import { GetLatestRecipes } from '@/LandingPage/functions/GetLatestRecipes'
+import { GetLatestRecipes } from '@/HomePage/functions/GetLatestRecipes'
 import ShowOneRecipe from '@/components/shared/ShowOneRecipe'
 import { UiImage } from '@/components/ui'
 

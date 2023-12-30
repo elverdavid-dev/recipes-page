@@ -1,5 +1,5 @@
-import { baseUrl } from '@/lib/utils'
 import { type CountryData } from '@interfaces/Cuntry.interface'
+import { baseUrl } from '@libs/utils'
 
 /**
  * @description Obtiene una lista de datos de países desde el servidor con paginación.

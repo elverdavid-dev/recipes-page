@@ -1,5 +1,5 @@
-import { baseUrl } from '@/lib/utils'
 import { type Categories } from '@interfaces/Categories.interface'
+import { baseUrl } from '@libs/utils'
 
 /**
  * @description Obtiene una lista de categorías desde el servidor.
