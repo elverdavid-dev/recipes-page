@@ -1,8 +1,8 @@
-import { type RecipeList } from '@/interfaces/RecipesList.interface'
 import { baseUrl } from '@/lib/utils'
+import { type RecipeList } from '@interfaces/RecipesList.interface'
 
 interface ApiResponse extends RecipeList {
-	message?: string
+  message?: string
 }
 
 /**
@@ -12,19 +12,19 @@ interface ApiResponse extends RecipeList {
  */
 
 export async function GetAllRecipesOneCategory(
-	id: string,
+  id: string
 ): Promise<ApiResponse | undefined> {
-	try {
-		const response = await fetch(
-			`${baseUrl}/recipes/filter/categories?CategoryId=${id}&page=1&limit=20`,
-		)
-		if (!response.ok) {
-			throw new Error('Error al obtener las recetas de una categoria')
-		}
-		const data: ApiResponse = await response.json()
+  try {
+    const response = await fetch(
+      `${baseUrl}/recipes/filter/categories?CategoryId=${id}&page=1&limit=20`
+    )
+    if (!response.ok) {
+      throw new Error('Error al obtener las recetas de una categoria')
+    }
+    const data: ApiResponse = await response.json()
 
-		return data
-	} catch (error) {
-		console.error(error)
-	}
+    return data
+  } catch (error) {
+    console.error(error)
+  }
 }

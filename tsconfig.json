@@ -28,8 +28,8 @@
         "./app/*"
       ],
       "@interfaces/*": [
-        "./app/interfaces/*"
-      ]
+        "./interfaces/*"
+      ],
     }
   },
   "include": [

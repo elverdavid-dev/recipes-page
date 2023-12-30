@@ -1,5 +1,5 @@
-import { type CountryData } from '@/interfaces/Cuntry.interface'
 import { baseUrl } from '@/lib/utils'
+import { type CountryData } from '@interfaces/Cuntry.interface'
 
 /**
  * @description Obtiene una lista de datos de países desde el servidor con paginación.
@@ -7,14 +7,14 @@ import { baseUrl } from '@/lib/utils'
  */
 
 export async function GetAllCountry(limit: number) {
-	try {
-		const response = await fetch(`${baseUrl}/countrys?page=1&limit=${limit}`)
-		if (!response.ok) {
-			throw new Error('Error a el obtener todas las recetas de un pais')
-		}
-		const data: CountryData = await response.json()
-		return data
-	} catch (error) {
-		console.error(error)
-	}
+  try {
+    const response = await fetch(`${baseUrl}/countrys?page=1&limit=${limit}`)
+    if (!response.ok) {
+      throw new Error('Error a el obtener todas las recetas de un pais')
+    }
+    const data: CountryData = await response.json()
+    return data
+  } catch (error) {
+    console.error(error)
+  }
 }
