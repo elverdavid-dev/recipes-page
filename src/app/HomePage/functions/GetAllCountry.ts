@@ -1,4 +1,4 @@
-import { type CountryData } from '@interfaces/Cuntry.interface'
+import { type CountryData } from '@interfaces/Country.interface'
 import { baseUrl } from '@libs/utils'
 
 /**

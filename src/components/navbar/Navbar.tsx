@@ -1,6 +1,6 @@
 'use client'
 
-import { Logo } from '@/components/ui'
+import { Logo } from '@shared-components/ui'
 import useNavbar from 'hooks/useNavbar'
 import { usePathname } from 'next/navigation'
 import Menu from './Menu'

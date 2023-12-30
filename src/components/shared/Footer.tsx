@@ -1,4 +1,4 @@
-import { Logo } from '@/components/ui'
+import { Logo } from '@shared-components/ui'
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 export default function Footer() {

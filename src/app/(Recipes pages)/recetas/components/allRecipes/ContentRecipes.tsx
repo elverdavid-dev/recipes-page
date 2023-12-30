@@ -1,9 +1,9 @@
 import { GetAllRecipes } from '@/(Recipes pages)/functions/GetAllRecipes'
 import { SearchRecipeByName } from '@/(Recipes pages)/functions/SearchRecipe'
-import CardRecipe from '@/components/shared/CardRecipe'
-import NotFound from '@/components/shared/NotFound'
-import ShowOneRecipe from '@/components/shared/ShowOneRecipe'
-import { UiPagination } from '@/components/ui'
+import CardRecipe from '@shared-components/shared/CardRecipe'
+import NotFound from '@shared-components/shared/NotFound'
+import ShowOneRecipe from '@shared-components/shared/ShowOneRecipe'
+import { UiPagination } from '@shared-components/ui'
 
 const ContentRecipes = async ({
 	page,

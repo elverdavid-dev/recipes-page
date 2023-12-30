@@ -9,14 +9,14 @@ import { baseUrl } from '@libs/utils'
  */
 
 export async function GetAllRecipes(page = 1): Promise<RecipeList | undefined> {
-  try {
-    const response = await fetch(`${baseUrl}/recipes?page=${page}`)
-    if (!response.ok) {
-      throw new Error('Error al obtener todas las recetas')
-    }
-    const data: RecipeList = await response.json()
-    return data
-  } catch (error) {
-    console.error(error)
-  }
+	try {
+		const response = await fetch(`${baseUrl}/recipes?page=${page}`)
+		if (!response.ok) {
+			throw new Error('Error al obtener todas las recetas')
+		}
+		const data: RecipeList = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
 }

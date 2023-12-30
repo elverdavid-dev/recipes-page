@@ -1,6 +1,6 @@
 import ShowRecipesOneCountry from '@/HomePage/components/ShowRecipesOneCountry'
 import { GetAllCountry } from '@/HomePage/functions/GetAllCountry'
-import CardCountry from '@/components/shared/CardCountry'
+import CardCountry from '@shared-components/shared/CardCountry'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import SkeletonAllCountry from './components/SkeletonAllCountry'
