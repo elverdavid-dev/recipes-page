@@ -1,4 +1,4 @@
-import { GetLatestRecipes } from '@/HomePage/functions/GetLatestRecipes'
+import { GetLatestRecipes } from '@app/HomePage/functions/GetLatestRecipes'
 import ShowOneRecipe from '@shared-components/shared/ShowOneRecipe'
 import { UiImage } from '@shared-components/ui'
 

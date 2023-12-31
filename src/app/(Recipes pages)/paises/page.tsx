@@ -1,5 +1,5 @@
-import ShowRecipesOneCountry from '@/HomePage/components/ShowRecipesOneCountry'
-import { GetAllCountry } from '@/HomePage/functions/GetAllCountry'
+import ShowRecipesOneCountry from '@app/HomePage/components/ShowRecipesOneCountry'
+import { GetAllCountry } from '@app/HomePage/functions/GetAllCountry'
 import CardCountry from '@shared-components/shared/CardCountry'
 import { Metadata } from 'next'
 import { Suspense } from 'react'

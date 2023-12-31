@@ -1,5 +1,5 @@
-import { GetAllRecipes } from '@/(Recipes pages)/functions/GetAllRecipes'
-import { SearchRecipeByName } from '@/(Recipes pages)/functions/SearchRecipe'
+import { GetAllRecipes } from '@app/(Recipes pages)/functions/GetAllRecipes'
+import { SearchRecipeByName } from '@app/(Recipes pages)/functions/SearchRecipe'
 import CardRecipe from '@shared-components/shared/CardRecipe'
 import NotFound from '@shared-components/shared/NotFound'
 import ShowOneRecipe from '@shared-components/shared/ShowOneRecipe'

@@ -1,5 +1,5 @@
-import { formatDuration } from '@/(Recipes pages)/functions/FormatDurations'
-import ChipRecipesLatest from '@/HomePage/components/ChipRecipesLatest'
+import { formatDuration } from '@app/(Recipes pages)/functions/FormatDurations'
+import ChipRecipesLatest from '@app/HomePage/components/ChipRecipesLatest'
 import { type CardRecipeProps } from '@interfaces/CardRecipeProps.interface'
 import { UiImage } from '@shared-components/ui'
 

@@ -1,4 +1,4 @@
-import { GetAllRecipesOneCountry } from '@/(Recipes pages)/functions/GetAllRecipesOneCountry'
+import { GetAllRecipesOneCountry } from '@app/(Recipes pages)/functions/GetAllRecipesOneCountry'
 import { type ParamProps } from '@interfaces/ParamProps.interface'
 import CardRecipe from '@shared-components/shared/CardRecipe'
 import DynamicTitle from '@shared-components/shared/DynamicTitle'
