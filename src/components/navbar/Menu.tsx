@@ -1,4 +1,4 @@
-import { optionsMenu } from '@/lib/optionsMenu'
+import { optionsMenu } from '@libs/optionsMenu'
 import Link from 'next/link'
 
 interface Props {

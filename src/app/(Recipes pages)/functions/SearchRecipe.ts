@@ -1,5 +1,5 @@
-import type { RecipeList } from '@/interfaces/RecipesList.interface'
-import { baseUrl } from '@/lib/utils'
+import type { RecipeList } from '@interfaces/RecipesList.interface'
+import { baseUrl } from '@libs/utils'
 
 interface Props extends RecipeList {
 	message: string

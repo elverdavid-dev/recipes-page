@@ -1,5 +1,5 @@
-import { type Recipes } from '@/interfaces/Recipes.interface'
-import { baseUrl } from '@/lib/utils'
+import { type Recipes } from '@interfaces/Recipes.interface'
+import { baseUrl } from '@libs/utils'
 
 /**
  * @description Obtiene una lista de recetas de un país específico desde el servidor.

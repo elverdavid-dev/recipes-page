@@ -1,11 +1,11 @@
-import Hero from '@/LandingPage/components/Hero'
-import SectionCountry from '@/LandingPage/components/sections/SectionCountry'
-import SectionRecipesLatest from '@/LandingPage/components/sections/SectionRecipesLatest'
+import Hero from '@app/HomePage/components/Hero'
+import SectionCategories from '@app/HomePage/components/sections/SectionCategories'
+import SectionCountry from '@app/HomePage/components/sections/SectionCountry'
+import SectionRecipesLatest from '@app/HomePage/components/sections/SectionRecipesLatest'
+import CategorySkeleton from '@app/HomePage/components/skeletons/CategorySkeleton'
+import CountrySkeleton from '@app/HomePage/components/skeletons/CountrySkeleton'
+import RecipesLatestSkeleton from '@app/HomePage/components/skeletons/RecipesLatestSkeleton'
 import { Suspense } from 'react'
-import SectionCategories from './LandingPage/components/sections/SectionCategories'
-import CategorySkeleton from './LandingPage/components/skeletons/CategorySkeleton'
-import CountrySkeleton from './LandingPage/components/skeletons/CountrySkeleton'
-import RecipesLatestSkeleton from './LandingPage/components/skeletons/RecipesLatestSkeleton'
 
 const HomePage = () => {
 	return (

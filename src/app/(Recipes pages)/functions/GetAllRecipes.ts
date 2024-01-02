@@ -1,5 +1,5 @@
-import { baseUrl } from '@/lib/utils'
 import { type RecipeList } from '@interfaces/RecipesList.interface'
+import { baseUrl } from '@libs/utils'
 
 /**
  * @description Obtiene una lista de recetas desde el servidor con paginación.

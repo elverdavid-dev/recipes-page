@@ -1,5 +1,5 @@
-import { baseUrl } from '@/lib/utils'
 import { type Recipes } from '@interfaces/Recipes.interface'
+import { baseUrl } from '@libs/utils'
 
 /**
  * @description Obtiene una receta específica por su ID desde el servidor.

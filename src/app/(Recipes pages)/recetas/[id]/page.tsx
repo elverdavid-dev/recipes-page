@@ -1,4 +1,4 @@
-import { GetRecipeById } from '@/(Recipes pages)/functions/GetRecipeById'
+import { GetRecipeById } from '@app/(Recipes pages)/functions/GetRecipeById'
 import { type ParamProps } from '@interfaces/ParamProps.interface'
 import { Metadata } from 'next'
 import { Suspense } from 'react'

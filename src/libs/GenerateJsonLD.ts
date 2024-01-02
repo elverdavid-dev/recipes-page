@@ -1,5 +1,5 @@
-import { FormatRelativeDate } from '@/(Recipes pages)/functions/FormatRelativeDate'
-import { Recipes } from '@/interfaces/Recipes.interface'
+import { FormatRelativeDate } from '@app/(Recipes pages)/functions/FormatRelativeDate'
+import { Recipes } from '@interfaces/Recipes.interface'
 import { Recipe, WithContext } from 'schema-dts'
 
 const GenerateJsonLD = (recipe: Recipes) => {

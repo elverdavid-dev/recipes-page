@@ -1,4 +1,4 @@
-import SkeletonCardRecipe from '@/components/skeletons/SkeletonCardRecipe'
+import SkeletonCardRecipe from '@shared-components/skeletons/SkeletonCardRecipe'
 
 const SkeletonOneCountry = () => {
 	return (

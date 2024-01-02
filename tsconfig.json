@@ -24,11 +24,17 @@
     ],
     "baseUrl": "./src/",
     "paths": {
-      "@/*": [
+      "@app/*": [
         "./app/*"
       ],
       "@interfaces/*": [
-        "./app/interfaces/*"
+        "./interfaces/*"
+      ],
+      "@libs/*": [
+        "./libs/*"
+      ],
+      "@shared-components/*": [
+        "./components/*"
       ]
     }
   },

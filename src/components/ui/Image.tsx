@@ -11,7 +11,7 @@ import { useState } from 'react'
 const UiImage = (props: ImageProps) => {
 	const [isLoaded, setIsLoaded] = useState(false)
 	const closeSkeleton = () => {
-		setIsLoaded(!isLoaded)
+		setIsLoaded(true)
 	}
 	return (
 		<>

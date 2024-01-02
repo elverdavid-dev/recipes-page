@@ -1,5 +1,5 @@
-import RedirectPageCountry from '@/LandingPage/components/RedirectPageCountry'
-import CardCountry from '@/components/shared/CardCountry'
+import RedirectPageCountry from '@app/HomePage/components/RedirectPageCountry'
+import CardCountry from '@shared-components/shared/CardCountry'
 import { GetAllCountry } from '../../functions/GetAllCountry'
 import ShowRecipesOneCountry from '../ShowRecipesOneCountry'
 

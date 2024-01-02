@@ -1,5 +1,5 @@
-import { UiImage } from '@/components/ui'
 import { type CardCountryProps } from '@interfaces/CardCountryProps.interface'
+import { UiImage } from '@shared-components/ui'
 
 const CardCountry = ({ img, name }: CardCountryProps) => {
 	return (
