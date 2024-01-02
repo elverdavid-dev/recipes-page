@@ -42,8 +42,8 @@ export const metadata: Metadata = {
 		images: 'https://www.globalfood.site/og-image.png',
 	},
 	robots: { index: true, follow: true },
+	icons: 'https://www.globalfood.site/favicon.ico',
 }
-
 export const viewport: Viewport = {
 	themeColor: '#f6f6f6',
 }

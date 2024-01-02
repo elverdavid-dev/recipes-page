@@ -9,16 +9,16 @@ const Hero = () => {
 	return (
 		<section className="lg:px-20 px-4 grid lg:grid-cols-2  lg:h-[580px] relative 2xl:container mx-auto">
 			<div className="lg:w-[600px] lg:h-auto h-[60rem]">
-				<h1 className="lg:text-5xl text-4xl font-readexPro font-extrabold lg:mt-32 mt-16 text-slate-950">
-					Explora recetas de <br className="md:block hidden" /> todo el
+				<h1 className="lg:text-5xl text-4xl font-readexPro font-extrabold lg:mt-32 mt-16 text-slate-950 text-balance">
+					Explora recetas de todo el
 					<strong className="text-gold"> Mundo</strong>
 				</h1>
 
-				<span className="text-lg font-nunito text-slate-700 block mt-4">
+				<p className="text-lg font-nunito text-slate-700 block mt-4 text-balance">
 					Sumérgete en una experiencia gastronómica única que te lleva en un
 					viaje por los sabores del mundo. Explora platos tradicionales
 					arraigados en la cultura de diferentes países.
-				</span>
+				</p>
 
 				<Button
 					as={Link}
