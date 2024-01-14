@@ -9,7 +9,7 @@ const ContentRecipes = async ({
 	page,
 	name,
 }: { name?: string; page?: string }) => {
-	const recipesData = await GetAllRecipes(Number(page) || 1)
+	const recipesData = await GetAllRecipes(Number(page) || 1, 20)
 
 	const getDataSearch = async () => {
 		if (name) {
