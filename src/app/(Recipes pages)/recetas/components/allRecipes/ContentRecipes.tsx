@@ -9,7 +9,7 @@ const ContentRecipes = async ({
 	page,
 	name,
 }: { name?: string; page?: string }) => {
-	const recipesData = await GetAllRecipes(Number(page) || 1)
+	const recipesData = await GetAllRecipes(Number(page) || 1, 20)
 
 	const getDataSearch = async () => {
 		if (name) {
@@ -35,9 +35,9 @@ const ContentRecipes = async ({
 				) : (
 					<section className="mt-16 px-2 lg:px-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2">
 						{data?.data.map(
-							({ _id, image, name, category, duration, portions }) => (
+							({ _id, image, name, category, duration, portions, slug }) => (
 								<div key={_id}>
-									<ShowOneRecipe id={_id}>
+									<ShowOneRecipe id={slug}>
 										<CardRecipe
 											img={image}
 											name={name}
