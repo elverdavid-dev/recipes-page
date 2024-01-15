@@ -26,7 +26,7 @@ const Hero = () => {
 					size="lg"
 					href="/recetas"
 				>
-					Ver recetas
+					Explorar Recetas
 				</Button>
 			</div>
 
