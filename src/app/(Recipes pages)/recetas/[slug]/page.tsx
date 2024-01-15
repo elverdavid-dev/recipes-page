@@ -1,5 +1,5 @@
 import { GetRecipeById } from '@app/(Recipes pages)/functions/GetRecipeById'
-import { type ParamProps } from '@interfaces/ParamProps.interface'
+import { SlugProps } from '@interfaces/SlugProps.interface'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import Aside from '../components/oneRecipe/AsideSection'
@@ -9,9 +9,9 @@ import SkeletonOneRecipe from '../components/oneRecipe/skeletons/SkeletonOneReci
 
 export async function generateMetadata({
 	params,
-}: ParamProps): Promise<Metadata> {
-	const id = params.id
-	const recipe = await GetRecipeById(id)
+}: SlugProps): Promise<Metadata> {
+	const slug = params.slug
+	const recipe = await GetRecipeById(slug)
 	return {
 		title: `Cómo Hacer ${recipe?.name} | GlobalFood`,
 		description: recipe?.description,
@@ -28,14 +28,14 @@ export async function generateMetadata({
 	}
 }
 
-const PageById = async ({ params }: ParamProps) => {
-	const id = params.id
+const PageById = async ({ params }: SlugProps) => {
+	const slug = params.slug
 
 	return (
 		<>
 			<section className="container px-2 md:px-8 lg:px-10  mx-auto mt-16 lg:flex lg:justify-between gap-x-16">
 				<Suspense fallback={<SkeletonOneRecipe />}>
-					<ShowDataRecipe id={id} />
+					<ShowDataRecipe slug={slug} />
 				</Suspense>
 				<Suspense fallback={<SkeletonAsideSection />}>
 					<Aside />

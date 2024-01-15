@@ -9,18 +9,16 @@ const SectionRecipesLatest = async () => {
 		<section className="mt-32 lg:px-16 px-2 2xl:container mx-auto">
 			<h2 className="Subtitle">Ultimas recetas</h2>
 			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5">
-				{Recipes?.map(({ _id, name, image, category, duration, portions }) => (
-					<div key={_id}>
-						<ShowOneRecipe id={_id}>
-							<CardRecipe
-								img={image}
-								name={name}
-								category={category.name}
-								duration={duration}
-								portions={portions}
-							/>
-						</ShowOneRecipe>
-					</div>
+				{Recipes?.map(({ _id, name, image, category, duration, portions, slug }) => (
+					<ShowOneRecipe slug={slug} key={_id}>
+						<CardRecipe
+							img={image}
+							name={name}
+							category={category.name}
+							duration={duration}
+							portions={portions}
+						/>
+					</ShowOneRecipe>
 				))}
 			</div>
 		</section>

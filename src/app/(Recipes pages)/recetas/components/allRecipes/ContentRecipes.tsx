@@ -37,7 +37,7 @@ const ContentRecipes = async ({
 						{data?.data.map(
 							({ _id, image, name, category, duration, portions, slug }) => (
 								<div key={_id}>
-									<ShowOneRecipe id={slug}>
+									<ShowOneRecipe slug={slug}>
 										<CardRecipe
 											img={image}
 											name={name}

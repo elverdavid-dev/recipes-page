@@ -8,8 +8,8 @@ const AsideSection = async () => {
 		<div className="flex flex-col ">
 			<h2 className="font-lora text-xl py-4">Ultimas recetas </h2>
 			<aside className="max-w-sm">
-				{Recipes?.map(({ _id, image, name, category }) => (
-					<ShowOneRecipe id={_id} key={_id}>
+				{Recipes?.map(({ _id, image, name, category, slug }) => (
+					<ShowOneRecipe slug={slug} key={_id}>
 						<div className="flex items-start gap-x-3 py-3 px-2 group">
 							<UiImage
 								src={image}

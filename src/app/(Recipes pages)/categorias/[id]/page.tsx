@@ -33,8 +33,8 @@ const CategoryPage = async ({ params }: ParamProps) => {
 				{Array.isArray(recipes?.data) ? (
 					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 lg:px-16 px-2 mt-20">
 						{recipes?.data.map(
-							({ _id, name, image, duration, portions, country }) => (
-								<ShowOneRecipe id={_id} key={_id}>
+							({ _id, name, image, duration, portions, country, slug }) => (
+								<ShowOneRecipe slug={slug} key={_id}>
 									<CardRecipe
 										name={name}
 										img={image}
