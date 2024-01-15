@@ -1,5 +1,5 @@
 import { FormatRelativeDate } from '@app/(Recipes pages)/functions/FormatRelativeDate'
-import { GetRecipeById } from '@app/(Recipes pages)/functions/GetRecipeById'
+import { GetRecipeBySlug } from '@app/(Recipes pages)/functions/GetRecipeBySlug'
 import CheckBoxComponent from '@app/(Recipes pages)/recetas/components/oneRecipe/CheckBox'
 import ChipComponent from '@app/(Recipes pages)/recetas/components/oneRecipe/Chip'
 import GenerateJsonLD from '@libs/GenerateJsonLD'
@@ -9,8 +9,8 @@ import { FiList } from 'react-icons/fi'
 import BreadcrumbsComponent from './Breadcrumbs'
 import RecipeInfoTags from './RecipeInfoTags'
 
-const ShowDataRecipe = async ({ id }: { id: string }) => {
-	const recipe = await GetRecipeById(id)
+const ShowDataRecipe = async ({ slug }: { slug: string }) => {
+	const recipe = await GetRecipeBySlug(slug)
 	if (recipe === undefined) {
 		notFound()
 	}

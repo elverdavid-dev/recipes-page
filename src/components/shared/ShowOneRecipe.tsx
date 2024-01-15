@@ -4,7 +4,7 @@ import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import { useRouter } from 'next-nprogress-bar'
 
 interface RecipeProps extends ChildrenProps {
-	id: string
+	slug: string
 }
 
 /**
@@ -13,13 +13,13 @@ interface RecipeProps extends ChildrenProps {
  * @param children  Contenido que se renderizará dentro del componente.
  */
 
-const ShowOneRecipe = ({ children, id }: RecipeProps) => {
+const ShowOneRecipe = ({ children, slug }: RecipeProps) => {
 	const router = useRouter()
 
 	return (
 		<section
 			onClick={() => {
-				router.push(`/recetas/${id}`)
+				router.push(`/recetas/${slug}`)
 			}}
 			className="cursor-pointer"
 		>

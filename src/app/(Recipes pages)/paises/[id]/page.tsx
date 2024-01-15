@@ -25,7 +25,6 @@ export async function generateMetadata({
 const page = async ({ params }: ParamProps) => {
 	const id = params.id
 	const recipes = await GetAllRecipesOneCountry(id)
-
 	if (recipes === undefined) {
 		notFound()
 	}
@@ -37,18 +36,16 @@ const page = async ({ params }: ParamProps) => {
 					{Array.isArray(recipes) ? (
 						<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2">
 							{recipes.map(
-								({ _id, image, name, category, portions, duration }) => (
-									<section key={_id}>
-										<ShowOneRecipe id={_id}>
-											<CardRecipe
-												name={name}
-												img={image}
-												category={category.name}
-												duration={duration}
-												portions={portions}
-											/>
-										</ShowOneRecipe>
-									</section>
+								({ _id, image, name, category, portions, duration, slug }) => (
+									<ShowOneRecipe slug={slug} key={_id}>
+										<CardRecipe
+											name={name}
+											img={image}
+											category={category.name}
+											duration={duration}
+											portions={portions}
+										/>
+									</ShowOneRecipe>
 								),
 							)}
 						</section>
