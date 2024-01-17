@@ -1,5 +1,5 @@
 'use client'
-import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
+import { type ChildrenProps } from '@/interfaces/ChildrenProps.interface'
 import { NextUIProvider } from '@nextui-org/react'
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar'
 import { useRouter } from 'next/navigation'

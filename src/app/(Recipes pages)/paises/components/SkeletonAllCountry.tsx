@@ -1,12 +1,12 @@
-import SkeletonCardCountry from '@shared-components/skeletons/SkeletonCardCountry'
+import SkeletonCardCountry from '@/components/shared/skeletons/SkeletonCardCountry'
 
 const SkeletonAllCountry = () => {
 	return (
 		<section className="2xl:mx-auto 2xl:container px-2 md:px-4 lg:px-16 mt-20">
 			<section className="2xl:mx-auto 2xl:container mt-20">
 				<div className="flex justify-between items-center">
-					<h1 className="lg:text-4xl text-2xl font-readexPro">Paises</h1>
-					<h3 className="text-xl font-nunito flex items-center gap-x-2">
+					<h1 className="lg:text-4xl text-2xl font-poppins-bold">Paises</h1>
+					<h3 className="text-xl flex items-center gap-x-2">
 						<span className="h-5 w-12 rounded-full bg-gray-300 animate-pulse block" />{' '}
 						Paises totales
 					</h3>

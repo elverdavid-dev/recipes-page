@@ -2,29 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.Subtitle {
-  @apply py-10 text-3xl font-readexPro text-slate-950  capitalize;
-}
-
 body {
-  @apply bg-base;
+  background: #f6f6f6;
 }
 
 .RecipeInfoTags {
   @apply flex items-center gap-x-2   text-sm;
-}
-
-/*? Navbar Component Style*/
-
-.Navbar {
-  @apply md:flex md:items-center md:justify-between py-2 lg:px-20 px-4  relative bg-base;
-}
-.Content-menu-items {
-  @apply md:flex md:items-center md:static md:z-auto md:w-auto absolute gap-x-4 left-0 z-10 w-full transition-all shadow-md md:shadow-none pb-5 md:pb-0 bg-base;
-}
-
-.Menu-item {
-  @apply font-nunito text-lg hover:text-gold border-b-2 border-transparent hover:border-b-gold transition-all;
 }
 
 .Active-link {
@@ -35,4 +18,17 @@ body {
 .swiper-pagination-bullet-active {
   background-color: rgb(255, 162, 0);
   opacity: 1;
+}
+
+
+.change-color-navbar{
+animation: ChangeColorNavbar linear both;
+animation-timeline: scroll(root);
+animation-range: 0px 600px;
+}
+
+@keyframes ChangeColorNavbar{
+  to{
+    background: #f6f6f6;
+  }
 }

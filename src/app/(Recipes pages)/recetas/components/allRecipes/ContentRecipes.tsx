@@ -1,9 +1,10 @@
-import { GetAllRecipes } from '@app/(Recipes pages)/functions/GetAllRecipes'
-import { SearchRecipeByName } from '@app/(Recipes pages)/functions/SearchRecipe'
-import CardRecipe from '@shared-components/shared/CardRecipe'
-import NotFound from '@shared-components/shared/NotFound'
-import ShowOneRecipe from '@shared-components/shared/ShowOneRecipe'
-import { UiPagination } from '@shared-components/ui'
+import CardRecipe from '@/components/shared/CardRecipe'
+import NotFound from '@/components/shared/NotFound'
+import UiPagination from '@/components/shared/Pagination'
+import ShowOneRecipe from '@/components/shared/ShowOneRecipe'
+import Subtitle from '@/components/shared/Subtitle'
+import { GetAllRecipes } from '@/services/GetAllRecipes'
+import { SearchRecipeByName } from '@/services/SearchRecipe'
 
 const ContentRecipes = async ({
 	page,
@@ -24,10 +25,8 @@ const ContentRecipes = async ({
 	return (
 		<>
 			<div className="flex items-center justify-between px-2 md:px-4 lg:px-16">
-				<h2 className="Subtitle">Recetas</h2>
-				<span className="text-lg font-nunito">
-					{data?.totalItems ?? 0} Recetas totales
-				</span>
+				<Subtitle>Recetas</Subtitle>
+				<span className="text-lg">{data?.totalItems ?? 0} Recetas totales</span>
 			</div>
 			<section>
 				{data?.message ? (

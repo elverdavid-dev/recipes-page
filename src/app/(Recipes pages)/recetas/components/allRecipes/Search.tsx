@@ -28,7 +28,7 @@ export default function Search() {
 			<Input
 				onChange={(event) => handleSearch(event.target.value)}
 				size="sm"
-				className="lg:w-[600px] mx-2 md:mx-4 lg:mx-0 font-nunito"
+				className="lg:w-[600px] mx-2 md:mx-4 lg:mx-0"
 				variant="faded"
 				placeholder="Buscar recetas..."
 				startContent={<FiSearch className="text-slate-500 text-lg" />}

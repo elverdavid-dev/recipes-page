@@ -1,4 +1,4 @@
-import { formatDuration } from '@app/(Recipes pages)/functions/FormatDurations'
+import { formatDuration } from '@/services/FormatDurations'
 import {
 	RiCalendarLine,
 	RiFunctionLine,
@@ -21,7 +21,7 @@ const RecipeInfoTags = ({
 }: RecipeInfo) => {
 	const durationFormat = formatDuration(duration)
 	return (
-		<div className="flex flex-wrap gap-y-2 items-center gap-x-10 py-3 font-readexPro">
+		<div className="flex flex-wrap gap-y-2 items-center gap-x-10 py-3">
 			{/* Fecha */}
 			<span className="RecipeInfoTags">
 				<RiCalendarLine className="text-gold" size={20} /> {fecha}

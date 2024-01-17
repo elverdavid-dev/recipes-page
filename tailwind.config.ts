@@ -15,9 +15,7 @@ const config: Config = {
         base: '#f6f6f6'
       },
       fontFamily: {
-        lora: ['var(--lora)'],
-        nunito: ['var(--nunito)'],
-        readexPro: ['var(--readexPro)']
+        'poppins-bold': ['var(--poppins-bold)']
       }
     }
   },

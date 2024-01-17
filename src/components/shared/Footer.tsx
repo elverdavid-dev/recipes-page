@@ -1,11 +1,11 @@
-import { Logo } from '@shared-components/ui'
+import Logo from '@/components/shared/Logo'
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 export default function Footer() {
 	const date = new Date()
 	const CurrentYear = date.getFullYear()
 	return (
-		<footer className="bg-gray-200 flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between w-full p-5 mt-44 font-nunito 2xl:container mx-auto">
+		<footer className="bg-gray-200 flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 xl:justify-between w-full p-5 mt-44 2xl:container mx-auto">
 			<div>
 				<Logo />
 			</div>
@@ -13,7 +13,7 @@ export default function Footer() {
 				<p className="text-gray-800 text-center md:text-left flex gap-2">
 					&copy; {CurrentYear}
 					<span className="text-gray-900 font-bold">GlobalFood</span>{' '}
-					<span className="text-gray-700">• By</span>
+					<span className="text-gray-700">• Por</span>
 					<a
 						href="https://www.elvportafolio.website"
 						target="_blank"
