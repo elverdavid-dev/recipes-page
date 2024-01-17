@@ -8,7 +8,7 @@ const ChipComponent = ({ children }: ChildrenProps) => {
 			variant="solid"
 			radius="sm"
 			size="lg"
-			className="font-nunito text-sm bg-gold text-white"
+			className="text-sm bg-gold text-white"
 		>
 			{children}
 		</Chip>

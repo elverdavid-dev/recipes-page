@@ -10,7 +10,7 @@ const ChipRecipesLatest = ({ children, className }: PropsChip) => {
 	return (
 		<Chip
 			variant="flat"
-			className={`z-10 absolute top-1 left-1 bg-black/30 text-white font-nunito ${className}`}
+			className={`z-10 absolute top-1 left-1 bg-black/30 text-white ${className}`}
 		>
 			{children}
 		</Chip>

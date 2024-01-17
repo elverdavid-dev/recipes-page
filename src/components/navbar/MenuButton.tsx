@@ -9,7 +9,6 @@ const MenuButton = ({ isOpenMenu, closeMenu }: Props) => {
 	return (
 		<div
 			className="text-2xl md:hidden cursor-pointer"
-			aria-label="button close and open menu"
 			onClick={closeMenu}
 		>
 			{isOpenMenu ? <FiX /> : <FiMenu />}

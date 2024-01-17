@@ -1,4 +1,4 @@
-import { lora, nunito, readexPro } from '@app/fonts'
+import { onest, onestBold } from '@app/fonts'
 import Providers from '@app/providers'
 import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
 import Navbar from '@shared-components/navbar/Navbar'
@@ -19,9 +19,9 @@ export default function RootLayout({ children }: ChildrenProps) {
 	return (
 		<html
 			lang="es"
-			className={`  ${lora.variable} ${nunito.variable} ${readexPro.variable}`}
+			className={` ${onestBold.variable}`}
 		>
-			<body>
+			<body className={`${onest.className}`}>
 				<Analytics mode="auto" />
 				<SpeedInsights />
 				<Navbar />

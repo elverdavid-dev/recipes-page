@@ -3,7 +3,7 @@ import { SearchRecipeByName } from '@app/(Recipes pages)/functions/SearchRecipe'
 import CardRecipe from '@shared-components/shared/CardRecipe'
 import NotFound from '@shared-components/shared/NotFound'
 import ShowOneRecipe from '@shared-components/shared/ShowOneRecipe'
-import { UiPagination } from '@shared-components/ui'
+import { Subtitle, UiPagination } from '@shared-components/ui'
 
 const ContentRecipes = async ({
 	page,
@@ -24,8 +24,10 @@ const ContentRecipes = async ({
 	return (
 		<>
 			<div className="flex items-center justify-between px-2 md:px-4 lg:px-16">
-				<h2 className="Subtitle">Recetas</h2>
-				<span className="text-lg font-nunito">
+				<Subtitle>
+					Recetas
+				</Subtitle>
+				<span className="text-lg">
 					{data?.totalItems ?? 0} Recetas totales
 				</span>
 			</div>

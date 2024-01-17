@@ -12,9 +12,21 @@ export async function generateMetadata({
 }: SlugProps): Promise<Metadata> {
 	const slug = params.slug
 	const recipe = await GetRecipeById(slug)
+	// metadata of the page 404 not found
+	if (!recipe) {
+		return {
+			title: '¡Oops! Algo salió mal.',
+			description: 'La pagina no se ha encontrado!',
+		}
+	}
+	//
 	return {
 		title: `Cómo Hacer ${recipe?.name} | GlobalFood`,
 		description: recipe?.description,
+		category: recipe.category.name,
+		alternates: {
+			canonical: `https://www.globalfood.site/recetas/${recipe.slug}`,
+		},
 		openGraph: {
 			title: `Cómo Hacer ${recipe?.name} | GlobalFood`,
 			description: recipe?.description,

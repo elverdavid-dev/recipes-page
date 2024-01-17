@@ -5,8 +5,7 @@ import Link from 'next/link'
 
 const Logo = () => {
 	return (
-		<Link href={'/'} className="flex items-center gap-x-2">
-			<h3 className="text-lg font-readexPro">GlobalFood</h3>
+		<Link href={'/'} className="flex items-center gap-x-1">
 			<Image
 				src="/logo.svg"
 				alt="logo"
@@ -14,6 +13,7 @@ const Logo = () => {
 				height="50"
 				className="mb-3 w-[40px] h-[50px]"
 			/>
+			<h3 className="text-xl font-onest-bold">GlobalFood</h3>
 		</Link>
 	)
 }

@@ -32,7 +32,7 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 									height={188}
 									className="hover:scale-[1.03] transition-all rounded-md w-[230px] h-[150px] md:w-[264px] md:h-[188px]"
 								/>
-								<span className="text-xl text-slate-950 font-nunito block py-2 group-hover:text-gold transition-all ">
+								<span className="text-xl text-slate-950 block py-2 group-hover:text-gold transition-all ">
 									{name}{' '}
 								</span>
 							</section>

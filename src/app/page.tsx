@@ -1,6 +1,6 @@
-import Hero from '@app/HomePage/components/Hero'
 import SectionCategories from '@app/HomePage/components/sections/SectionCategories'
 import SectionCountry from '@app/HomePage/components/sections/SectionCountry'
+import SectionHero from '@app/HomePage/components/sections/SectionHero'
 import SectionRecipesLatest from '@app/HomePage/components/sections/SectionRecipesLatest'
 import CategorySkeleton from '@app/HomePage/components/skeletons/CategorySkeleton'
 import CountrySkeleton from '@app/HomePage/components/skeletons/CountrySkeleton'
@@ -10,7 +10,7 @@ import { Suspense } from 'react'
 const HomePage = () => {
 	return (
 		<main>
-			<Hero />
+			<SectionHero />
 			<Suspense fallback={<CategorySkeleton />}>
 				<SectionCategories />
 			</Suspense>
