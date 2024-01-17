@@ -15,7 +15,7 @@ const config: Config = {
         base: '#f6f6f6'
       },
       fontFamily: {
-        'onest-bold': ['var(--onest-bold)']
+        'poppins-bold': ['var(--poppins-bold)']
       }
     }
   },

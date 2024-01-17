@@ -24,18 +24,9 @@
     ],
     "baseUrl": "./src/",
     "paths": {
-      "@app/*": [
-        "./app/*"
+      "@/*": [
+        "./*"
       ],
-      "@interfaces/*": [
-        "./interfaces/*"
-      ],
-      "@libs/*": [
-        "./libs/*"
-      ],
-      "@shared-components/*": [
-        "./components/*"
-      ]
     }
   },
   "include": [

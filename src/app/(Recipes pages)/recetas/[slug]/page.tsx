@@ -1,5 +1,5 @@
-import { GetRecipeById } from '@app/(Recipes pages)/functions/GetRecipeById'
-import { SlugProps } from '@interfaces/SlugProps.interface'
+import { SlugProps } from '@/interfaces/SlugProps.interface'
+import { GetRecipeBySlug } from '@/services/GetRecipeBySlug'
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import Aside from '../components/oneRecipe/AsideSection'
@@ -11,7 +11,7 @@ export async function generateMetadata({
 	params,
 }: SlugProps): Promise<Metadata> {
 	const slug = params.slug
-	const recipe = await GetRecipeById(slug)
+	const recipe = await GetRecipeBySlug(slug)
 	// metadata of the page 404 not found
 	if (!recipe) {
 		return {

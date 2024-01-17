@@ -43,6 +43,9 @@ export const metadata: Metadata = {
 	},
 	robots: { index: true },
 	icons: 'https://www.globalfood.site/favicon.ico',
+	alternates:{
+		canonical:"https://www.globalfood.site"
+	}
 }
 export const viewport: Viewport = {
 	themeColor: '#f6f6f6',

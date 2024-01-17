@@ -1,6 +1,6 @@
 'use client'
 
-import { type ChildrenProps } from '@interfaces/ChildrenProps.interface'
+import { type ChildrenProps } from '@/interfaces/ChildrenProps.interface'
 import { useRouter } from 'next-nprogress-bar'
 
 interface RecipeProps extends ChildrenProps {

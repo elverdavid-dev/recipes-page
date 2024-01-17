@@ -1,11 +1,11 @@
-import { type ParamProps } from '@interfaces/ParamProps.interface'
-import CardRecipe from '@shared-components/shared/CardRecipe'
-import DynamicTitle from '@shared-components/shared/DynamicTitle'
-import NotFound from '@shared-components/shared/NotFound'
-import ShowOneRecipe from '@shared-components/shared/ShowOneRecipe'
+import CardRecipe from '@/components/shared/CardRecipe'
+import DynamicTitle from '@/components/shared/DynamicTitle'
+import NotFound from '@/components/shared/NotFound'
+import ShowOneRecipe from '@/components/shared/ShowOneRecipe'
+import { type ParamProps } from '@/interfaces/ParamProps.interface'
+import { GetAllRecipesOneCategory } from '@/services/GetAllRecipesOneCategory'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { GetAllRecipesOneCategory } from '../../functions/GetAllRecipesOneCategory'
 
 type Props = {
 	searchParams: { [key: string]: string | string[] | undefined }

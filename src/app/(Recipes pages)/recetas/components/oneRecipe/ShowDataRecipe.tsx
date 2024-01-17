@@ -1,12 +1,13 @@
-import { FormatRelativeDate } from '@app/(Recipes pages)/functions/FormatRelativeDate'
-import { GetRecipeBySlug } from '@app/(Recipes pages)/functions/GetRecipeBySlug'
-import CheckBoxComponent from '@app/(Recipes pages)/recetas/components/oneRecipe/CheckBox'
-import ChipComponent from '@app/(Recipes pages)/recetas/components/oneRecipe/Chip'
-import GenerateJsonLD from '@libs/GenerateJsonLD'
-import { Subtitle, UiImage } from '@shared-components/ui'
+import UiImage from '@/components/shared/Image'
+import Subtitle from '@/components/shared/Subtitle'
+import GenerateJsonLD from '@/libs/GenerateJsonLD'
+import { FormatRelativeDate } from '@/services/FormatRelativeDate'
+import { GetRecipeBySlug } from '@/services/GetRecipeBySlug'
 import { notFound } from 'next/navigation'
-import { RiListCheck3, RiListOrdered2 } from "react-icons/ri"
+import { RiListCheck3, RiListOrdered2 } from 'react-icons/ri'
 import BreadcrumbsComponent from './Breadcrumbs'
+import CheckBoxComponent from './CheckBox'
+import ChipComponent from './Chip'
 import RecipeInfoTags from './RecipeInfoTags'
 
 const ShowDataRecipe = async ({ slug }: { slug: string }) => {
@@ -21,13 +22,13 @@ const ShowDataRecipe = async ({ slug }: { slug: string }) => {
 		<section className="lg:w-[700px]">
 			<BreadcrumbsComponent name={recipe.name} />
 
-			<h2 className="font-onest-bold text-xl text-gold">
+			<h2 className="font-poppins-bold capitalize text-xl text-gold">
 				{recipe.country?.name}
 			</h2>
 
 			{/* Title */}
 
-			<h1 className="font-onest-bold tracking-tight text-4xl text-slate-900 py-3 capitalize text-balance">
+			<h1 className="font-poppins-bold tracking-tight text-3xl md:text-4xl text-slate-900 py-3 capitalize text-balance">
 				{recipe.name}
 			</h1>
 
@@ -72,7 +73,7 @@ const ShowDataRecipe = async ({ slug }: { slug: string }) => {
 
 			<div className="mt-16 flex items-center gap-x-2">
 				<RiListOrdered2 className="text-gold" size={32} />
-				<Subtitle>Pasos </Subtitle>
+				<Subtitle>Preparación </Subtitle>
 			</div>
 			<ul className="lg:mb-16">
 				{recipe.steps.map((recipe, i) => (

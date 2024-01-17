@@ -28,7 +28,9 @@ const NotFound = () => {
 			</div>
 			<div className="text-center text-slate-950">
 				<strong className="font-extrabold text-7xl">Oops!</strong>
-				<p className="text-2xl font-onest-bold mt-5">Esta pagina no existe!</p>
+				<p className="text-2xl font-poppins-bold mt-5">
+					Esta pagina no existe!
+				</p>
 				<Button
 					size="lg"
 					className="mt-5 bg-gold  text-slate-950 rounded-full capitalize"

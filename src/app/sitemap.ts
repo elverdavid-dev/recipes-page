@@ -1,5 +1,5 @@
+import { GetAllRecipes } from '@/services/GetAllRecipes'
 import { MetadataRoute } from 'next'
-import { GetAllRecipes } from './(Recipes pages)/functions/GetAllRecipes'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 	const getAllRecipesRecursive = async () => {

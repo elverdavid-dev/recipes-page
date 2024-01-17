@@ -1,10 +1,11 @@
-import SkeletonCard from '@shared-components/skeletons/SkeletonCardRecipe'
+import Subtitle from '@/components/shared/Subtitle'
+import SkeletonCard from '@/components/shared/skeletons/SkeletonCardRecipe'
 
 const SkeletonRecipe = () => {
 	return (
 		<>
 			<div className="flex items-center justify-between px-5">
-				<h2 className="Subtitle">Recetas</h2>
+				<Subtitle>Recetas</Subtitle>
 				<span className="inline-block h-5 w-32 rounded-full bg-gray-300 animate-pulse" />
 			</div>
 			<section className="mt-16 px-2 mx-auto  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-3">
