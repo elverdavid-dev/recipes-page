@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 const SectionHero = () => {
 	return (
-		<section className="lg:px-20 px-4 grid lg:grid-cols-2  lg:h-[580px] relative 2xl:container mx-auto bg-[#f8e7d4]">
+		<section className="lg:px-20 px-4 grid lg:grid-cols-2  lg:h-[580px] relative 2xl:container mx-auto">
 			<div className="lg:w-[600px] lg:h-auto h-[60rem]">
 				<h1 className="lg:text-6xl tracking-tight text-4xl font-poppins-bold  lg:mt-32 mt-16 text-slate-950 text-balance">
 					Explora recetas de todo el
@@ -54,7 +54,7 @@ const SectionHero = () => {
 					className="absolute w-[190px] right-0 bottom-[9rem] h-auto md:w-[275px] md:bottom-[7rem] md:right-16  lg:-right-10 lg:top-[300px] lg:w-auto lg:h-auto z-10"
 					priority={true}
 				/>{' '}
-				<div className="absolute w-52 h-52 bg-gold rounded-full right-5 bottom-[15rem] lg:top-44 lg:right-20 blur-3xl" />
+				<div className="absolute w-52 h-52 bg-gold/80 rounded-full right-5 bottom-[15rem] lg:top-44 lg:right-20 blur-3xl" />
 			</div>
 
 			<div className="absolute left-0 bottom-7">

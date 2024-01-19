@@ -6,8 +6,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import 'styles/globals.css'
 // Styles of carusel
-import 'swiper/css'
-import 'swiper/css/autoplay'
+
 import 'swiper/css/pagination'
 import { onest, poppinsBold } from './fonts'
 
