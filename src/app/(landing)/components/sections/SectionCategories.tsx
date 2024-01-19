@@ -1,6 +1,7 @@
 import Subtitle from '@/components/shared/Subtitle'
 import { GetAllCategories } from '@/services/GetAllCategories'
 import Carusel from '../Carusel'
+
 const SectionCategories = async () => {
 	const Categories = await GetAllCategories()
 
