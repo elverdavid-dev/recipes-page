@@ -12,6 +12,7 @@ const Logo = () => {
 				width="40"
 				height="50"
 				className="mb-3 w-[40px] h-[50px]"
+				priority
 			/>
 			<h3 className="text-xl font-poppins-bold">GlobalFood</h3>
 		</Link>
