@@ -5,10 +5,11 @@
 body {
   background: #f6f6f6;
   font-family: 'Nunito Variable', sans-serif;
+  font-weight: 500;
 }
 
 .RecipeInfoTags {
-  @apply flex items-center gap-x-2   text-sm;
+  @apply flex items-center gap-x-1 text-gray-700 capitalize;
 }
 
 .Active-link {

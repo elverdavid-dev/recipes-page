@@ -9,17 +9,15 @@ type ApiResponse = RecipeList & MessageResponse
  * @returns Una promesa que resuelve en una respuesta que incluye una lista de recetas (RecipeList) y un mensaje opcional, o undefined en caso de error.
  */
 
-export const getRecipesByCategory = async (
-  id: string,
-) => {
-  try {
-    const response = await fetch(
-      `${baseUrl}/recipes/filter/categories?CategoryId=${id}&page=1&limit=20`,
-    )
-    const data: ApiResponse = await response.json()
+export const getRecipesByCategory = async (id: string) => {
+	try {
+		const response = await fetch(
+			`${baseUrl}/recipes/filter/categories?CategoryId=${id}&page=1&limit=20`,
+		)
+		const data: ApiResponse = await response.json()
 
-    return data
-  } catch (error) {
-    console.error(error)
-  }
+		return data
+	} catch (error) {
+		console.error(error)
+	}
 }

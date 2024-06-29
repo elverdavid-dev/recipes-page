@@ -1,38 +1,38 @@
 import CardRecipe from '@/components/shared/CardRecipe'
-import DynamicTitle from '@/components/shared/DynamicTitle'
 import NotFound from '@/components/shared/NotFound'
+import BackButton from '@/components/shared/common/back-button'
 import { getRecipesByCategory } from '@/services/recipes/get-recipes-by-category'
-import type { ParamProps } from '@/types/common/param-props'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-type Props = {
-	searchParams: { [key: string]: string | string[] | undefined }
+type SearchParamsProps = {
+	searchParams: { [key: string]: string | undefined }
 }
-
+interface Props extends SearchParamsProps {
+	params: { id: string }
+}
 export async function generateMetadata({
 	searchParams,
-}: Props): Promise<Metadata> {
-	const name = searchParams.name
+}: SearchParamsProps): Promise<Metadata> {
 	return {
-		title: `Recetas de la categoría ${name} | GlobalFood`,
+		title: `Recetas de la categoría ${searchParams.name} | GlobalFood`,
 	}
 }
 
-const CategoryPage = async ({ params }: ParamProps) => {
+const CategoryRecipesPage = async ({ params, searchParams }: Props) => {
 	const recipes = await getRecipesByCategory(params.id)
-	if (recipes === undefined) {
+	if (!recipes) {
 		notFound()
 	}
 	return (
 		<>
-			<DynamicTitle message="Recetas de la categoria " />
-			<section className="mx-auto container">
+			<section className="2xl:mx-auto 2xl:container px-2 md:px-4 lg:px-16 mt-10">
+				<BackButton label={searchParams.name} href="/" />
 				{recipes.message ? (
 					<NotFound description={recipes?.message} />
 				) : (
-					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 lg:px-16 px-2 mt-20">
+					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 px-2 mt-10">
 						{recipes?.data.map(
 							({ _id, name, image, duration, portions, country, slug }) => (
 								<Link href={`/recetas/${slug}`} key={_id}>
@@ -53,4 +53,4 @@ const CategoryPage = async ({ params }: ParamProps) => {
 	)
 }
 
-export default CategoryPage
+export default CategoryRecipesPage

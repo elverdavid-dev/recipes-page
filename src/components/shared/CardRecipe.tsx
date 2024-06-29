@@ -1,5 +1,5 @@
 import ChipRecipesLatest from '@/components/home/ChipRecipesLatest'
-import UiImage from '@/components/shared/Image'
+import ImageWrapper from '@/components/shared/Image'
 import { formatDuration } from '@/libs/common/format-duration'
 import type { CardRecipeProps } from '@/types/recipes/card-recipes-props'
 
@@ -14,8 +14,9 @@ export default function CardRecipe({
 	return (
 		<>
 			<article className="flex flex-col  cursor-pointer  group relative">
-				<ChipRecipesLatest>{category}</ChipRecipesLatest>
-				<img
+				{/*  */}
+				{category && <ChipRecipesLatest>{category}</ChipRecipesLatest>}
+				<ImageWrapper
 					src={img}
 					alt={name}
 					width={280}
@@ -25,8 +26,8 @@ export default function CardRecipe({
 				<h2 className="font-extrabold capitalize text-xl pt-3 px-3  group-hover:text-gold transition-all truncate">
 					{name}
 				</h2>
-				<span className="py-1 px-3 text-sm text-gray-700 font-medium">
-					{durationFormat} | {portions} Porciones{' '}
+				<span className="py-1 px-3 text-sm text-gray-700">
+					{durationFormat} | {portions} Porciones
 				</span>
 			</article>
 		</>

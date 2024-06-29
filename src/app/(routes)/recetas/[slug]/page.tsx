@@ -40,9 +40,8 @@ export async function generateMetadata({
 	}
 }
 
-const PageDetailsRecipe = async ({ params }: SlugProps) => {
+const RecipeDetailPage = async ({ params }: SlugProps) => {
 	const slug = params.slug
-	console.log(slug)
 	return (
 		<>
 			<section className="container px-2 md:px-8 lg:px-10  mx-auto mt-16 lg:flex lg:justify-between gap-x-16">
@@ -57,4 +56,4 @@ const PageDetailsRecipe = async ({ params }: SlugProps) => {
 	)
 }
 
-export default PageDetailsRecipe
+export default RecipeDetailPage

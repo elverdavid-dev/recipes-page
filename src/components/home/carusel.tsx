@@ -1,12 +1,12 @@
 'use client'
-import UiImage from '@/components/shared/Image'
+import ImageWrapper from '@/components/shared/Image'
 import { ResponsiveOptions } from '@/libs/common/ResponsiveCaruselOptions'
 import type { Categories } from '@/types/categories/categories-interface'
+import Link from 'next/link'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import ShowRecipesOneCategory from './ShowRecipesOneCategory'
 
 const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 	return (
@@ -25,26 +25,24 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 			>
 				{categories?.map(({ name, image, _id }, i) => (
 					<SwiperSlide key={_id} virtualIndex={i}>
-						<ShowRecipesOneCategory id={_id} category={name}>
-							<section className="group">
-								<img
+						<Link href={`/categorias/${_id}?name=${name}`}>
+							<section className="group relative w-[230px] md:w-[280px]">
+								<ImageWrapper
 									src={image}
 									alt={name}
-									width={264}
+									width={280}
 									height={188}
-									className="hover:scale-[1.03] transition-all rounded-md w-[230px] h-[150px] md:w-[264px] md:h-[188px]"
+									className="rounded-xl w-full"
 								/>
-								<span className="text-xl text-slate-950 block py-2 group-hover:text-gold transition-all ">
-									{name}{' '}
+								<span className="text-xl text-white font-extrabold absolute bottom-4 left-5 capitalize z-20">
+									{name}
 								</span>
+								<div className="absolute inset-0 bg-gradient-to-t from-black/70  to-transparent rounded-xl z-10" />
 							</section>
-						</ShowRecipesOneCategory>
+						</Link>
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<section className="flex justify-center mt-2 pl-16">
-				<div className="pagination" />
-			</section>
 		</section>
 	)
 }

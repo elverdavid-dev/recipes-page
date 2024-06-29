@@ -8,11 +8,11 @@ import type { Recipes } from '@/types/recipes/recipes-interface'
  */
 
 export const getRecipeBySlug = async (slug: string) => {
-  try {
-    const response = await fetch(`${baseUrl}/recipes/${slug}`)
-    const data: Recipes = await response.json()
-    return data
-  } catch (error) {
-    console.error(error)
-  }
+	try {
+		const response = await fetch(`${baseUrl}/recipes/${slug}`)
+		const data: Recipes = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
 }

@@ -1,5 +1,6 @@
 'use client'
 
+import Search from '@/components/recipes/list/Search'
 import Logo from '@/components/shared/Logo'
 import useNavbar from '@/libs/hooks/useNavbar'
 import { usePathname } from 'next/navigation'
@@ -17,7 +18,7 @@ const Navbar = () => {
 					<Logo />
 					<MenuButton isOpenMenu={isOpenMenu} closeMenu={closeMenu} />
 				</section>
-
+				<Search />
 				<Menu
 					closeMenu={closeMenu}
 					isOpenMenu={isOpenMenu}

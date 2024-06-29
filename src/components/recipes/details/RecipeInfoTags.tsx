@@ -1,44 +1,43 @@
 import { formatDuration } from '@/libs/common/format-duration'
 import {
-	RiCalendarLine,
-	RiFunctionLine,
-	RiRestaurant2Line,
-	RiTimeLine,
-} from 'react-icons/ri'
-
+	Calendar03Icon,
+	Clock01Icon,
+	DashboardSquare01Icon,
+	Tag01Icon,
+} from 'hugeicons-react'
 interface RecipeInfo {
-	fecha: string
+	date: string
 	duration: number
 	category: string
 	portions: number
 }
 
-const RecipeInfoTags = ({
-	category,
-	duration,
-	fecha,
-	portions,
-}: RecipeInfo) => {
+const RecipeInfoTags = ({ category, duration, date, portions }: RecipeInfo) => {
 	const durationFormat = formatDuration(duration)
 	return (
-		<div className="flex flex-wrap gap-y-2 items-center gap-x-10 py-3">
-			{/* Fecha */}
+		<div className="flex flex-wrap items-center gap-x-2 py-3">
+			{/* Duration */}
 			<span className="RecipeInfoTags">
-				<RiCalendarLine className="text-gold" size={20} /> {fecha}
+				<Clock01Icon className="text-gold" size={18} strokeWidth={2} />{' '}
+				{durationFormat}
 			</span>
-			{/* Duracion */}
+			{/* Category */}
 			<span className="RecipeInfoTags">
-				<RiTimeLine className="text-gold" size={20} /> {durationFormat}
-			</span>
-			{/* Categoria */}
-			<span className="RecipeInfoTags">
-				<RiFunctionLine className="text-gold" size={20} />
+				<Tag01Icon className="text-gold" size={18} strokeWidth={2} />
 				{category}
 			</span>
-			{/* Porciones */}
+			{/* Portions */}
 			<span className="RecipeInfoTags">
-				<RiRestaurant2Line className="text-gold" size={20} />
+				<DashboardSquare01Icon
+					className="text-gold"
+					size={18}
+					strokeWidth={2}
+				/>
 				{portions} {'Porciones'}
+			</span>
+			<span className="RecipeInfoTags">
+				<Calendar03Icon className="text-gold" size={18} strokeWidth={2} />
+				{date}
 			</span>
 		</div>
 	)

@@ -7,14 +7,14 @@ import type { Recipes } from '@/types/recipes/recipes-interface'
  */
 
 export const getLatestRecipes = async (limit = 12) => {
-  try {
-    const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`)
-    if (!response.ok) {
-      throw new Error('Error al obtener las recetas')
-    }
-    const data: Recipes[] = await response.json()
-    return data
-  } catch (error) {
-    console.error(error)
-  }
+	try {
+		const response = await fetch(`${baseUrl}/recipes/latest?limit=${limit}`)
+		if (!response.ok) {
+			throw new Error('Error al obtener las recetas')
+		}
+		const data: Recipes[] = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
 }

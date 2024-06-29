@@ -4,7 +4,12 @@ import { Checkbox } from '@nextui-org/react'
 
 const CheckBoxComponent = ({ children }: ChildrenProps) => {
 	return (
-		<Checkbox lineThrough color="warning" size="lg">
+		<Checkbox
+			lineThrough
+			color="default"
+			size="lg"
+			classNames={{ label: 'text-gray-800' }}
+		>
 			{children}
 		</Checkbox>
 	)

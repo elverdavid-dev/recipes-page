@@ -9,16 +9,16 @@ import type { Recipes } from '@/types/recipes/recipes-interface'
  */
 type ApiResponse = Recipes[] & MessageResponse
 export const getRecipesByCountry = async (id: string) => {
-  try {
-    const response = await fetch(
-      `${baseUrl}/recipes/filter/countrys?countryId=${id}`,
-    )
-    if (!response.ok) {
-      throw new Error('Error al obtener todas las recetas de 1 pais')
-    }
-    const data: ApiResponse = await response.json()
-    return data
-  } catch (error) {
-    console.error(error)
-  }
+	try {
+		const response = await fetch(
+			`${baseUrl}/recipes/filter/countrys?countryId=${id}`,
+		)
+		if (!response.ok) {
+			throw new Error('Error al obtener todas las recetas de 1 pais')
+		}
+		const data: ApiResponse = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
 }

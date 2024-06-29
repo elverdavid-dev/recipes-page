@@ -7,7 +7,7 @@ import CountrySkeleton from '@/components/home/skeletons/CountrySkeleton'
 import RecipesLatestSkeleton from '@/components/home/skeletons/RecipesLatestSkeleton'
 import { Suspense } from 'react'
 
-const HomePage = () => {
+const HomePage = async () => {
 	return (
 		<main>
 			<SectionHero />

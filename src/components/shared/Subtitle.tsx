@@ -8,10 +8,7 @@ const Subtitle = ({
 }: HTMLAttributes<HTMLHeadingElement>) => {
 	return (
 		<h2
-			className={cn(
-				'py-10 text-3xl font-extrabold  capitalize flex items-center gap-x-1',
-				className,
-			)}
+			className={cn('py-4 text-3xl font-extrabold  capitalize', className)}
 			{...props}
 		>
 			{children}

@@ -5,10 +5,11 @@ import { Chip } from '@nextui-org/react'
 const ChipComponent = ({ children }: ChildrenProps) => {
 	return (
 		<Chip
-			variant="solid"
-			radius="sm"
+			radius="lg"
 			size="lg"
-			className="text-sm bg-gold text-white"
+			classNames={{
+				base: 'bg-gold text-white',
+			}}
 		>
 			{children}
 		</Chip>

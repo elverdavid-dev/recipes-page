@@ -11,14 +11,14 @@ type ResponseApi = RecipeList & MessageResponse
  */
 
 export const searchRecipeByName = async (name: string) => {
-  try {
-    const response = await fetch(`${baseUrl}/recipes/search?name=${name}`)
-    if (!response.ok) {
-      throw new Error('Error al obtener  la receta')
-    }
-    const data: ResponseApi = await response.json()
-    return data
-  } catch (error) {
-    console.error(error)
-  }
+	try {
+		const response = await fetch(`${baseUrl}/recipes/search?name=${name}`)
+		if (!response.ok) {
+			throw new Error('Error al obtener  la receta')
+		}
+		const data: ResponseApi = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
 }

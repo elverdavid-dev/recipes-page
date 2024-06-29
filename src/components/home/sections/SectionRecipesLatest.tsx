@@ -7,7 +7,7 @@ const SectionRecipesLatest = async () => {
 	const Recipes = await getLatestRecipes(12)
 
 	return (
-		<section className="mt-32 lg:px-16 px-2 2xl:container mx-auto">
+		<section className="mt-20 lg:px-16 px-2 2xl:container mx-auto">
 			<Subtitle>Ultimas recetas</Subtitle>
 			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-5">
 				{Recipes?.map(

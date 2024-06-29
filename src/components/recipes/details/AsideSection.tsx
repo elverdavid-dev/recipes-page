@@ -1,4 +1,4 @@
-import UiImage from '@/components/shared/Image'
+import ImageWrapper from '@/components/shared/Image'
 import Subtitle from '@/components/shared/Subtitle'
 import { getLatestRecipes } from '@/services/recipes/get-latest-recipes'
 import Link from 'next/link'
@@ -12,7 +12,7 @@ const AsideSection = async () => {
 				{Recipes?.map(({ _id, image, name, category, slug }) => (
 					<Link href={`/recetas/${slug}`} key={_id}>
 						<div className="flex items-start gap-x-3 py-3 px-2 group">
-							<UiImage
+							<ImageWrapper
 								src={image}
 								alt={name}
 								width={100}
