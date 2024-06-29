@@ -1,7 +1,7 @@
-import ChipRecipesLatest from '@/app/(landing)/components/ChipRecipesLatest'
-import UiImage from '@/components/shared/Image'
-import { type CardRecipeProps } from '@/interfaces/CardRecipeProps.interface'
-import { formatDuration } from '@/services/FormatDurations'
+import ChipRecipesLatest from '@/components/home/ChipRecipesLatest'
+import ImageWrapper from '@/components/shared/Image'
+import { formatDuration } from '@/libs/common/format-duration'
+import type { CardRecipeProps } from '@/types/recipes/card-recipes-props'
 
 export default function CardRecipe({
 	img,
@@ -13,24 +13,21 @@ export default function CardRecipe({
 	const durationFormat = formatDuration(duration)
 	return (
 		<>
-			<article className="flex flex-col  cursor-pointer  group relative bg-white rounded-md shadow border">
-				<ChipRecipesLatest
-					className={`${category === undefined ? 'hidden' : ''}`}
-				>
-					{category}{' '}
-				</ChipRecipesLatest>
-				<UiImage
+			<article className="flex flex-col  cursor-pointer  group relative">
+				{/*  */}
+				{category && <ChipRecipesLatest>{category}</ChipRecipesLatest>}
+				<ImageWrapper
 					src={img}
 					alt={name}
 					width={280}
 					height={210}
-					className="group-hover:scale-105 transition-transform w-full h-auto"
+					className="w-full h-auto rounded-xl"
 				/>
-				<span className="font-poppins-bold capitalize text-xl text-slate-950 pt-3 px-3  group-hover:text-gold transition-all truncate">
+				<h2 className="font-extrabold capitalize text-xl pt-3 px-3  group-hover:text-gold transition-all truncate">
 					{name}
-				</span>
-				<span className="py-3 px-3 text-sm text-slate-700">
-					{durationFormat} | {portions} Porciones{' '}
+				</h2>
+				<span className="py-1 px-3 text-sm text-gray-700">
+					{durationFormat} | {portions} Porciones
 				</span>
 			</article>
 		</>

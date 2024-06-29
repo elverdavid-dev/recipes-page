@@ -1,8 +1,16 @@
-import { ChildrenProps } from '@/interfaces/ChildrenProps.interface'
+import { cn } from '@/libs/common/utils'
+import type { HTMLAttributes } from 'react'
 
-const Subtitle = ({ children }: ChildrenProps) => {
+const Subtitle = ({
+	children,
+	className,
+	...props
+}: HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h2 className="py-10 text-3xl font-poppins-bold text-slate-950  capitalize flex items-center gap-x-1">
+		<h2
+			className={cn('py-4 text-3xl font-extrabold  capitalize', className)}
+			{...props}
+		>
 			{children}
 		</h2>
 	)

@@ -1,29 +1,10 @@
 'use client'
 
-import { Skeleton } from '@nextui-org/react'
-import Image, { type ImageProps } from 'next/image'
-import { useState } from 'react'
+import { Image, type ImageProps } from '@nextui-org/react'
+import ImageNext from 'next/image'
 
-/**
- * @description Componente  que muestra una imagen con un esqueleto de carga si la imagen no a cargado por completo.
- */
-
-const UiImage = (props: ImageProps) => {
-	const [isLoaded, setIsLoaded] = useState(false)
-	const closeSkeleton = () => {
-		setIsLoaded(true)
-	}
-	return (
-		<>
-			<Skeleton isLoaded={isLoaded} className={'rounded-md'}>
-				<Image
-					{...props}
-					// Callback que se ejecuta cuando la imagen se carga completamente.
-					onLoad={closeSkeleton}
-				/>
-			</Skeleton>
-		</>
-	)
+const ImageWrapper = ({ ...props }: ImageProps) => {
+	return <Image as={ImageNext} {...props} loading="lazy" />
 }
 
-export default UiImage
+export default ImageWrapper

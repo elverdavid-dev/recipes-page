@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@nextui-org/react'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { useRouter } from 'next/navigation'
 
 export const metadata: Metadata = {
@@ -28,9 +28,7 @@ const NotFound = () => {
 			</div>
 			<div className="text-center text-slate-950">
 				<strong className="font-extrabold text-7xl">Oops!</strong>
-				<p className="text-2xl font-poppins-bold mt-5">
-					Esta pagina no existe!
-				</p>
+				<p className="text-2xl font-extrabold mt-5">Esta pagina no existe!</p>
 				<Button
 					size="lg"
 					className="mt-5 bg-gold  text-slate-950 rounded-full capitalize"

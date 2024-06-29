@@ -1,15 +1,16 @@
 import Providers from '@/app/providers'
 import Footer from '@/components/shared/Footer'
 import Navbar from '@/components/shared/navbar/Navbar'
-import { type ChildrenProps } from '@/interfaces/ChildrenProps.interface'
+import type { ChildrenProps } from '@/types/common/children-props'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import 'styles/globals.css'
+import '@fontsource-variable/nunito'
+
 // Styles of carusel
 
-import { Metadata, Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 import 'swiper/css/pagination'
-import { onest, poppinsBold } from './fonts'
 
 // Metadata
 export const metadata: Metadata = {
@@ -69,8 +70,8 @@ export const viewport: Viewport = {
 export const revalidate = 60 // revalidar los datos de la api cada 60 segundos
 export default function RootLayout({ children }: ChildrenProps) {
 	return (
-		<html lang="es" className={` ${poppinsBold.variable}`}>
-			<body className={`${onest.className}`}>
+		<html lang="es">
+			<body>
 				<Analytics mode="auto" />
 				<SpeedInsights />
 				<Navbar />

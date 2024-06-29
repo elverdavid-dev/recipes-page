@@ -1,6 +1,5 @@
 import Logo from '@/components/shared/Logo'
-import { FiFacebook, FiGithub, FiInstagram, FiLinkedin } from 'react-icons/fi'
-
+import { GithubIcon, Linkedin02Icon } from 'hugeicons-react'
 export default function Footer() {
 	const date = new Date()
 	const CurrentYear = date.getFullYear()
@@ -26,36 +25,24 @@ export default function Footer() {
 			</div>
 			<div className="flex items-center gap-2">
 				<a
-					href="https://instagram.com/elver.dev?igshid=OGQ5ZDc2ODk2ZA=="
+					href="https://www.linkedin.com/in/elverdavid-dev"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					<FiInstagram aria-label="Link a instagram" />
+					<Linkedin02Icon
+						size={18}
+						strokeWidth={2}
+						aria-label="Link a linkedin"
+					/>
 				</a>
 				<a
-					href="https://www.linkedin.com/in/elver-peñate"
+					href="https://github.com/elverdavid-dev"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
 				>
-					<FiLinkedin aria-label="Link a linkedin" />
-				</a>
-				<a
-					href="https://github.com/ElverDavid07"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
-				>
-					<FiGithub aria-label="Link a github" />
-				</a>
-				<a
-					href="https://www.facebook.com/elverdavid.penatepacheco.3"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="p-2 bg-white rounded-full shadow-md hover:bg-gold hover:text-white transition-all"
-				>
-					<FiFacebook aria-label="Link a facebook" />
+					<GithubIcon size={18} strokeWidth={2} aria-label="Link a github" />
 				</a>
 			</div>
 		</footer>
