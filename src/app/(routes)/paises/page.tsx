@@ -28,3 +28,5 @@ const CountriesPage = async () => {
 		</Suspense>
 	)
 }
+
+export default CountriesPage
