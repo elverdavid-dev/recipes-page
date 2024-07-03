@@ -18,7 +18,7 @@ const RecipeInfoTags = ({ category, duration, date, portions }: RecipeInfo) => {
 		<div className="flex flex-wrap items-center gap-x-2 py-3">
 			{/* Duration */}
 			<span className="RecipeInfoTags">
-				<Clock01Icon className="text-gold" size={18} strokeWidth={2} />{' '}
+				<Clock01Icon className="text-gold" size={18} strokeWidth={2} />
 				{durationFormat}
 			</span>
 			{/* Category */}

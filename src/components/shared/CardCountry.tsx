@@ -11,7 +11,7 @@ const CardCountry = ({ img, name }: CardCountryProps) => {
 			<ImageWrapper
 				src={img}
 				alt={name}
-				width={400}
+				width={445}
 				height={300}
 				className="w-full rounded-xl"
 			/>

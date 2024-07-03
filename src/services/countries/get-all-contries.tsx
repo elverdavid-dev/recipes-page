@@ -3,7 +3,7 @@ import type { CountriesData } from '@/types/countries/countries-interface'
 
 export const getAllCountries = async (limit?: number) => {
 	try {
-		const response = await fetch(`${baseUrl}/countrys`, {
+		const response = await fetch(`${baseUrl}/countries`, {
 			next: { revalidate: 60 },
 		})
 		if (!response.ok) {

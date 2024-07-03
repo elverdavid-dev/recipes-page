@@ -7,18 +7,18 @@ interface Props {
 
 const CardCountries = ({ image, name }: Props) => {
 	return (
-		<div className="relative">
+		<div className="relative group cursor-pointer">
 			<ImageWrapper
 				src={image}
 				alt={name}
-				width={400}
+				width={445}
 				height={300}
 				className="w-full rounded-xl"
 			/>
-			<span className="text-2xl text-white font-extrabold absolute bottom-4 left-5 z-10">
+			<span className="text-2xl text-white font-extrabold absolute bottom-4 left-5 z-20 capitalize">
 				{name}
 			</span>
-			<div className="absolute inset-0 bg-gradient-to-t from-black/80  to-transparent rounded-xl" />
+			<div className="absolute inset-0 bg-gradient-to-t from-black/70  to-transparent rounded-xl z-10" />
 		</div>
 	)
 }

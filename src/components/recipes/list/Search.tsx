@@ -27,7 +27,6 @@ const Search = () => {
 	const defaultValueInput = searchParams.get('name')?.toString()
 	return (
 		<Input
-			className="hidden md:flex"
 			classNames={{
 				base: 'max-w-full sm:max-w-[35rem] h-12',
 				inputWrapper: 'h-full text-default-500 bg-default-400/20 rounded-full',

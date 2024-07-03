@@ -11,7 +11,7 @@ export default function Footer() {
 			<div>
 				<p className="text-gray-800 text-center md:text-left flex gap-2">
 					&copy; {CurrentYear}
-					<span className="text-gray-900 font-bold">GlobalFood</span>{' '}
+					<span className="text-gray-900 font-bold">GlobalFood</span>
 					<span className="text-gray-700">• Por</span>
 					<a
 						href="https://www.elvportafolio.website"

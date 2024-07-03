@@ -15,7 +15,7 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 				spaceBetween={50}
 				slidesPerView={1.25}
 				modules={[Autoplay, Pagination]}
-				autoplay={{ delay: 4000 }}
+				autoplay={{ delay: 4000, pauseOnMouseEnter: true }}
 				loop={true}
 				breakpoints={ResponsiveOptions}
 				pagination={{
