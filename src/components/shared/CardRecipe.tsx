@@ -14,8 +14,6 @@ export default function CardRecipe({
 	return (
 		<>
 			<article className="flex flex-col  cursor-pointer  group relative">
-				{/*  */}
-				{category && <ChipRecipesLatest>{category}</ChipRecipesLatest>}
 				<ImageWrapper
 					src={img}
 					alt={name}
@@ -27,7 +25,7 @@ export default function CardRecipe({
 					{name}
 				</h2>
 				<span className="py-1 px-3 text-sm text-gray-700">
-					{durationFormat} | {portions} Porciones
+					{durationFormat} • {portions} Porciones
 				</span>
 			</article>
 		</>

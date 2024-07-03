@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation'
 import { Suspense } from 'react'
 
 type SearchParamsProps = {
-	searchParams: { [key: string]: string | undefined }
+	searchParams: { [key: string]: string | string[] | undefined }
 }
 interface Props extends SearchParamsProps {
 	params: { id: string }

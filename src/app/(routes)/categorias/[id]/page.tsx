@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 type SearchParamsProps = {
-	searchParams: { [key: string]: string | undefined }
+	searchParams: { [key: string]: string | string[] | undefined }
 }
 interface Props extends SearchParamsProps {
 	params: { id: string }

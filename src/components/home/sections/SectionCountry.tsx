@@ -1,4 +1,4 @@
-import CardCountry from '@/components/shared/CardCountry'
+import CardCountries from '@/components/countries/card-countries'
 import Subtitle from '@/components/shared/Subtitle'
 import { getAllCountries } from '@/services/countries/get-all-contries'
 import { Button } from '@nextui-org/react'
@@ -14,7 +14,7 @@ const SectionCountry = async () => {
 			<section className="grid md:grid-cols-2  lg:grid-cols-3 lg:justify-center gap-y-5  md:gap-5 lg:gap-5">
 				{countrys?.data.map(({ _id, image, name }) => (
 					<Link href={`/paises/${_id}?name=${name}`} key={_id}>
-						<CardCountry img={image} name={name} />
+						<CardCountries image={image} name={name} />
 					</Link>
 				))}
 			</section>

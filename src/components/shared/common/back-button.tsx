@@ -4,7 +4,7 @@ import { ArrowLeft01Icon } from 'hugeicons-react'
 import Link from 'next/link'
 
 interface Props extends ButtonProps {
-	label: string | undefined
+	label: string | undefined | string[]
 }
 const BackButton = ({ label, ...props }: Props) => {
 	return (

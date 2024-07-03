@@ -6,11 +6,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import 'styles/globals.css'
 import '@fontsource-variable/nunito'
-
-// Styles of carusel
-
 import type { Metadata, Viewport } from 'next'
-import 'swiper/css/pagination'
 
 // Metadata
 export const metadata: Metadata = {

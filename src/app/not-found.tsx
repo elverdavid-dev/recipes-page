@@ -1,41 +1,31 @@
-'use client'
-
-import { Button } from '@nextui-org/react'
 import type { Metadata } from 'next'
-import { useRouter } from 'next/navigation'
-
+import Image from 'next/image'
+import Link from 'next/link'
 export const metadata: Metadata = {
 	title: 'Pagina no encontrada',
 }
 
 const NotFound = () => {
-	const router = useRouter()
-	const redirectToHome = () => {
-		router.push('/')
-	}
 	return (
-		<main className="bg-base h-screen">
-			<div className="flex justify-center">
-				<video
-					src="/404/404-NotFound.mp4"
-					autoPlay
-					loop
-					muted
-					width="300"
-					height="300"
-					className="rounded-full"
-				/>
-			</div>
-			<div className="text-center text-slate-950">
+		<main>
+			<Image
+				src="/404/404-notFound.svg"
+				alt="notfound"
+				width={400}
+				height={100}
+				className="mx-auto"
+			/>
+			<div className="text-center">
 				<strong className="font-extrabold text-7xl">Oops!</strong>
-				<p className="text-2xl font-extrabold mt-5">Esta pagina no existe!</p>
-				<Button
-					size="lg"
-					className="mt-5 bg-gold  text-slate-950 rounded-full capitalize"
-					onClick={redirectToHome}
+				<p className="text-2xl font-extrabold mt-2 text-gray-800">
+					Esta pagina no existe!
+				</p>
+				<Link
+					href="/"
+					className="mt-5 inline-block bg-gold rounded-full capitalize py-3 px-8 text-white"
 				>
 					Regresar al inicio
-				</Button>
+				</Link>
 			</div>
 		</main>
 	)

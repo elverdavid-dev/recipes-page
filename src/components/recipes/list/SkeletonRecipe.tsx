@@ -1,21 +1,18 @@
 import Subtitle from '@/components/shared/Subtitle'
+import BackButton from '@/components/shared/common/back-button'
 import SkeletonCard from '@/components/shared/skeletons/SkeletonCardRecipe'
+import { createSkeletons } from '@/libs/common/create-skeletons'
 
 const SkeletonRecipe = () => {
+	const skeletons = createSkeletons(8)
 	return (
 		<>
-			<div className="flex items-center justify-between px-5">
-				<Subtitle>Recetas</Subtitle>
-				<span className="inline-block h-5 w-32 rounded-full bg-gray-300 animate-pulse" />
-			</div>
-			<section className="mt-16 px-2 mx-auto  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-3">
-				{[...Array(8)].map((_, index) => (
-					<SkeletonCard key={index + 1} />
+			<BackButton label={'Recetas'} href="/" />
+			<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 px-2 mt-10">
+				{skeletons.map(({ id }) => (
+					<SkeletonCard key={id} />
 				))}
 			</section>
-			<div className="mt-10 flex justify-center">
-				<span className="h-8 w-24 bg-gray-300 rounded-md animate-pulse" />
-			</div>
 		</>
 	)
 }
