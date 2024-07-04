@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import 'styles/globals.css'
 import '@fontsource-variable/nunito'
+import Adsense from '@/components/ads/adsense'
 import type { Metadata, Viewport } from 'next'
 
 // Metadata
@@ -67,6 +68,9 @@ export const revalidate = 60 // revalidar los datos de la api cada 60 segundos
 export default function RootLayout({ children }: ChildrenProps) {
 	return (
 		<html lang="es">
+			<head>
+				<Adsense />
+			</head>
 			<body>
 				<Analytics mode="auto" />
 				<SpeedInsights />
