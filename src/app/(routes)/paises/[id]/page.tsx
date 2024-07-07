@@ -1,6 +1,6 @@
-import SkeletonOneCountry from '@/components/countries/SkeletonOneCountry'
-import CardRecipe from '@/components/shared/CardRecipe'
-import NotFound from '@/components/shared/NotFound'
+import CountryDetailSkeleton from '@/components/countries/country-detail-skeleton'
+import CardRecipe from '@/components/shared/recipes-card'
+import NotFound from '@/components/shared/not-found'
 import BackButton from '@/components/shared/common/back-button'
 import { getRecipesByCountry } from '@/services/recipes/get-recipes-by-country'
 import type { Metadata } from 'next'
@@ -32,26 +32,23 @@ const CountryRecipesPage = async ({ params, searchParams }: Props) => {
 	}
 	return (
 		<>
-			<Suspense fallback={<SkeletonOneCountry />}>
+			<Suspense fallback={<CountryDetailSkeleton />}>
 				<section className="2xl:mx-auto 2xl:container px-2 md:px-4 lg:px-16 mt-10">
 					<BackButton label={searchParams.name} href="/paises" />
 					{recipes.message ? (
 						<NotFound description={recipes.message} />
 					) : (
 						<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 px-2 mt-10">
-							{recipes.map(
-								({ _id, image, name, category, portions, duration, slug }) => (
-									<Link href={`/recetas/${slug}`} key={_id}>
-										<CardRecipe
-											name={name}
-											img={image}
-											category={category.name}
-											duration={duration}
-											portions={portions}
-										/>
-									</Link>
-								),
-							)}
+							{recipes.map(({ _id, image, name, portions, duration, slug }) => (
+								<Link href={`/recetas/${slug}`} key={_id}>
+									<CardRecipe
+										name={name}
+										img={image}
+										duration={duration}
+										portions={portions}
+									/>
+								</Link>
+							))}
 						</section>
 					)}
 				</section>

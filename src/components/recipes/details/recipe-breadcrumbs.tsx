@@ -1,6 +1,6 @@
 'use client'
 import { BreadcrumbItem, Breadcrumbs } from '@nextui-org/react'
-const BreadcrumbsComponent = ({ name }: { name: string }) => {
+const RecipeBreadcrumbs = ({ name }: { name: string }) => {
 	return (
 		<Breadcrumbs size="lg" className="mb-5">
 			<BreadcrumbItem href="/">Inicio</BreadcrumbItem>
@@ -10,4 +10,4 @@ const BreadcrumbsComponent = ({ name }: { name: string }) => {
 	)
 }
 
-export default BreadcrumbsComponent
+export default RecipeBreadcrumbs

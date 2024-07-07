@@ -1,6 +1,6 @@
 'use client'
-import ImageWrapper from '@/components/shared/Image'
-import { ResponsiveOptions } from '@/libs/common/ResponsiveCaruselOptions'
+import ImageWrapper from '@/components/shared/common/image-wrapper'
+import { responsiveOptionsCarusel } from '@/libs/common/responsive-option-carusel'
 import type { Categories } from '@/types/categories/categories-interface'
 import Link from 'next/link'
 import 'swiper/css'
@@ -17,7 +17,7 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 				modules={[Autoplay, Pagination]}
 				autoplay={{ delay: 4000, pauseOnMouseEnter: true }}
 				loop={true}
-				breakpoints={ResponsiveOptions}
+				breakpoints={responsiveOptionsCarusel}
 				pagination={{
 					el: '.pagination',
 					dynamicBullets: true,

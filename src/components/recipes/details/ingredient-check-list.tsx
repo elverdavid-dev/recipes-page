@@ -2,7 +2,7 @@
 import type { ChildrenProps } from '@/types/common/children-props'
 import { Checkbox } from '@nextui-org/react'
 
-const CheckBoxComponent = ({ children }: ChildrenProps) => {
+const IngredientCheckList = ({ children }: ChildrenProps) => {
 	return (
 		<Checkbox
 			lineThrough
@@ -15,4 +15,4 @@ const CheckBoxComponent = ({ children }: ChildrenProps) => {
 	)
 }
 
-export default CheckBoxComponent
+export default IngredientCheckList

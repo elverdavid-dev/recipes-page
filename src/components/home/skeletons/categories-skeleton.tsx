@@ -1,4 +1,4 @@
-import Subtitle from '@/components/shared/Subtitle'
+import Subtitle from '@/components/shared/common/subtitle'
 import { createSkeletons } from '@/libs/common/create-skeletons'
 import { Skeleton } from '@nextui-org/react'
 

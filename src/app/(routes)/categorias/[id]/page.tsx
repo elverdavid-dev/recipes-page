@@ -1,5 +1,5 @@
-import CardRecipe from '@/components/shared/CardRecipe'
-import NotFound from '@/components/shared/NotFound'
+import CardRecipe from '@/components/shared/recipes-card'
+import NotFound from '@/components/shared/not-found'
 import BackButton from '@/components/shared/common/back-button'
 import { getRecipesByCategory } from '@/services/recipes/get-recipes-by-category'
 import type { Metadata } from 'next'
@@ -34,12 +34,11 @@ const CategoryRecipesPage = async ({ params, searchParams }: Props) => {
 				) : (
 					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 px-2 mt-10">
 						{recipes?.data.map(
-							({ _id, name, image, duration, portions, country, slug }) => (
+							({ _id, name, image, duration, portions, slug }) => (
 								<Link href={`/recetas/${slug}`} key={_id}>
 									<CardRecipe
 										name={name}
 										img={image}
-										category={country?.name}
 										duration={duration}
 										portions={portions}
 									/>

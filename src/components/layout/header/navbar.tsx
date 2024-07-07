@@ -1,10 +1,10 @@
 'use client'
 
-import Logo from '@/components/shared/Logo'
-import useNavbar from '@/libs/hooks/useNavbar'
+import Logo from '@/components/shared/common/logo'
+import useNavbar from '@/libs/hooks/use-navbar'
 import { usePathname } from 'next/navigation'
-import Menu from './Menu'
-import MenuButton from './MenuButton'
+import Menu from '@/components/layout/header/menu'
+import MenuButton from '@/components/layout/header/menu-button'
 
 const Navbar = () => {
 	const pathName = usePathname()

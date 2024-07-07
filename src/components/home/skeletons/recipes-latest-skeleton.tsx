@@ -1,5 +1,5 @@
-import Subtitle from '@/components/shared/Subtitle'
-import SkeletonCard from '@/components/shared/skeletons/SkeletonCardRecipe'
+import Subtitle from '@/components/shared/common/subtitle'
+import RecipesCardSkeleton from '@/components/shared/skeletons/recipes-card-skeleton'
 import { createSkeletons } from '@/libs/common/create-skeletons'
 
 const RecipesLatestSkeleton = () => {
@@ -9,7 +9,7 @@ const RecipesLatestSkeleton = () => {
 			<Subtitle>Ultimas recetas</Subtitle>
 			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5">
 				{skeletons.map(({ id }) => (
-					<SkeletonCard key={id} />
+					<RecipesCardSkeleton key={id} />
 				))}
 			</div>
 		</section>

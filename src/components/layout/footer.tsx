@@ -1,4 +1,4 @@
-import Logo from '@/components/shared/Logo'
+import Logo from '@/components/shared/common/logo'
 import { GithubIcon, Linkedin02Icon } from 'hugeicons-react'
 export default function Footer() {
 	const date = new Date()

@@ -1,6 +1,6 @@
-import ContentRecipes from '@/components/recipes/list/ContentRecipes'
-import Search from '@/components/recipes/list/Search'
-import SkeletonRecipe from '@/components/recipes/list/SkeletonRecipe'
+import ContentRecipes from '@/components/recipes/list/content-recipes'
+import Search from '@/components/recipes/list/search'
+import RecipesSkeleton from '@/components/recipes/list/recipes-skeleton'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 
@@ -18,11 +18,11 @@ const RecipesPage = async ({ searchParams }: SearchProps) => {
 	const dinamyKey = name + page
 	return (
 		<>
-			<main className="2xl:mx-auto 2xl:container px-2 md:px-4 lg:px-16 mt-10">
+			<main className="2xl:mx-auto 2xl:container px-2 md:px-4 lg:px-20 2xl:px-32 mt-10">
 				<div className="flex justify-center my-5">
 					<Search />
 				</div>
-				<Suspense key={dinamyKey} fallback={<SkeletonRecipe />}>
+				<Suspense key={dinamyKey} fallback={<RecipesSkeleton />}>
 					<ContentRecipes page={searchParams.page} name={searchParams.name} />
 				</Suspense>
 			</main>

@@ -1,9 +1,9 @@
-import ImageWrapper from '@/components/shared/Image'
-import Subtitle from '@/components/shared/Subtitle'
+import ImageWrapper from '@/components/shared/common/image-wrapper'
+import Subtitle from '@/components/shared/common/subtitle'
 import { getLatestRecipes } from '@/services/recipes/get-latest-recipes'
 import Link from 'next/link'
 
-const AsideSection = async () => {
+const SidebarLatestRecipe = async () => {
 	const Recipes = await getLatestRecipes(7)
 	return (
 		<div className="flex flex-col">
@@ -33,4 +33,4 @@ const AsideSection = async () => {
 	)
 }
 
-export default AsideSection
+export default SidebarLatestRecipe

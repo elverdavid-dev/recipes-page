@@ -1,6 +1,6 @@
 import Providers from '@/app/providers'
-import Footer from '@/components/shared/Footer'
-import Navbar from '@/components/shared/navbar/Navbar'
+import Footer from '@/components/layout/footer'
+import Navbar from '@/components/layout/header/navbar'
 import type { ChildrenProps } from '@/types/common/children-props'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'

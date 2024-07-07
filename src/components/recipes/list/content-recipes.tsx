@@ -1,6 +1,6 @@
-import CardRecipe from '@/components/shared/CardRecipe'
-import NotFound from '@/components/shared/NotFound'
-import UiPagination from '@/components/shared/Pagination'
+import CardRecipe from '@/components/shared/recipes-card'
+import NotFound from '@/components/shared/not-found'
+import PaginateNavigation from '@/components/shared/paginate-navigation'
 import BackButton from '@/components/shared/common/back-button'
 import { getAllRecipes } from '@/services/recipes/get-all-recipes'
 import { searchRecipeByName } from '@/services/recipes/search-recipe-by-name'
@@ -34,14 +34,13 @@ const ContentRecipes = async ({
 				{data?.message ? (
 					<NotFound description={data.message} />
 				) : (
-					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 px-2 mt-10">
+					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-3 gap-2 px-2 mt-10">
 						{data?.data.map(
-							({ _id, image, name, category, duration, portions, slug }) => (
+							({ _id, image, name, duration, portions, slug }) => (
 								<Link href={`/recetas/${slug}`} key={_id}>
 									<CardRecipe
 										img={image}
 										name={name}
-										category={category.name}
 										duration={duration}
 										portions={portions}
 									/>
@@ -51,7 +50,7 @@ const ContentRecipes = async ({
 					</section>
 				)}
 			</section>
-			<UiPagination
+			<PaginateNavigation
 				currentPage={data?.page ?? 1}
 				total={data?.totalPages ?? 1}
 			/>

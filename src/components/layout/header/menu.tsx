@@ -1,4 +1,4 @@
-import { optionsMenu } from '@/libs/common/optionsMenu'
+import { optionsMenu } from '@/libs/common/options-menu'
 import { cn } from '@/libs/common/utils'
 import Link from 'next/link'
 
