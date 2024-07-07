@@ -1,12 +1,10 @@
-import ChipRecipesLatest from '@/components/home/ChipRecipesLatest'
-import ImageWrapper from '@/components/shared/Image'
+import ImageWrapper from '@/components/shared/common/image-wrapper'
 import { formatDuration } from '@/libs/common/format-duration'
 import type { CardRecipeProps } from '@/types/recipes/card-recipes-props'
 
 export default function CardRecipe({
 	img,
 	name,
-	category,
 	duration,
 	portions,
 }: CardRecipeProps) {

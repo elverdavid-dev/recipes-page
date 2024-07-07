@@ -1,7 +1,7 @@
-import Aside from '@/components/recipes/details/AsideSection'
-import ShowDataRecipe from '@/components/recipes/details/ShowDataRecipe'
-import SkeletonAsideSection from '@/components/recipes/details/skeletons/SkeletonAsideSection'
-import SkeletonOneRecipe from '@/components/recipes/details/skeletons/SkeletonOneRecipe'
+import SidebarLatestRecipes from '@/components/recipes/details/sidebar-latest-recipes'
+import RecipeDetail from '@/components/recipes/details/recipe-detail'
+import RecipesSidebarSkeleton from '@/components/recipes/details/skeletons/recipes-sidebar-skeleton'
+import RecipeDetailSkeleton from '@/components/recipes/details/skeletons/recipe-detail-skeleton'
 import { getRecipeBySlug } from '@/services/recipes/get-recipes-by-slug'
 import type { SlugProps } from '@/types/common/slug-props'
 import type { Metadata } from 'next'
@@ -45,11 +45,11 @@ const RecipeDetailPage = async ({ params }: SlugProps) => {
 	return (
 		<>
 			<section className="container px-2 md:px-8 lg:px-10  mx-auto mt-16 lg:flex lg:justify-between gap-x-16">
-				<Suspense fallback={<SkeletonOneRecipe />}>
-					<ShowDataRecipe slug={slug} />
+				<Suspense fallback={<RecipeDetailSkeleton />}>
+					<RecipeDetail slug={slug} />
 				</Suspense>
-				<Suspense fallback={<SkeletonAsideSection />}>
-					<Aside />
+				<Suspense fallback={<RecipesSidebarSkeleton />}>
+					<SidebarLatestRecipes />
 				</Suspense>
 			</section>
 		</>

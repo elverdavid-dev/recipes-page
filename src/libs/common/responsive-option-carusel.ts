@@ -1,6 +1,6 @@
-export const ResponsiveOptions = {
+export const responsiveOptionsCarusel = {
 	360: {
-		slidesPerView: 1.4,
+		slidesPerView: 1.5,
 		spaceBetween: 10,
 	},
 	412: {
@@ -22,5 +22,5 @@ export const ResponsiveOptions = {
 	3840: {
 		slidesPerView: 4.5,
 		spaceBetween: 10,
-	}
+	},
 }

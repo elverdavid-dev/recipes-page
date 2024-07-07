@@ -2,7 +2,7 @@
 import type { ChildrenProps } from '@/types/common/children-props'
 import { Chip } from '@nextui-org/react'
 
-const ChipComponent = ({ children }: ChildrenProps) => {
+const StepChip = ({ children }: ChildrenProps) => {
 	return (
 		<Chip
 			radius="lg"
@@ -16,4 +16,4 @@ const ChipComponent = ({ children }: ChildrenProps) => {
 	)
 }
 
-export default ChipComponent
+export default StepChip

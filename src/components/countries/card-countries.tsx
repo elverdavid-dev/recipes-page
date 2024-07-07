@@ -1,4 +1,4 @@
-import ImageWrapper from '@/components/shared/Image'
+import ImageWrapper from '@/components/shared/common/image-wrapper'
 
 interface Props {
 	image: string

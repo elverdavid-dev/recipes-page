@@ -7,7 +7,7 @@ interface PaginateProps {
 	total: number
 }
 
-const PaginationComponent = ({ currentPage, total }: PaginateProps) => {
+const PaginateNavigation = ({ currentPage, total }: PaginateProps) => {
 	const router = useRouter()
 	const pathName = usePathname()
 	const searchParams = useSearchParams()
@@ -20,7 +20,6 @@ const PaginationComponent = ({ currentPage, total }: PaginateProps) => {
 
 	return (
 		<Pagination
-			color="warning"
 			size="lg"
 			loop
 			showShadow
@@ -29,9 +28,12 @@ const PaginationComponent = ({ currentPage, total }: PaginateProps) => {
 			total={total}
 			page={currentPage}
 			onChange={handlePage}
-			className="mt-10 flex justify-center mx-1"
+			className="mt-10 flex justify-center mx-1 "
+			classNames={{
+				cursor: 'bg-gold shadow-none',
+			}}
 		/>
 	)
 }
 
-export default PaginationComponent
+export default PaginateNavigation

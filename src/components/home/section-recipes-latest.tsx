@@ -1,5 +1,5 @@
-import CardRecipe from '@/components/shared/CardRecipe'
-import Subtitle from '@/components/shared/Subtitle'
+import CardRecipe from '@/components/shared/recipes-card'
+import Subtitle from '@/components/shared/common/subtitle'
 import { getLatestRecipes } from '@/services/recipes/get-latest-recipes'
 import Link from 'next/link'
 

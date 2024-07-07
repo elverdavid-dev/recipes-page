@@ -1,6 +1,6 @@
 import { Skeleton } from '@nextui-org/react'
 
-const SkeletonCardRecipe = () => {
+const RecipesCardSkeleton = () => {
 	return (
 		<div
 			role="status"
@@ -13,4 +13,4 @@ const SkeletonCardRecipe = () => {
 	)
 }
 
-export default SkeletonCardRecipe
+export default RecipesCardSkeleton
