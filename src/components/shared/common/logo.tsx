@@ -14,7 +14,7 @@ const Logo = () => {
 				className="mb-2 w-[40px] h-[50px]"
 				priority
 			/>
-			<h3 className="text-xl font-extrabold">GlobalFood</h3>
+			<h3 className="text-xl font-extrabold hidden md:block">GlobalFood</h3>
 		</Link>
 	)
 }

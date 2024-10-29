@@ -1,3 +1,4 @@
+import HomeContainer from '@/components/home/home-container'
 import SectionCategories from '@/components/home/section-categories'
 import SectionCountries from '@/components/home/section-countries'
 import SectionHero from '@/components/home/section-hero'
@@ -10,7 +11,7 @@ import { Suspense } from 'react'
 const HomePage = async () => {
 	return (
 		<main>
-			<SectionHero />
+			{/* 			<SectionHero />
 			<Suspense fallback={<CategoriesSkeleton/>}>
 			<SectionCategories />
 			</Suspense>
@@ -19,7 +20,8 @@ const HomePage = async () => {
 			</Suspense>
 			<Suspense fallback={<RecipesLatestSkeleton/>}>
 			<SectionRecipesLatest />
-			</Suspense>
+			</Suspense> */}
+			<HomeContainer />
 		</main>
 	)
 }

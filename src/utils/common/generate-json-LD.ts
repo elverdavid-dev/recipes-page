@@ -1,5 +1,5 @@
-import { formatDate } from '@/libs/common/format-date'
 import type { Recipes } from '@/types/recipes/recipes-interface'
+import { formatDate } from '@/utils/common/format-date'
 import type { Recipe, WithContext } from 'schema-dts'
 
 const GenerateJsonLD = (recipe: Recipes) => {

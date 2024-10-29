@@ -1,7 +1,7 @@
 'use client'
 import ImageWrapper from '@/components/shared/common/image-wrapper'
-import { responsiveOptionsCarusel } from '@/libs/common/responsive-option-carusel'
 import type { Categories } from '@/types/categories/categories-interface'
+import { responsiveOptionsCarusel } from '@/utils/common/responsive-option-carusel'
 import Link from 'next/link'
 import 'swiper/css'
 import 'swiper/css/autoplay'

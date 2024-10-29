@@ -13,7 +13,7 @@ const CardCountries = ({ image, name }: Props) => {
 				alt={name}
 				width={445}
 				height={300}
-				className="w-full rounded-xl"
+				className="w-full rounded-xl object-cover"
 			/>
 			<span className="text-2xl text-white font-extrabold absolute bottom-4 left-5 z-20 capitalize">
 				{name}
@@ -22,5 +22,4 @@ const CardCountries = ({ image, name }: Props) => {
 		</div>
 	)
 }
-
 export default CardCountries

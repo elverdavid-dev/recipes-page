@@ -1,5 +1,5 @@
-import { optionsMenu } from '@/libs/common/options-menu'
-import { cn } from '@/libs/common/utils'
+import { optionsMenu } from '@/utils/common/options-menu'
+import { cn } from '@nextui-org/react'
 import Link from 'next/link'
 
 interface Props {

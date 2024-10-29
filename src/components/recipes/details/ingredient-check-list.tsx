@@ -6,9 +6,9 @@ const IngredientCheckList = ({ children }: ChildrenProps) => {
 	return (
 		<Checkbox
 			lineThrough
-			color="default"
+			color="primary"
 			size="lg"
-			classNames={{ label: 'text-gray-800' }}
+			classNames={{ label: 'text-xl' }}
 		>
 			{children}
 		</Checkbox>

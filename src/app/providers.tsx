@@ -2,6 +2,7 @@
 import type { ChildrenProps } from '@/types/common/children-props'
 import { NextUIProvider } from '@nextui-org/react'
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar'
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { useRouter } from 'next/navigation'
 const providers = ({ children }: ChildrenProps) => {
 	const router = useRouter()
@@ -9,11 +10,19 @@ const providers = ({ children }: ChildrenProps) => {
 		<>
 			<ProgressBar
 				color="#FFAC4B"
-				height="4px"
 				options={{ showSpinner: false }}
 				shallowRouting
 			/>
-			<NextUIProvider navigate={router.push}>{children}</NextUIProvider>
+			<NextUIProvider navigate={router.push}>
+				<NextThemesProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					{children}
+				</NextThemesProvider>
+			</NextUIProvider>
 		</>
 	)
 }

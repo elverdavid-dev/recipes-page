@@ -1,5 +1,5 @@
-import { baseUrl } from '@/libs/common/config'
 import type { Recipes } from '@/types/recipes/recipes-interface'
+import { baseUrl } from '@/utils/common/config'
 
 /**
  * @description Obtiene una lista de las recetas más recientes desde el servidor.

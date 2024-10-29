@@ -1,6 +1,6 @@
 import BackButton from '@/components/shared/common/back-button'
 import RecipesCardSkeleton from '@/components/shared/skeletons/recipes-card-skeleton'
-import { createSkeletons } from '@/libs/common/create-skeletons'
+import { createSkeletons } from '@/utils/common/create-skeletons'
 
 const RecipesSkeleton = () => {
 	const skeletons = createSkeletons(8)

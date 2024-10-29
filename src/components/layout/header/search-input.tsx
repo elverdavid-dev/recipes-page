@@ -1,46 +1,38 @@
 'use client'
 import { Input } from '@nextui-org/react'
 import { Search01Icon } from 'hugeicons-react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useDebouncedCallback } from 'use-debounce'
 
-const Search = () => {
+const SearchInput = () => {
 	//hooks
 	const router = useRouter()
-	const pathName = usePathname()
 	const searchParams = useSearchParams()
 
-	const params = new URLSearchParams(searchParams)
+	const query = searchParams.get('name')?.toString()
 
 	const handleSearch = useDebouncedCallback((value: string) => {
-		if (searchParams.get('page')) {
-			params.set('page', '1')
-		}
+		const params = new URLSearchParams(searchParams)
 		if (value) {
 			params.set('name', value)
-		} else {
-			params.delete('name')
+			params.delete('page')
 		}
 		router.replace(`/recetas?${params.toString()}`)
-	}, 500)
+	}, 400)
 
-	const defaultValueInput = searchParams.get('name')?.toString()
 	return (
 		<Input
-			classNames={{
-				base: 'max-w-full sm:max-w-[35rem] h-12',
-				inputWrapper: 'h-full text-default-500 bg-default-400/20 rounded-full',
-			}}
+			className="w-[170px] md:w-full"
 			placeholder="Buscar recetas..."
-			size="sm"
+			radius="full"
 			autoComplete="off"
 			role="search"
+			isClearable
 			startContent={<Search01Icon size={18} strokeWidth={1.8} />}
-			onClear={() => router.replace(pathName)}
 			onChange={(event) => handleSearch(event.target.value)}
-			defaultValue={defaultValueInput}
+			defaultValue={query}
 		/>
 	)
 }
 
-export default Search
+export default SearchInput

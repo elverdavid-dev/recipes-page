@@ -1,7 +1,7 @@
-import CardRecipe from '@/components/shared/recipes-card'
-import NotFound from '@/components/shared/not-found'
-import PaginateNavigation from '@/components/shared/paginate-navigation'
 import BackButton from '@/components/shared/common/back-button'
+import NotFound from '@/components/shared/not-found-search'
+import PaginateNavigation from '@/components/shared/paginate-navigation'
+import CardRecipe from '@/components/shared/recipes-card'
 import { getAllRecipes } from '@/services/recipes/get-all-recipes'
 import { searchRecipeByName } from '@/services/recipes/search-recipe-by-name'
 import Link from 'next/link'
@@ -26,13 +26,13 @@ const ContentRecipes = async ({
 		<section>
 			<div className="flex items-center justify-between px-2 md:px-0">
 				<BackButton label="Recetas" href="/" />
-				<span className="text-lg text-gray-800">
+				<span className="text-lg">
 					<strong>{data?.totalItems ?? 0}</strong> Recetas totales
 				</span>
 			</div>
 			<section>
 				{data?.message ? (
-					<NotFound description={data.message} />
+					<NotFound message={`No se encontraron recetas para "${name}"`} />
 				) : (
 					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-3 gap-2 px-2 mt-10">
 						{data?.data.map(

@@ -1,4 +1,4 @@
-import { cn } from '@/libs/common/utils'
+import { cn } from '@nextui-org/react'
 import type { HTMLAttributes } from 'react'
 
 const Subtitle = ({

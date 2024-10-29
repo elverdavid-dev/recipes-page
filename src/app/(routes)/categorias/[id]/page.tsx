@@ -1,36 +1,38 @@
-import CardRecipe from '@/components/shared/recipes-card'
-import NotFound from '@/components/shared/not-found'
 import BackButton from '@/components/shared/common/back-button'
+import NotFound from '@/components/shared/not-found-search'
+import CardRecipe from '@/components/shared/recipes-card'
 import { getRecipesByCategory } from '@/services/recipes/get-recipes-by-category'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-type SearchParamsProps = {
-	searchParams: { [key: string]: string | string[] | undefined }
-}
-interface Props extends SearchParamsProps {
-	params: { id: string }
+interface Props {
+	params: Promise<{ id: string }>
+	searchParams: Promise<{ name: string }>
 }
 export async function generateMetadata({
 	searchParams,
-}: SearchParamsProps): Promise<Metadata> {
+}: Pick<Props, 'searchParams'>): Promise<Metadata> {
+	const { name } = await searchParams
 	return {
-		title: `Recetas de la categoría ${searchParams.name} | GlobalFood`,
+		title: `Recetas de la categoría ${name} | GlobalFood`,
 	}
 }
 
 const CategoryRecipesPage = async ({ params, searchParams }: Props) => {
-	const recipes = await getRecipesByCategory(params.id)
+	const { id } = await params
+	const { name } = await searchParams
+
+	const recipes = await getRecipesByCategory(id)
 	if (!recipes) {
 		notFound()
 	}
 	return (
 		<>
 			<section className="2xl:mx-auto 2xl:container px-2 md:px-4 lg:px-16 mt-10">
-				<BackButton label={searchParams.name} href="/" />
+				<BackButton label={name} href="/" />
 				{recipes.message ? (
-					<NotFound description={recipes?.message} />
+					<NotFound message={recipes?.message} />
 				) : (
 					<section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-2 px-2 mt-10">
 						{recipes?.data.map(

@@ -20,10 +20,10 @@ const SidebarLatestRecipe = async () => {
 								className="rounded-xl group-hover:scale-105 transition-all w-[100px] h-[70px]"
 							/>
 							<div>
-								<h2 className="font-extrabold capitalize">{category.name}</h2>
-								<h3 className="text-gray-700 capitalize group-hover:text-gold group-hover:underline transition-all">
+								<h3 className="font-extrabold capitalize group-hover:text-gold group-hover:underline transition-all dark:text-white">
 									{name}
 								</h3>
+								<h2 className="capitalize">{category.name}</h2>
 							</div>
 						</div>
 					</Link>

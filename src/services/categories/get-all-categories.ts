@@ -1,5 +1,5 @@
-import { baseUrl } from '@/libs/common/config'
 import type { Categories } from '@/types/categories/categories-interface'
+import { baseUrl } from '@/utils/common/config'
 
 export const getAllCategories = async () => {
 	try {
