@@ -1,6 +1,6 @@
-import { baseUrl } from '@/libs/common/config'
 import type { MessageResponse } from '@/types/common/message-response-interface'
 import type { RecipeList } from '@/types/recipes/recipes-list-interface'
+import { baseUrl } from '@/utils/common/config'
 
 type ResponseApi = RecipeList & MessageResponse
 

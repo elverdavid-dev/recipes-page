@@ -1,4 +1,4 @@
-import { formatDuration } from '@/libs/common/format-duration'
+import { formatDuration } from '@/utils/common/format-duration'
 import { Clock01Icon, DashboardSquare01Icon, Tag01Icon } from 'hugeicons-react'
 interface RecipeInfo {
 	duration: number

@@ -3,34 +3,31 @@
 @tailwind utilities;
 
 body {
-  background: #f6f6f6;
-  font-family: 'Nunito Variable', sans-serif;
-  font-weight: 500;
+	font-family: "Nunito Variable", sans-serif;
+	font-weight: 500;
 }
 
 .RecipeInfoTags {
-  @apply flex items-center gap-x-1 text-gray-700 capitalize;
+	@apply flex items-center gap-x-1 capitalize;
 }
 
 .Active-link {
-  text-shadow: 0px 0px 10px #ffac4b;
+	text-shadow: 0px 0px 10px #ffac4b;
 }
-
 
 .swiper-pagination-bullet-active {
-  background-color: rgb(255, 162, 0);
-  opacity: 1;
+	background-color: rgb(255, 162, 0);
+	opacity: 1;
 }
 
-
-.change-color-navbar{
-animation: ChangeColorNavbar linear both;
-animation-timeline: scroll(root);
-animation-range: 0px 600px;
+.change-color-navbar {
+	animation: ChangeColorNavbar linear both;
+	animation-timeline: scroll(root);
+	animation-range: 0px 600px;
 }
 
-@keyframes ChangeColorNavbar{
-  to{
-    background: #f6f6f6;
-  }
+@keyframes ChangeColorNavbar {
+	to {
+		background: #f6f6f6;
+	}
 }

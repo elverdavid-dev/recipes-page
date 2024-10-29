@@ -1,5 +1,5 @@
-import { baseUrl } from '@/libs/common/config'
 import type { CountriesData } from '@/types/countries/countries-interface'
+import { baseUrl } from '@/utils/common/config'
 
 export const getAllCountries = async (limit?: number) => {
 	try {

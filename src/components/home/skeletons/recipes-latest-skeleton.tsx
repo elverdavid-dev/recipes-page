@@ -1,6 +1,6 @@
 import Subtitle from '@/components/shared/common/subtitle'
 import RecipesCardSkeleton from '@/components/shared/skeletons/recipes-card-skeleton'
-import { createSkeletons } from '@/libs/common/create-skeletons'
+import { createSkeletons } from '@/utils/common/create-skeletons'
 
 const RecipesLatestSkeleton = () => {
 	const skeletons = createSkeletons(12)

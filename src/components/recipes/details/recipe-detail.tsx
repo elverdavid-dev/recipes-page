@@ -1,11 +1,11 @@
-import RecipeBreadcrumbs from '@/components/recipes/details/recipe-breadcrumbs'
 import IngredientCheckList from '@/components/recipes/details/ingredient-check-list'
-import StepChip from '@/components/recipes/details/step-chip'
+import RecipeBreadcrumbs from '@/components/recipes/details/recipe-breadcrumbs'
 import RecipeInfoTags from '@/components/recipes/details/recipe-info-tag'
+import StepChip from '@/components/recipes/details/step-chip'
 import ImageWrapper from '@/components/shared/common/image-wrapper'
 import Subtitle from '@/components/shared/common/subtitle'
-import GenerateJsonLD from '@/libs/common/generate-json-LD'
 import { getRecipeBySlug } from '@/services/recipes/get-recipes-by-slug'
+import GenerateJsonLD from '@/utils/common/generate-json-LD'
 import {
 	CheckListIcon,
 	LeftToRightListNumberIcon,
@@ -15,7 +15,7 @@ import { notFound } from 'next/navigation'
 
 const ShowDataRecipe = async ({ slug }: { slug: string }) => {
 	const recipe = await getRecipeBySlug(slug)
-	if (recipe === undefined) {
+	if (!recipe) {
 		notFound()
 	}
 
@@ -24,10 +24,12 @@ const ShowDataRecipe = async ({ slug }: { slug: string }) => {
 		<section className="lg:w-[700px]">
 			<RecipeBreadcrumbs name={recipe.name} />
 
-			<span className="font-extrabold capitalize text-xl text-gold flex items-center gap-x-1">
-				<Location01Icon size={18} strokeWidth={2} />
-				{recipe.country?.name}
-			</span>
+			{recipe.country?.name && (
+				<span className="font-extrabold capitalize text-xl text-gold flex items-center gap-x-1">
+					<Location01Icon size={18} strokeWidth={2} />
+					{recipe.country?.name}
+				</span>
+			)}
 
 			{/* Title */}
 
@@ -55,7 +57,7 @@ const ShowDataRecipe = async ({ slug }: { slug: string }) => {
 
 			{/* Description */}
 
-			<article className="text-lg mt-10 text-pretty text-gray-800">
+			<article className="text-xl mt-10 text-pretty">
 				{recipe.description}
 			</article>
 
@@ -81,7 +83,7 @@ const ShowDataRecipe = async ({ slug }: { slug: string }) => {
 				{recipe.steps.map((recipe, i) => (
 					<li key={i + recipe} className="py-5">
 						<StepChip>Paso {i + 1} </StepChip>
-						<p className="pt-3 text-lg text-pretty text-gray-800">{recipe}</p>
+						<p className="pt-3 text-pretty text-xl">{recipe}</p>
 					</li>
 				))}
 			</ul>

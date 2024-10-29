@@ -17,9 +17,7 @@ const NotFound = () => {
 			/>
 			<div className="text-center">
 				<strong className="font-extrabold text-7xl">Oops!</strong>
-				<p className="text-2xl font-extrabold mt-2 text-gray-800">
-					Esta pagina no existe!
-				</p>
+				<p className="text-2xl font-extrabold mt-2">Esta pagina no existe!</p>
 				<Link
 					href="/"
 					className="mt-5 inline-block bg-gold rounded-full capitalize py-3 px-8 text-white"

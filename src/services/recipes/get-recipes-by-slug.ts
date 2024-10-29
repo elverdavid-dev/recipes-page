@@ -1,5 +1,5 @@
-import { baseUrl } from '@/libs/common/config'
 import type { Recipes } from '@/types/recipes/recipes-interface'
+import { baseUrl } from '@/utils/common/config'
 
 /**
  * @description Obtiene una receta específica por su slug desde el servidor.

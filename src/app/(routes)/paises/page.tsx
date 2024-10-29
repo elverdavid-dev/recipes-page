@@ -1,14 +1,14 @@
-import CountriesSkeleton from '@/components/countries/countries-skeleton'
 import CardCountries from '@/components/countries/card-countries'
+import CountriesSkeleton from '@/components/countries/countries-skeleton'
 import BackButton from '@/components/shared/common/back-button'
 import { getAllCountries } from '@/services/countries/get-all-contries'
-import type { Metadata } from 'next'
+import { createMetadata } from '@/utils/common/create-metadata'
 import Link from 'next/link'
 import { Suspense } from 'react'
 
-export const metadata: Metadata = {
-	title: 'Explora la Gastronomía Internacional por Países | GlobalFood',
-}
+export const metadata = createMetadata({
+	title: 'Explora la Gastronomía Internacional por Países',
+})
 
 const CountriesPage = async () => {
 	const countriesData = await getAllCountries()

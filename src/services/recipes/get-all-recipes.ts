@@ -1,5 +1,5 @@
-import { baseUrl } from '@/libs/common/config'
 import type { RecipeList } from '@/types/recipes/recipes-list-interface'
+import { baseUrl } from '@/utils/common/config'
 
 /**
  *  Obtiene una lista de recetas desde el servidor con paginación.
@@ -20,6 +20,8 @@ export const getAllRecipes = async (page = 1, limit?: number) => {
 		const data: RecipeList = await response.json()
 		return data
 	} catch (error) {
-		console.error(error)
+		if (error instanceof Error) {
+			console.error(error.message)
+		}
 	}
 }

@@ -1,6 +1,6 @@
-import { baseUrl } from '@/libs/common/config'
 import type { MessageResponse } from '@/types/common/message-response-interface'
 import type { Recipes } from '@/types/recipes/recipes-interface'
+import { baseUrl } from '@/utils/common/config'
 
 /**
  * @description Obtiene una lista de recetas de un país específico desde el servidor.

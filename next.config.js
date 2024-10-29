@@ -8,6 +8,7 @@ const nextConfig = {
 				pathname:"/dnbdpnvz1/**"
 			},
 		],
+		unoptimized: true,
 	},
 }
 

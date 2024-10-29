@@ -1,5 +1,5 @@
-import { createSkeletons } from '@/libs/common/create-skeletons'
 import BackButton from '@/components/shared/common/back-button'
+import { createSkeletons } from '@/utils/common/create-skeletons'
 import { Skeleton } from '@nextui-org/react'
 
 const CountriesSkeleton = () => {

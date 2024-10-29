@@ -1,9 +1,13 @@
 import Carusel from '@/components/home/carusel'
 import Subtitle from '@/components/shared/common/subtitle'
-import { getAllCategories } from '@/services/categories/get-all-categories'
+import type { Categories } from '@/types/categories/categories-interface'
+import type { FC } from 'react'
 
-const SectionCategories = async () => {
-	const categories = await getAllCategories()
+interface Props {
+	categories: Categories[]
+}
+
+const SectionCategories: FC<Props> = async ({ categories }) => {
 	return (
 		<section className="mt-32 px-4 lg:px-20 my-10 2xl:container 2xl:mx-auto">
 			<Subtitle>Categorias</Subtitle>

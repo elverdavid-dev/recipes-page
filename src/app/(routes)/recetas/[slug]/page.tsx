@@ -1,16 +1,17 @@
-import SidebarLatestRecipes from '@/components/recipes/details/sidebar-latest-recipes'
 import RecipeDetail from '@/components/recipes/details/recipe-detail'
-import RecipesSidebarSkeleton from '@/components/recipes/details/skeletons/recipes-sidebar-skeleton'
+import SidebarLatestRecipes from '@/components/recipes/details/sidebar-latest-recipes'
 import RecipeDetailSkeleton from '@/components/recipes/details/skeletons/recipe-detail-skeleton'
+import RecipesSidebarSkeleton from '@/components/recipes/details/skeletons/recipes-sidebar-skeleton'
 import { getRecipeBySlug } from '@/services/recipes/get-recipes-by-slug'
-import type { SlugProps } from '@/types/common/slug-props'
-import type { Metadata } from 'next'
+import { createMetadata } from '@/utils/common/create-metadata'
 import { Suspense } from 'react'
 
-export async function generateMetadata({
-	params,
-}: SlugProps): Promise<Metadata> {
-	const slug = params.slug
+interface Props {
+	params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props) {
+	const { slug } = await params
 	const recipe = await getRecipeBySlug(slug)
 	// metadata of the page 404 not found
 	if (!recipe) {
@@ -19,29 +20,17 @@ export async function generateMetadata({
 			description: 'La pagina no se ha encontrado!',
 		}
 	}
-	//
-	return {
-		title: `Cómo Hacer ${recipe?.name} | GlobalFood`,
-		description: recipe?.description,
+	return createMetadata({
+		title: `Como hacer ${recipe.name}`,
+		description: recipe.description,
+		canonicalUrl: `recetas/${recipe.slug}`,
+		ogImg: recipe.image,
 		category: recipe.category.name,
-		alternates: {
-			canonical: `https://www.globalfood.site/recetas/${recipe.slug}`,
-		},
-		openGraph: {
-			title: `Cómo Hacer ${recipe?.name} | GlobalFood`,
-			description: recipe?.description,
-			images: recipe?.image,
-		},
-		twitter: {
-			title: `Cómo Hacer ${recipe?.name} | GlobalFood`,
-			description: recipe?.description,
-			images: recipe?.image,
-		},
-	}
+	})
 }
 
-const RecipeDetailPage = async ({ params }: SlugProps) => {
-	const slug = params.slug
+const RecipeDetailPage = async ({ params }: Props) => {
+	const { slug } = await params
 	return (
 		<>
 			<section className="container px-2 md:px-8 lg:px-10  mx-auto mt-16 lg:flex lg:justify-between gap-x-16">

@@ -1,4 +1,4 @@
-import { createSkeletons } from '@/libs/common/create-skeletons'
+import { createSkeletons } from '@/utils/common/create-skeletons'
 import { Skeleton } from '@nextui-org/react'
 
 const RecipesSidebarSkeleton = () => {

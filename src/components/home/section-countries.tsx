@@ -1,18 +1,21 @@
 import CardCountries from '@/components/countries/card-countries'
 import Subtitle from '@/components/shared/common/subtitle'
-import { getAllCountries } from '@/services/countries/get-all-contries'
+import type { CountriesData } from '@/types/countries/countries-interface'
 import { Button } from '@nextui-org/react'
 import { ArrowRight02Icon } from 'hugeicons-react'
 import Link from 'next/link'
+import type { FC } from 'react'
 
-const SectionCountries = async () => {
-	const countrys = await getAllCountries(6)
+interface Props {
+	countries?: CountriesData
+}
 
+const SectionCountries: FC<Props> = async ({ countries }) => {
 	return (
 		<section className="mt-20 px-2 lg:px-20 py-4 2xl:container mx-auto">
 			<Subtitle>Recetas del mundo</Subtitle>
 			<section className="grid md:grid-cols-2  lg:grid-cols-3 lg:justify-center gap-y-3  md:gap-5">
-				{countrys?.data.map(({ _id, image, name }) => (
+				{countries?.data.map(({ _id, image, name }) => (
 					<Link href={`/paises/${_id}?name=${name}`} key={_id}>
 						<CardCountries image={image} name={name} />
 					</Link>

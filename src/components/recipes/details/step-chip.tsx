@@ -8,7 +8,7 @@ const StepChip = ({ children }: ChildrenProps) => {
 			radius="lg"
 			size="lg"
 			classNames={{
-				base: 'bg-gold text-white',
+				base: 'bg-gold text-white text-medium',
 			}}
 		>
 			{children}
