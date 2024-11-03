@@ -2,7 +2,6 @@ import IngredientCheckList from '@/components/recipes/details/ingredient-check-l
 import RecipeBreadcrumbs from '@/components/recipes/details/recipe-breadcrumbs'
 import RecipeInfoTags from '@/components/recipes/details/recipe-info-tag'
 import StepChip from '@/components/recipes/details/step-chip'
-import ImageWrapper from '@/components/shared/common/image-wrapper'
 import Subtitle from '@/components/shared/common/subtitle'
 import { getRecipeBySlug } from '@/services/recipes/get-recipes-by-slug'
 import GenerateJsonLD from '@/utils/common/generate-json-LD'
@@ -11,6 +10,7 @@ import {
 	LeftToRightListNumberIcon,
 	Location01Icon,
 } from 'hugeicons-react'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 const ShowDataRecipe = async ({ slug }: { slug: string }) => {
@@ -39,7 +39,7 @@ const ShowDataRecipe = async ({ slug }: { slug: string }) => {
 
 			{/* Image */}
 
-			<ImageWrapper
+			<Image
 				src={recipe.image}
 				alt={recipe.name}
 				width={700}

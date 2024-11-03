@@ -1,7 +1,8 @@
 'use client'
 import { Input } from '@nextui-org/react'
 import { Search01Icon } from 'hugeicons-react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next-nprogress-bar'
+import { useSearchParams } from 'next/navigation'
 import { useDebouncedCallback } from 'use-debounce'
 
 const SearchInput = () => {
@@ -22,7 +23,7 @@ const SearchInput = () => {
 
 	return (
 		<Input
-			className="w-[170px] md:w-full"
+			className="w-full"
 			placeholder="Buscar recetas..."
 			radius="full"
 			autoComplete="off"

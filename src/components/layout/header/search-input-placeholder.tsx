@@ -11,6 +11,7 @@ const SearchInputPlaceholder = () => {
 			startContent={<Search01Icon />}
 			aria-busy
 			aria-disabled
+			radius="full"
 			className="pointer-events-none w-[170px] md:w-full"
 		/>
 	)
