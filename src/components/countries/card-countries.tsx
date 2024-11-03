@@ -13,12 +13,12 @@ const CardCountries = ({ image, name }: Props) => {
 				alt={name}
 				width={445}
 				height={300}
-				className="w-full rounded-xl object-cover"
+				className="w-full rounded-3xl object-cover"
 			/>
-			<span className="text-2xl text-white font-extrabold absolute bottom-4 left-5 z-20 capitalize">
+			<span className="text-2xl text-gray-300 font-extrabold absolute bottom-4 left-5 z-20 capitalize">
 				{name}
 			</span>
-			<div className="absolute inset-0 bg-gradient-to-t from-black/70  to-transparent rounded-xl z-10" />
+			<div className="absolute inset-0 bg-gradient-to-t from-black/70  to-transparent rounded-3xl z-10" />
 		</div>
 	)
 }
