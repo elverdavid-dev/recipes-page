@@ -1,6 +1,6 @@
-import ImageWrapper from '@/components/shared/common/image-wrapper'
 import Subtitle from '@/components/shared/common/subtitle'
 import { getLatestRecipes } from '@/services/recipes/get-latest-recipes'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const SidebarLatestRecipe = async () => {
@@ -12,7 +12,7 @@ const SidebarLatestRecipe = async () => {
 				{Recipes?.map(({ _id, image, name, category, slug }) => (
 					<Link href={`/recetas/${slug}`} key={_id}>
 						<div className="flex items-start gap-x-3 py-1 group">
-							<ImageWrapper
+							<Image
 								src={image}
 								alt={name}
 								width={100}

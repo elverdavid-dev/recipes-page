@@ -1,6 +1,7 @@
-import ImageWrapper from '@/components/shared/common/image-wrapper'
 import { formatDuration } from '@/utils/common/format-duration'
+import { Image } from '@nextui-org/react'
 import type { FC } from 'react'
+import ImageWrapper from './common/image-wrapper'
 
 interface Props {
 	img: string
@@ -17,8 +18,7 @@ const CardRecipe: FC<Props> = ({ img, name, duration, portions }) => {
 					src={img}
 					alt={name}
 					width={280}
-					height={210}
-					className="w-full h-auto rounded-xl object-cover"
+					className="rounded-2xl h-[132px] md:h-[200px]"
 				/>
 				<h2 className="font-extrabold capitalize text-xl pt-3 px-3  group-hover:text-gold transition-all truncate">
 					{name}

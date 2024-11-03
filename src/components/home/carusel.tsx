@@ -1,10 +1,10 @@
 'use client'
-import ImageWrapper from '@/components/shared/common/image-wrapper'
 import type { Categories } from '@/types/categories/categories-interface'
 import { responsiveOptionsCarusel } from '@/utils/common/responsive-option-carusel'
 import Link from 'next/link'
 import 'swiper/css'
 import 'swiper/css/autoplay'
+import ImageWrapper from '@/components/shared/common/image-wrapper'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -31,7 +31,6 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 									src={image}
 									alt={name}
 									width={280}
-									height={188}
 									className="rounded-xl w-full"
 								/>
 								<span className="text-xl text-white font-extrabold absolute bottom-4 left-5 capitalize z-20">
@@ -43,6 +42,7 @@ const Carusel = ({ categories }: { categories: Categories[] | undefined }) => {
 					</SwiperSlide>
 				))}
 			</Swiper>
+			<span className="pagination" />
 		</section>
 	)
 }
